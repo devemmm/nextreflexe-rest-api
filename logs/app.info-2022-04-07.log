@@ -1,0 +1,65 @@
+{"level":"info","message":"::1 - [2022-04-07T08:31:45.154Z] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T08:39:45.271Z] \"GET / HTTP/1.1\" 400 57 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T08:40:13.693Z] \"GET /api/v1/service HTTP/1.1\" 200 16 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T08:41:20.234Z] \"GET / HTTP/1.1\" 200 18 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T08:41:51.512Z] \"GET / HTTP/1.1\" 200 32 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:03:47.166Z] \"GET /api/v1/service HTTP/1.1\" 500 1604 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:05:21.914Z] \"GET /api/v1/service HTTP/1.1\" 500 1604 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:05:45.123Z] \"GET /api/v1/service HTTP/1.1\" 500 1604 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:06:45.051Z] \"GET /api/v1/service HTTP/1.1\" 500 1604 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:07:35.117Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:09:20.765Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:09:34.959Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:10:39.644Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:11:35.925Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:13:11.603Z] \"GET /api/v1/service HTTP/1.1\" 200 63 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:14:20.647Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:15:32.353Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:16:01.348Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:16:40.644Z] \"GET /api/v1/service HTTP/1.1\" 200 63 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:17:16.637Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:17:34.957Z] \"GET /api/v1/service?name=emmy HTTP/1.1\" 200 63 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:18:12.342Z] \"GET /api/v1/service?name=emmy HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:20:05.046Z] \"GET /api/v1/service?name=emmy HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:20:32.114Z] \"GET /api/v1/service?name=emmy HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:21:00.056Z] \"GET /api/v1/service?name=emmy HTTP/1.1\" 200 67 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:21:13.620Z] \"GET /api/v1/service HTTP/1.1\" 500 1603 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:23:38.395Z] \"GET /api/v1/service HTTP/1.1\" 200 21 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:25:23.665Z] \"GET /api/v1/service HTTP/1.1\" 200 49 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:33:40.966Z] \"GET /api/v1/service HTTP/1.1\" 200 39 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:33:59.995Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:35:01.660Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:35:29.446Z] \"GET /api/v1/service HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:51:13.657Z] \"GET /api/v1/service HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:52:03.824Z] \"GET /api/v1/services HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:52:45.560Z] \"GET /api/v1/services HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:53:12.561Z] \"POST /api/v1/services HTTP/1.1\" 200 64 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:55:21.575Z] \"POST /api/v1/services HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T09:56:45.688Z] \"POST /api/v1/services HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T10:00:24.061Z] \"POST /api/v1/services HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T10:00:58.011Z] \"POST /api/v1/services HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T10:02:46.263Z] \"POST /api/v1/services HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T10:03:14.993Z] \"POST /api/v1/services HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T10:03:32.842Z] \"POST /api/v1/services HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:33:54.134Z] \"GET /api/v1/services HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:35:55.913Z] \"GET /api/v1/services HTTP/1.1\" 200 879 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:36:57.860Z] \"GET /api/v1/services HTTP/1.1\" 200 1074 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:38:28.347Z] \"GET /api/v1/services HTTP/1.1\" 200 1074 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:41:01.034Z] \"GET /api/v1/services HTTP/1.1\" 200 60 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:42:20.788Z] \"POST /api/v1/services HTTP/1.1\" 200 58 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:42:22.923Z] \"POST /api/v1/services HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:42:27.861Z] \"POST /api/v1/services HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:42:28.811Z] \"POST /api/v1/services HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:42:51.181Z] \"GET /api/v1/services HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:45:49.018Z] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T15:45:56.412Z] \"GET /api/v1/services HTTP/1.1\" 200 242 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:04:15.766Z] \"GET /api/v1/services?name=kunga HTTP/1.1\" 200 67 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:05:48.240Z] \"GET /api/v1/services?name=kunga HTTP/1.1\" 200 60 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:06:02.787Z] \"GET /api/v1/services?name=kunga HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:06:54.510Z] \"GET /api/v1/services HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:07:26.720Z] \"GET /api/v1/services HTTP/1.1\" 200 242 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:10:23.364Z] \"GET /api/v1/services?name=kunga HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:12:10.368Z] \"GET /api/v1/services?code=1 HTTP/1.1\" 200 67 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:12:48.281Z] \"GET /api/v1/services?code=1 HTTP/1.1\" 200 242 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:12:59.812Z] \"GET /api/v1/services?code=2 HTTP/1.1\" 200 242 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-07T16:13:04.180Z] \"GET /api/v1/services?code=2 HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}

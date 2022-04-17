@@ -1,0 +1,34 @@
+{"level":"info","message":"::1 - [2022-04-11T08:00:42.477Z] \"GET /api/v1/branches HTTP/1.1\" 200 85 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:00:42.547Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:02:04.923Z] \"GET /api/v1/branches HTTP/1.1\" - - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:07:20.901Z] \"GET /api/v1/branches HTTP/1.1\" 200 163 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:07:20.943Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:10:18.539Z] \"GET /api/v1/branches HTTP/1.1\" 200 163 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:10:18.575Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:13:29.131Z] \"GET /api/v1/branches HTTP/1.1\" - - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:14:43.604Z] \"GET /api/v1/branches HTTP/1.1\" 200 28 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:14:43.656Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:15:12.836Z] \"GET /api/v1/branches HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:15:12.884Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:21:27.635Z] \"GET /api/v1/branches HTTP/1.1\" 200 163 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T08:21:27.683Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T09:22:08.707Z] \"GET /api/v1/branches HTTP/1.1\" 200 140 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T09:22:08.747Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:13:40.607Z] \"POST /api/v1/branches HTTP/1.1\" 200 62 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:22:02.253Z] \"POST /api/v1/branches HTTP/1.1\" 200 64 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:22:29.343Z] \"POST /api/v1/branches HTTP/1.1\" 200 69 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:23:06.360Z] \"POST /api/v1/branches HTTP/1.1\" 200 68 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:23:31.381Z] \"POST /api/v1/branches HTTP/1.1\" 200 79 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T10:23:55.172Z] \"POST /api/v1/branches HTTP/1.1\" 200 77 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T15:56:41.145Z] \"POST /api/v1/branches HTTP/1.1\" 200 77 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T15:58:19.314Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T15:59:03.333Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T15:59:47.741Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:00:46.988Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:01:45.251Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:02:31.837Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:03:11.981Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:03:47.203Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:04:46.191Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:09:47.963Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-11T16:10:15.581Z] \"POST /api/v1/branches HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}

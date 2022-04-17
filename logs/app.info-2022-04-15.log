@@ -1,0 +1,15 @@
+{"level":"info","message":"::1 - [2022-04-15T07:56:33.221Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/services\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T07:56:33.225Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T07:56:34.752Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/users?id=RWB101\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T07:56:35.925Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/services\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T08:33:05.246Z] \"POST /api/v1/visits HTTP/1.1\" 200 56 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:14:22.166Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 79 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:14:53.189Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:20:19.838Z] \"GET /api/v1/payments HTTP/1.1\" 200 47 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:20:26.884Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:24:38.104Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:41:18.552Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:42:43.074Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:43:50.502Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 55 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:46:32.826Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-15T09:47:58.243Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 53 \"-\" \"PostmanRuntime/7.29.0\"\n"}
