@@ -33,23 +33,12 @@ Schema.init({
     values: ['MOMO', 'BK', 'HANDS', 'EQUITY', 'SPENN'],
     defaultValue: 'HANDS',
     trim: true,
-  },
-  createdAt: {
-    type: "TIMESTAMP",
-    defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
-  },
-  updatedAt: {
-    type: "TIMESTAMP",
-    defaultValue: sequelize.literal(
-      "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
-    ),
-  },
+  }
 },
   {
     sequelize,
     modelName: 'payment',
     tableName: 'payment',
-    timestamps: false
   }
 )
 module.exports = Schema

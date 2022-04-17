@@ -25,11 +25,13 @@ Schema.init({
   },
   email: {
     type: DataTypes.STRING,
-    trim: true
+    trim: true,
+    unique: true
   },
   phone: {
     type: DataTypes.STRING,
-    trim: true
+    trim: true,
+    unique: true
   },
   dob: {
     type: DataTypes.STRING,
@@ -37,7 +39,8 @@ Schema.init({
   },
   nid: {
     type: DataTypes.STRING,
-    trim: true
+    trim: true,
+    unique: true
   },
   diagnosis:{
     type: DataTypes.STRING,
@@ -56,13 +59,13 @@ Schema.init({
   {
     sequelize,
     modelName: 'patient',
-    tableName: 'patient'
+    tableName: 'patient',
   }
 )
 
 Schema.hasOne(Location, {
   foreignKey: {
-    name: 'branchId'
+    name: 'patientId'
   },
   onDelete: 'RESTRICT',
   onUpdate: 'RESTRICT',

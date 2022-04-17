@@ -70,6 +70,21 @@ class Validator {
     //--------------APPOINTMENT----------------
 
     CREATE_APPOINTMENT = joi.object().keys({
+        fname: joi.string(),
+        lname: joi.string(),
+        email: joi.string(),
+        phone: joi.string(),
+        dob: joi.string(),
+        nid: joi.string(),
+        location: joi.object().keys({
+            country: joi.string(),
+            province: joi.string(),
+            district: joi.string(),
+            sector: joi.string(),
+            cell: joi.string(),
+            village: joi.string(),
+            createdBy: joi.string(),
+        }),
         startTime: joi.string().required(),
         endTime: joi.string(),
         branchId: joi.string().required(),

@@ -6,7 +6,7 @@ class Utils {
   }
 
   rightNow() {
-    return moment().format("YYYY-MM-DD :: hh:mm:ss");
+    return moment().format("YYYY-MM-DD HH:mm:ss");
   }
   getDate() {
     return moment().format("YYYY-MM-DD");

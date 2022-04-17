@@ -7,17 +7,17 @@ const QueryBuilder = require('../../helpers/queryBuilder')
 
 
 class Service {
-    async save(req){
+    async save(params){
         try {
 
-            const data = new Schema(req.body)
-            const location = new LocationShema(req.body.location)
+            const data = new Schema(params)
 
+            const location = new LocationShema(params.location)
             await data.save();
 
             location.patientId = data.id
             await location.save()
-
+            
             return data;
         } catch (e) {
             console.log(e.message)

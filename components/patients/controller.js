@@ -10,7 +10,7 @@ class Controller extends BaseController {
 
     async save (req, res){
 
-        const data = await new Service().save(req);
+        const data = await new Service().save(req.body);
         if(!_.isUndefined(data) && data.id){
             this.sendResponse(req, res, SUCCESS.CODE, { message: 'server_success.user_created' })
         }else{

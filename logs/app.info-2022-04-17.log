@@ -409,3 +409,87 @@
 {"level":"info","message":"::1 - [2022-04-17T10:44:18.160Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?isitStatus=PENDING\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-04-17T10:44:38.190Z] \"GET /api/v1/branches?visitStatus=PENDING HTTP/1.1\" 200 479 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-04-17T10:44:38.241Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?visitStatus=PENDING\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T11:03:56.266Z] \"GET /api/v1/branches?visitStatus=PENDING HTTP/1.1\" 200 479 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T11:03:56.341Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?visitStatus=PENDING\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T11:04:42.454Z] \"GET /api/v1/branches?visitStatus=PENDING HTTP/1.1\" 200 479 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T11:04:42.525Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?visitStatus=PENDING\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:23:09.902Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 141 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:31:18.711Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:37:59.362Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:40:49.045Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:42:28.871Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:42:45.954Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T13:44:45.974Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:01:54.665Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:08:16.321Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:09:12.759Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 134 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:11:05.636Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 126 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:25:05.554Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:28:43.300Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:30:39.304Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:39:18.017Z] \"POST /api/v1/appointments HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:40:28.548Z] \"POST /api/v1/appointments HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:15.580Z] \"GET /api/v1/branches?search=RW01&byLocation=true HTTP/1.1\" 200 497 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:15.624Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?search=RW01&byLocation=true\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:26.253Z] \"GET /api/v1/branches?search=RW01 HTTP/1.1\" 200 497 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:26.296Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?search=RW01\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:41.857Z] \"GET /api/v1/branches?search=RW01&appointment=true HTTP/1.1\" 200 1439 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T14:43:41.905Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?search=RW01&appointment=true\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:09:09.900Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:10:36.793Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:13:08.387Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:29:56.721Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:34:35.551Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:35:02.933Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:36:09.694Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:43:25.430Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:44:35.861Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T15:50:34.136Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:24:09.007Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:25:01.589Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:26:20.912Z] \"GET /api/v1/appointments HTTP/1.1\" 200 120 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:26:26.984Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:30:57.747Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:33:40.739Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:35:57.636Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:38:02.024Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:38:16.162Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:40:27.992Z] \"GET /api/v1/appointments HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:43:58.142Z] \"GET /api/v1/appointments HTTP/1.1\" 200 310 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:44:29.107Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:46:17.618Z] \"GET /api/v1/appointments HTTP/1.1\" 200 320 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:47:56.757Z] \"GET /api/v1/appointments HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:48:24.047Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:49:35.039Z] \"POST /api/v1/appointments HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:50:42.285Z] \"POST /api/v1/appointments HTTP/1.1\" 400 1098 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:52:00.419Z] \"POST /api/v1/users/ HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:52:36.951Z] \"POST /api/v1/users/ HTTP/1.1\" 200 210 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:52:46.072Z] \"POST /api/v1/users/ HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:54:46.897Z] \"POST /api/v1/users/ HTTP/1.1\" 200 125 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:55:37.515Z] \"GET /api/v1/users HTTP/1.1\" 200 1011 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:56:34.119Z] \"GET /api/v1/users HTTP/1.1\" 200 1011 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:57:48.002Z] \"GET /api/v1/users HTTP/1.1\" 200 1011 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:58:24.275Z] \"GET /api/v1/users HTTP/1.1\" 200 1011 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T16:59:04.310Z] \"GET /api/v1/users HTTP/1.1\" 200 1011 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:03:51.096Z] \"GET /api/v1/users HTTP/1.1\" 200 114 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:03:59.859Z] \"POST /api/v1/users/ HTTP/1.1\" 200 125 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:04:42.536Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:05:28.346Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:07:33.287Z] \"GET /api/v1/users HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:07:44.066Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:08:06.419Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:08:51.731Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:09:49.313Z] \"GET /api/v1/users HTTP/1.1\" 200 563 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:19:45.172Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:21:13.350Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:21:35.181Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:23:13.940Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:24:12.008Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:30:26.745Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T17:35:51.705Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:12:52.180Z] \"POST /api/v1/appointments HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:14:24.622Z] \"POST /api/v1/appointments HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:15:36.713Z] \"POST /api/v1/appointments HTTP/1.1\" 200 131 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:17:07.357Z] \"POST /api/v1/appointments HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:23:25.888Z] \"GET /api/v1/branches?appointment=true HTTP/1.1\" 200 1646 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T18:23:25.951Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?appointment=true\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}

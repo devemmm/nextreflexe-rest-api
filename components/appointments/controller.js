@@ -10,7 +10,7 @@ class Controller extends BaseController {
 
     async save (req, res){
 
-        const data = await new Service().save(req.body);
+        const data = await new Service().save(req);
         if(!_.isUndefined(data) && data.id){
             this.sendResponse(req, res, SUCCESS.CODE, { message: 'server_success.appointment_booked' })
         }else{

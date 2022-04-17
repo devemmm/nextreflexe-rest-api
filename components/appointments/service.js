@@ -1,23 +1,52 @@
 const Schema = require('./schema')
+const PatientService = require('../patients/service')
 const { errLogger } = require('../../config/logger')
 const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
+const Constants = require('../../libs/constant')
+const moment = require('moment')
 
 
 class Service {
-    async save(params){
-        const data = new Schema(params)
-        return await data.save().catch((e)=>{
+    async save(req){
+        req.body.password = Constants.user.PASSWORD;
+        req.body.userId = req.body.doctorId;
+        req.body.startTime = moment(req.body.startTime).format("YYYY-MM-DD HH:mm:ss")
+        req.body.endTime = moment(req.body.startTime).add(1.5, 'hours').format("YYYY-MM-DD HH:mm:ss")
+                   
+        try {
+            const { account } = req.query;
+
+            if(!_.isUndefined(account) && account === "false"){
+                const patient = await new PatientService().save(req.body)
+
+                if(!_.isUndefined(patient) && patient.id){
+
+                    req.body.patientId = patient.id;
+                    const appointment = new Schema(req.body)
+
+                    //send message to customer
+        
+                    return  await appointment.save();
+                }
+                return false;
+            }else{
+                const appointment = new Schema(req.body)
+                
+                //send message to customer
+                return await appointment.save();
+            }
+        } catch (error) {
             errLogger.error(e)
-        });
+            return false
+        }
     }
 
     async list(req, skipPaging = false, isActiveList = false){
         try {
         
             const metadata = await QueryBuilder.LIST_APPOINTMENT(req)
-
             return { appointment: metadata, rows: metadata.length}
         } catch (error) {
             errLogger.error(e)

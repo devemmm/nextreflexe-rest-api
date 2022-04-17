@@ -57,4 +57,6 @@ Location.belongsTo(Schema)
 Appointment.belongsTo(Schema)
 Visit.belongsTo(Schema)
 
+
+
 module.exports = Schema;

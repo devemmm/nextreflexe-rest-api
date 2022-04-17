@@ -171,6 +171,7 @@ class QueryBuilder {
       }
 
       const [metadata ] = await sequelize.query(db_qery)
+
       return  metadata
     }
 
@@ -194,6 +195,11 @@ class QueryBuilder {
       let db_query = "SELECT * FROM appointment;";
 
       const [metadata ] = await sequelize.query(db_query)
+      
+      const moment = require('moment')
+
+      console.log(moment(metadata[0].createdAt).format("YYYY-MM-DD HH:mm:ss"))
+
       return  metadata
     }
 

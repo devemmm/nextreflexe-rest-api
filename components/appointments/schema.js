@@ -27,7 +27,7 @@ Schema.init({
   {
     sequelize,
     modelName: 'appointment',
-    tableName: 'appointment'
+    tableName: 'appointment',
   }
 )
 
