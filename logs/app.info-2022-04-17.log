@@ -493,3 +493,25 @@
 {"level":"info","message":"::1 - [2022-04-17T18:17:07.357Z] \"POST /api/v1/appointments HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
 {"level":"info","message":"::1 - [2022-04-17T18:23:25.888Z] \"GET /api/v1/branches?appointment=true HTTP/1.1\" 200 1646 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-04-17T18:23:25.951Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?appointment=true\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:43:50.035Z] \"GET /api/v1/appointments HTTP/1.1\" 200 848 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:48:37.170Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:48:55.180Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:50:36.034Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:51:42.581Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:53:38.806Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:54:39.530Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:55:46.973Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:56:15.496Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:56:38.020Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:59:10.375Z] \"POST /api/v1/patients HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T20:59:38.626Z] \"POST /api/v1/patients HTTP/1.1\" 200 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:01:32.204Z] \"POST /api/v1/patients HTTP/1.1\" 200 224 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:03:46.283Z] \"POST /api/v1/patients HTTP/1.1\" 200 225 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:05:17.835Z] \"POST /api/v1/patients HTTP/1.1\" 500 225 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:05:55.177Z] \"POST /api/v1/patients HTTP/1.1\" 500 225 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:06:43.250Z] \"POST /api/v1/patients HTTP/1.1\" 500 220 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:08:56.791Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:08:58.528Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:09:42.297Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:10:45.277Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-17T21:11:47.630Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 225 \"-\" \"PostmanRuntime/7.29.0\"\n"}

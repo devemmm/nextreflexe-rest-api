@@ -17,11 +17,11 @@ class Service {
 
             location.patientId = data.id
             await location.save()
-            
+
             return data;
         } catch (e) {
-            console.log(e.message)
             errLogger.error(e)
+            return { code: e.parent.code, message: e.parent.sqlMessage }
         }
     }
 

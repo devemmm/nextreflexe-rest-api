@@ -70,6 +70,10 @@ class Controller {
       response.message = error.message
     }
 
+    if (_.has(error, 'error')){
+      response.error = error.error
+    }
+
     const logData = Controller.formatLogs(req, response)
     errLogger.error(logData)
 
@@ -106,7 +110,7 @@ class Controller {
     } else {
       this.response = Controller.successResponse(resToSend)
     }
-    return res.json(this.response)
+    return res.status(type).json(this.response)
   }
 
   permittedParams (params, acceptedKeys) {

@@ -1,4 +1,5 @@
 const moment = require("moment");
+const Constant = require('../libs/constant')
 
 class Utils {
   constructor() {
@@ -6,7 +7,7 @@ class Utils {
   }
 
   rightNow() {
-    return moment().format("YYYY-MM-DD HH:mm:ss");
+    return moment().format(Constant.MOMENT_TIME_FOMART);
   }
   getDate() {
     return moment().format("YYYY-MM-DD");

@@ -14,7 +14,7 @@ class Controller extends BaseController {
         if(!_.isUndefined(data) && data.id){
             this.sendResponse(req, res, SUCCESS.CODE, { message: 'server_success.appointment_booked' })
         }else{
-            this.sendResponse(req, res, ERROR.CODE, { message: 'server_error.try_again' })
+            this.sendResponse(req, res, ERROR.CODE, { message: 'server_error.try_again', error: data })
         }
     }
 

@@ -12,15 +12,15 @@ class Service {
     async save(req){
         req.body.password = Constants.user.PASSWORD;
         req.body.userId = req.body.doctorId;
-        req.body.startTime = moment(req.body.startTime).format("YYYY-MM-DD HH:mm:ss")
-        req.body.endTime = moment(req.body.startTime).add(1.5, 'hours').format("YYYY-MM-DD HH:mm:ss")
+        req.body.startTime = moment(req.body.startTime).format(Constants.MOMENT_TIME_FOMART)
+        req.body.endTime = moment(req.body.startTime).add(1.5, 'hours').format(Constants.MOMENT_TIME_FOMART)
                    
         try {
             const { account } = req.query;
 
             if(!_.isUndefined(account) && account === "false"){
                 const patient = await new PatientService().save(req.body)
-
+                
                 if(!_.isUndefined(patient) && patient.id){
 
                     req.body.patientId = patient.id;
@@ -30,7 +30,7 @@ class Service {
         
                     return  await appointment.save();
                 }
-                return false;
+                return patient;
             }else{
                 const appointment = new Schema(req.body)
                 

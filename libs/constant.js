@@ -25,7 +25,10 @@ class Constant{
 
     static user = {
         PASSWORD: "User123"
-    }
+    };
+
+    static MOMENT_TIME_FOMART= "YYYY-MM-DD HH:mm:ss"
+
 }
 
 module.exports = Constant;
