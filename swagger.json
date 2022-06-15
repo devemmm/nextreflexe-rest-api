@@ -1,0 +1,596 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "@nextreflelxe_api --version-2",
+        "description": "medical software system",
+        "version": "2.0.0",
+        "contact": {
+            "name": "devemm",
+            "email": "emmanuel@gennxttechsol.com"
+        }
+    },
+    "tags": [
+        {
+            "name": "Branch",
+            "description": "Branch Operations"
+        },
+        {
+            "name": "Service",
+            "description": "Service Operations"
+        },
+        {
+            "name": "Appointment",
+            "description": "Appointment Operations"
+        },
+        {
+            "name": "Patient",
+            "description": "Patient Operations"
+        },
+        {
+            "name": "Payment",
+            "description": "Payment Operations"
+        },
+        {
+            "name": "Visit",
+            "description": "Visit Operations"
+        },
+        {
+            "name": "User",
+            "description": "User Operations"
+        }
+    ],
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "name": "DEV"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "index",
+                "description": "api status",
+                "operationId": "getHome",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/branches": {
+            "get": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "branch list",
+                "description": "get a list of all branch",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/branches?visit={visit}&appointment={appointment}": {
+            "get": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "branch list including ...",
+                "description": "get a list of all branch including the appointment, visit, etc",
+                "parameters": [
+                    {
+                        "name": "visit",
+                        "required": true,
+                        "in": "path",
+                        "type": "boolean",
+                        "description": "enable to display visit"
+                    },
+                    {
+                        "name": "appointment",
+                        "required": true,
+                        "in": "path",
+                        "type": "boolean",
+                        "description": "enable to display appointment"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/branches/": {
+            "post": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "create a new Branch",
+                "description": "create a new branch",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Service info",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "managerId": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "required": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "province": {
+                                            "type": "string"
+                                        },
+                                        "district": {
+                                            "type": "string"
+                                        },
+                                        "sector": {
+                                            "type": "string"
+                                        },
+                                        "cell": {
+                                            "type": "string"
+                                        },
+                                        "village": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/branches/{id}": {
+            "patch": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "update branch info",
+                "description": "update branch info",
+                "operationId": "getHome",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "branch_id __unique__identifier"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Service info",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "managerId": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "required": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "province": {
+                                            "type": "string"
+                                        },
+                                        "district": {
+                                            "type": "string"
+                                        },
+                                        "sector": {
+                                            "type": "string"
+                                        },
+                                        "cell": {
+                                            "type": "string"
+                                        },
+                                        "village": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/branches/{branchId}": {
+            "delete": {
+                "tags": [
+                    "Branch"
+                ],
+                "summary": "delete service",
+                "description": "delete service by id",
+                "parameters": [
+                    {
+                        "name": "branchId",
+                        "required": true,
+                        "in": "path",
+                        "description": "branch_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/services": {
+            "get": {
+                "tags": [
+                    "Service"
+                ],
+                "summary": "Services",
+                "description": "get all available service",
+                "operationId": "getHome",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Service_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/services?id={id}": {
+            "get": {
+                "tags": [
+                    "Service"
+                ],
+                "summary": "get service",
+                "description": "get single service by id",
+                "operationId": "getHome",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Service_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/services/": {
+            "post": {
+                "tags": [
+                    "Service"
+                ],
+                "summary": "create service",
+                "description": "Services available",
+                "operationId": "getHome",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Service info",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "createdBy": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/services/{id}": {
+            "patch": {
+                "tags": [
+                    "Service"
+                ],
+                "summary": "update service",
+                "description": "update a single service",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "type": "integer",
+                        "description": "Service id",
+                        "required": "true"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Service info",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/services/{serviceId}": {
+            "delete": {
+                "tags": [
+                    "Service"
+                ],
+                "summary": "delete service",
+                "description": "delete service by id",
+                "parameters": [
+                    {
+                        "name": "serviceId",
+                        "required": true,
+                        "in": "path",
+                        "description": "Service_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Register": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "Login": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "Article": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                }
+            }
+        },
+        "Comment": {
+            "type": "object",
+            "properties": {
+                "sender": {
+                    "type": "string"
+                },
+                "comment": {
+                    "type": "string"
+                }
+            }
+        },
+        "Queries": {
+            "type": "object",
+            "properties": {
+                "senderName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "subject": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                }
+            }
+        },
+        "Service": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

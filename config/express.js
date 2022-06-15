@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-const swaggerUi = require('swagger-ui-express')
-const swaggerDocument = require('./swagger')
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("../swagger.json")
 require('../config/database')
 const api = require('../components')
 const { logger } = require('./logger')
@@ -29,8 +29,8 @@ app.use(
 )
 
 app.use(express.json())
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/', api)
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 // catch 404 and forward to error handler
 app.use((req, res) => {
@@ -39,5 +39,6 @@ app.use((req, res) => {
     message: 'requested source not found'
   })
 })
+
 
 module.exports = app
