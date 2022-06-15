@@ -86,3 +86,78 @@
 {"level":"info","message":"::1 - [2022-04-24T15:23:05.785Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/visits?branchId=RW01\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-04-24T15:23:41.943Z] \"GET /api/v1/visits?patientId=12 HTTP/1.1\" 200 374 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-04-24T15:23:41.993Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/visits?patientId=12\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T15:39:47.404Z] \"GET /api/v1/visits HTTP/1.1\" 200 374 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T15:44:07.772Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T15:45:03.685Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:13:40.806Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 142 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:15:23.988Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:15:45.357Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:19:34.966Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:19:50.206Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:20:15.416Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:20:37.718Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:20:55.342Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:21:30.603Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:21:39.288Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:27:29.275Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:27:51.659Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:28:22.488Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:29:28.917Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:29:51.837Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:30:14.953Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:30:21.148Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:30:29.558Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:31:25.887Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:31:46.244Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:32:08.125Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:32:11.710Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:32:35.824Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:32:51.812Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:33:07.583Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:34:57.449Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:35:36.742Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:36:19.744Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:37:31.094Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:37:58.486Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:38:35.098Z] \"POST /api/v1/payments/ HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:38:49.747Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:39:56.420Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:49:58.592Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:50:34.480Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:50:49.523Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:52:00.643Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:52:42.834Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:53:08.380Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:53:30.659Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:53:54.478Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:54:10.449Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:54:29.725Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:54:42.090Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:55:44.046Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T17:56:30.289Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:00:12.068Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:00:55.154Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:04:03.736Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:05:28.869Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:07:31.670Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:09:15.054Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:09:44.658Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:10:48.746Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:11:08.149Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:14:11.823Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:15:00.607Z] \"POST /api/v1/payments/ HTTP/1.1\" 500 123 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:16:24.010Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 125 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:18:21.551Z] \"POST /api/v1/payments/ HTTP/1.1\" 200 125 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:22:17.063Z] \"POST /api/v1/payments HTTP/1.1\" 500 143 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:39:15.823Z] \"GET /api/v1/branches HTTP/1.1\" 200 882 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:39:15.919Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:39:48.622Z] \"GET /api/v1/branches?id=RW01 HTTP/1.1\" 200 476 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:39:48.671Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?id=RW01\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:40:03.524Z] \"GET /api/v1/branches?id=RW01&visit=true&appointment=true HTTP/1.1\" 200 1515 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:40:03.564Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?id=RW01&visit=true&appointment=true\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:42:07.123Z] \"GET /api/v1/branches?search=branch HTTP/1.1\" 200 882 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:42:07.178Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?search=branch\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:42:19.610Z] \"GET /api/v1/branches?search=branch%201 HTTP/1.1\" 200 497 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T18:42:19.660Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches?search=branch%201\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T19:28:46.311Z] \"GET /api/v1/branches HTTP/1.1\" 200 882 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-24T19:28:46.362Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/api/v1/branches\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}

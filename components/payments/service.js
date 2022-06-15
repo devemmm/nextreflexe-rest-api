@@ -1,55 +1,84 @@
-const Schema = require('./schema')
-const { errLogger } = require('../../config/logger')
-const _ = require('lodash')
-const sequelize = require('../../config/database')
-const QueryBuilder = require('../../helpers/queryBuilder')
-
+const Schema = require("./schema");
+const { errLogger } = require("../../config/logger");
+const _ = require("lodash");
+const sequelize = require("../../config/database");
+const QueryBuilder = require("../../helpers/queryBuilder");
+const Constant = require("../../libs/constant");
 
 class Service {
-    async save(req){
-        const data = new Schema(req.body)
+  async save(req) {
+    try {
+      const reqData = req.body;
+      const { patientId, status, paymentMethod } = reqData;
+      let data = new Schema(reqData);
 
-        console.log(data)
-        return  data.save().catch((e)=>{
-            errLogger.error(e)
-        })
-    }
+      const payment = await Schema.findAll({ patientId });
 
-    async list(req, skipPaging = false, isActiveList = false){
-        try {
-        
-            const metadata = await QueryBuilder.LIST_PAYMENT(req)
-
-            return { patients: metadata, rows: metadata.length}
-        } catch (error) {
-            errLogger.error(e)
+      if (payment.length === 0) {
+        if (_.isUndefined(reqData.totalSession)) {
+          throw new Error(Constant.PAYMENT.ERROR.SESSION);
         }
-    }
 
+        data.status = reqData.status;
+        data.totalSession = reqData.totalSession;
+        data.remainsSession = reqData.totalSession - 1;
 
-    async update(params){
-        try {
-
-            const query = "UPDATE payment SET createdBy='Emmanuell' where branchId='RW01';"
-            const [results, metadata] = await sequelize.query(query);
-
-            if( metadata.affectedRows > 0 && metadata.changedRows > 0){
-                return {resullt: 'branch_updated_successfull'}
-            }
-
-            return {resullt: 'something_went_wrong'};
-        } catch (error) {
-            errLogger.error(e)
+        if (reqData.status !== Constant.PAYMENT.STATUS.PAY) {
+          throw new Error(Constant.PAYMENT.ERROR.UNPAID);
         }
-    }
+        data.totalPayment = reqData.totalSession * reqData.sessionPrice;
+        data.pay = reqData.pay;
+        data.debit = reqData.pay - reqData.sessionPrice;
+        data.credit = 0;
 
-    async delete(params){
-        try {
-            return {data: []}
-        } catch (error) {
-            errLogger.error(e)
-        }
+        delete data.visitId;
+
+        return await data.save();
+      } else {
+        console.log([]);
+
+        return [];
+      }
+
+      return data;
+    } catch (e) {
+      errLogger.error(e);
     }
+  }
+
+  async list(req, skipPaging = false, isActiveList = false) {
+    try {
+      const metadata = await QueryBuilder.LIST_PAYMENT(req);
+
+      return { patients: metadata, rows: metadata.length };
+    } catch (error) {
+      errLogger.error(e);
+    }
+  }
+
+  async update(params) {
+    try {
+      const query =
+        "UPDATE payment SET createdBy='Emmanuell' where branchId='RW01';";
+      const [results, metadata] = await sequelize.query(query);
+
+      if (metadata.affectedRows > 0 && metadata.changedRows > 0) {
+        return { resullt: "branch_updated_successfull" };
+      }
+
+      return { resullt: "something_went_wrong" };
+    } catch (error) {
+      errLogger.error(e);
+    }
+  }
+
+  async delete(params) {
+    try {
+      return { data: [] };
+    } catch (error) {
+      errLogger.error(e);
+    }
+  }
 }
 
 module.exports = Service;

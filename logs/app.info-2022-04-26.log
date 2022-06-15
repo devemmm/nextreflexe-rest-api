@@ -1,0 +1,2 @@
+{"level":"info","message":"::1 - [2022-04-26T16:04:16.478Z] \"GET /api/v1/branches HTTP/1.1\" 200 882 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-04-26T16:08:06.730Z] \"POST /api/v1/appointments?account=false HTTP/1.1\" 500 220 \"-\" \"PostmanRuntime/7.29.0\"\n"}
