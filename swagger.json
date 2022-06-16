@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "@nextreflelxe_api --version-2",
+        "title": "@nextreflexe_api --version-2",
         "description": "medical software system",
         "version": "2.0.0",
         "contact": {
@@ -36,14 +36,28 @@
         },
         {
             "name": "User",
-            "description": "User Operations"
+            "description": "The functionality of the user is under development cycle"
         }
     ],
     "servers": [
         {
             "url": "http://localhost:3000",
             "name": "DEV"
+        },
+        {
+            "url": "nextreflexe-api@nextreflexe.com",
+            "name": "PRO"
         }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
     ],
     "paths": {
         "/": {
@@ -313,9 +327,8 @@
                 "tags": [
                     "Service"
                 ],
-                "summary": "Services",
+                "summary": "available Service",
                 "description": "get all available service",
-                "operationId": "getHome",
                 "parameters": [
                     {
                         "name": "id",
@@ -378,7 +391,6 @@
                 ],
                 "summary": "create service",
                 "description": "Services available",
-                "operationId": "getHome",
                 "parameters": [
                     {
                         "name": "body",
@@ -496,72 +508,685 @@
                     }
                 }
             }
+        },
+        "/api/v1/appointments": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "list of appointments",
+                "description": "get all appointments",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "appointment_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments/": {
+            "post": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "make appointment when you have account",
+                "description": "create appointment",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "appointment details",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "startTime": {
+                                    "type": "string"
+                                },
+                                "branchId": {
+                                    "type": "string"
+                                },
+                                "patientId": {
+                                    "type": "string"
+                                },
+                                "doctorId": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?": {
+            "post": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "make appointment for unknow user",
+                "description": "create appointment",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "appointment details",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "fname": {
+                                    "type": "string"
+                                },
+                                "lname": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "dob": {
+                                    "type": "string"
+                                },
+                                "nid": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "required": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "province": {
+                                            "type": "string"
+                                        },
+                                        "district": {
+                                            "type": "string"
+                                        },
+                                        "sector": {
+                                            "type": "string"
+                                        },
+                                        "cell": {
+                                            "type": "string"
+                                        },
+                                        "village": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "startTime": {
+                                    "type": "string"
+                                },
+                                "branchId": {
+                                    "type": "string"
+                                },
+                                "doctorId": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/patients": {
+            "get": {
+                "tags": [
+                    "Patient"
+                ],
+                "summary": "list of patient",
+                "description": "list of patient",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/patients/": {
+            "post": {
+                "tags": [
+                    "Patient"
+                ],
+                "summary": "register new patient",
+                "description": "register patient, this route it will be used by branch admin",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "most information in this body it will come from the appointment he /she made",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "fname": {
+                                    "type": "string"
+                                },
+                                "lname": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "dob": {
+                                    "type": "string"
+                                },
+                                "nid": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "required": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "province": {
+                                            "type": "string"
+                                        },
+                                        "district": {
+                                            "type": "string"
+                                        },
+                                        "sector": {
+                                            "type": "string"
+                                        },
+                                        "cell": {
+                                            "type": "string"
+                                        },
+                                        "village": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "startTime": {
+                                    "type": "string"
+                                },
+                                "branchId": {
+                                    "type": "string"
+                                },
+                                "doctorId": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/payments": {
+            "get": {
+                "tags": [
+                    "Payment"
+                ],
+                "summary": "Directly payment",
+                "description": "Directly payment",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "patientId": {
+                                    "type": "integer"
+                                },
+                                "serviceId": {
+                                    "type": "integer"
+                                },
+                                "sessionPrice": {
+                                    "type": "integer"
+                                },
+                                "pay": {
+                                    "type": "integer"
+                                },
+                                "totalSession": {
+                                    "type": "integer"
+                                },
+                                "paymentMethod": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/payments/": {
+            "get": {
+                "tags": [
+                    "Payment"
+                ],
+                "summary": "Payment made before",
+                "description": "Payment made before",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "patientId": {
+                                    "type": "integer"
+                                },
+                                "serviceId": {
+                                    "type": "integer"
+                                },
+                                "sessionPrice": {
+                                    "type": "integer"
+                                },
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/visits": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "start visit for patient",
+                "description": "start visit for patient",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/visits?": {
+            "post": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "start visit visit for patient who haven't appointment",
+                "description": "start visit visit for patient who haven't appointment",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "endTime": {
+                                    "type": "string"
+                                },
+                                "branchId": {
+                                    "type": "string"
+                                },
+                                "patientId": {
+                                    "type": "integer"
+                                },
+                                "doctorId": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/visits/": {
+            "post": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "list of visits",
+                "description": "list of visits",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "appointmentId": {
+                                    "type": "integer"
+                                },
+                                "doctorId": {
+                                    "type": "string"
+                                },
+                                "time": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/users": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "list of users --route for system admin",
+                "description": "list of users",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/users?id={id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "get single user info --route for system admin",
+                "description": "list of users",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": "true"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/users/": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "create user",
+                "description": "list of users",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": "true",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "fname": {
+                                    "type": "string"
+                                },
+                                "lname": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "phone": {
+                                    "type": "string"
+                                },
+                                "dob": {
+                                    "type": "string"
+                                },
+                                "nid": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                },
+                                "location": {
+                                    "required": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "province": {
+                                            "type": "string"
+                                        },
+                                        "district": {
+                                            "type": "string"
+                                        },
+                                        "sector": {
+                                            "type": "string"
+                                        },
+                                        "cell": {
+                                            "type": "string"
+                                        },
+                                        "village": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
         }
     },
     "definitions": {
-        "Register": {
+        "Branch": {
             "type": "object",
             "properties": {
-                "username": {
+                "id": {
                     "type": "string"
                 },
-                "email": {
+                "name": {
                     "type": "string"
                 },
-                "password": {
-                    "type": "string"
-                }
-            }
-        },
-        "Login": {
-            "type": "object",
-            "properties": {
-                "email": {
-                    "type": "string"
-                },
-                "password": {
-                    "type": "string"
-                }
-            }
-        },
-        "Article": {
-            "type": "object",
-            "properties": {
-                "title": {
-                    "type": "string"
-                },
-                "content": {
-                    "type": "string"
-                }
-            }
-        },
-        "Comment": {
-            "type": "object",
-            "properties": {
-                "sender": {
-                    "type": "string"
-                },
-                "comment": {
-                    "type": "string"
-                }
-            }
-        },
-        "Queries": {
-            "type": "object",
-            "properties": {
-                "senderName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                },
-                "subject": {
-                    "type": "string"
-                },
-                "message": {
+                "managerId": {
                     "type": "string"
                 },
                 "location": {
+                    "type": "object",
+                    "properties": {
+                        "country": {
+                            "type": "string"
+                        },
+                        "province": {
+                            "type": "string"
+                        },
+                        "district": {
+                            "type": "string"
+                        },
+                        "sector": {
+                            "type": "string"
+                        },
+                        "cell": {
+                            "type": "string"
+                        },
+                        "village": {
+                            "type": "string"
+                        },
+                        "createdBy": {
+                            "type": "string"
+                        },
+                        "createdAt": {
+                            "type": "string"
+                        },
+                        "updatedAt": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
                     "type": "string"
                 }
             }
@@ -590,6 +1215,258 @@
                 "updatedAt": {
                     "type": "string"
                 }
+            },
+            "example": {
+                "id": 1,
+                "name": "Kunga Therapy",
+                "description": "Kunga Therapy",
+                "status": "active",
+                "createdBy": "Emmanuel",
+                "createdAt": "2022-04-14T18:21:02.000Z",
+                "updatedAt": "2022-04-14T18:21:02.000Z"
+            }
+        },
+        "Appointment": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "startTime": {
+                    "type": "string"
+                },
+                "endTime": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "patientId": {
+                    "type": "integer"
+                },
+                "branchId": {
+                    "type": "string"
+                },
+                "doctorId": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "id": 3,
+                "startTime": "2022-04-20 15:30:00",
+                "endTime": "2022-04-20 17:00:00",
+                "status": "PENDING",
+                "createdAt": "2022-04-17T18:12:52.000Z",
+                "updatedAt": "2022-04-17T18:12:52.000Z",
+                "patientId": 12,
+                "branchId": "RW01",
+                "doctorId": "RWB101",
+                "userId": "RWB101"
+            }
+        },
+        "Patient": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "id": 1,
+                "name": "Kunga Therapy",
+                "description": "Kunga Therapy",
+                "status": "active",
+                "createdBy": "Emmanuel",
+                "createdAt": "2022-04-14T18:21:02.000Z",
+                "updatedAt": "2022-04-14T18:21:02.000Z"
+            }
+        },
+        "Payment": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "createdBy": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "id": 1,
+                "name": "Kunga Therapy",
+                "description": "Kunga Therapy",
+                "status": "active",
+                "createdBy": "Emmanuel",
+                "createdAt": "2022-04-14T18:21:02.000Z",
+                "updatedAt": "2022-04-14T18:21:02.000Z"
+            }
+        },
+        "Visit": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "startTime": {
+                    "type": "string"
+                },
+                "endTime": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "createdAt": {
+                    "type": "string"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "appointmentId": {
+                    "type": "integer"
+                },
+                "patientId": {
+                    "type": "integer"
+                },
+                "branchId": {
+                    "type": "string"
+                },
+                "doctorId": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "id": 1,
+                "startTime": "2022-04-24 16:54:12",
+                "endTime": "2022-04-24 17:24:12",
+                "status": "PENDING",
+                "createdAt": "2022-04-24T12:54:12.000Z",
+                "updatedAt": "2022-04-24T12:54:12.000Z",
+                "appointmentId": 4,
+                "patientId": 12,
+                "branchId": "RW01",
+                "doctorId": "RWB101",
+                "userId": "RWB101"
+            }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "fname": {
+                    "type": "string"
+                },
+                "lname": {
+                    "type": "string"
+                },
+                "nid": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "dob": {
+                    "type": "string"
+                },
+                "user_createdAt": {
+                    "type": "string"
+                },
+                "user_updatedAt": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "province": {
+                    "type": "string"
+                },
+                "district": {
+                    "type": "string"
+                },
+                "sector": {
+                    "type": "string"
+                },
+                "cell": {
+                    "type": "string"
+                },
+                "village": {
+                    "type": "string"
+                },
+                "location_createdAt": {
+                    "type": "string"
+                },
+                "location_updatedAt": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "id": "RWB102",
+                "fname": "Emmanuel",
+                "lname": "NTIVUGURUZWA",
+                "nid": "1199887777889",
+                "email": "primaryemmyy@gmail.com",
+                "phone": "0788596841",
+                "dob": "1-1-1998",
+                "user_createdAt": "2022-04-17T17:03:59.000Z",
+                "user_updatedAt": "2022-04-17T17:03:59.000Z",
+                "country": "RWANDA",
+                "province": "KIGALI",
+                "district": "GASABO",
+                "sector": "REMERA",
+                "cell": "RUKIRI II",
+                "village": "REBERO",
+                "location_createdAt": "2022-04-17T15:03:59.000Z",
+                "location_updatedAt": "2022-04-17T15:03:59.000Z"
             }
         }
     }
