@@ -1,7 +1,7 @@
 const _ = require("lodash");
 const BaseController = require("../base/controller");
 const Service = require("./service");
-const { SUCCESS, ERROR, STATUS, ROLES } = require("../../libs/constants");
+const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
 
 class Controller extends BaseController {
   constructor() {
@@ -9,46 +9,72 @@ class Controller extends BaseController {
   }
 
   async save(req, res) {
+
+    const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+    if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+      return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+    }
+
     const data = await new Service().save(req);
     if (!_.isUndefined(data) && data.id) {
-      this.sendResponse(req, res, SUCCESS.CODE, {
+      this.sendResponse(req, res, RESPONSES.SUCCESS, {
         message: "server_success.visit_started",
       });
     } else {
-      this.sendResponse(req, res, ERROR.CODE, {
+      this.sendResponse(req, res, RESPONSES.ERROR, {
         message: "server_error.try_again",
       });
     }
   }
 
   async list(req, res) {
+    const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+    if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+      return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+    }
+
     const data = await new Service().list(req);
     if (!_.isUndefined(data)) {
-      this.sendResponse(req, res, SUCCESS.CODE, { data });
+      this.sendResponse(req, res, RESPONSES.SUCCESS, { data });
     } else {
-      this.sendResponse(req, res, ERROR.CODE, {
+      this.sendResponse(req, res, RESPONSES.ERROR, {
         message: "server_error.try_again",
       });
     }
   }
 
   async update(req, res) {
+    const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+    if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+      return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+    }
+
     const data = await new Service().update(req.body);
     if (!_.isUndefined(data)) {
-      this.sendResponse(req, res, SUCCESS.CODE, { data });
+      this.sendResponse(req, res, RESPONSES.SUCCESS, { data });
     } else {
-      this.sendResponse(req, res, ERROR.CODE, {
+      this.sendResponse(req, res, RESPONSES.ERROR, {
         message: "server_error.try_again",
       });
     }
   }
 
   async delete(req, res) {
+    const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+    if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+      return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+    }
+
+
     const data = await new Service().delete(req.body);
     if (!_.isUndefined(data)) {
-      this.sendResponse(req, res, SUCCESS.CODE, { data });
+      this.sendResponse(req, res, RESPONSES.SUCCESS, { data });
     } else {
-      this.sendResponse(req, res, ERROR.CODE, {
+      this.sendResponse(req, res, RESPONSES.ERROR, {
         message: "server_error.try_again",
       });
     }

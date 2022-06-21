@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const BaseController = require('../base/controller')
 const Service = require('./service')
-const { SUCCESS, ERROR, STATUS, ROLES } = require('../../libs/constants')
 const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
 
 class Controller extends BaseController {

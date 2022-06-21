@@ -2,8 +2,7 @@ const _ = require('lodash')
 const BaseController = require('../base/controller')
 const Service = require('./service')
 const { errLogger } = require('../../config/logger')
-const { SUCCESS, ERROR, STATUS, ROLES } = require('../../libs/constants')
-const { responses: RESPONSES } = require('../../libs/constant')
+const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
 
 class Controller extends BaseController {
     constructor() {
@@ -11,6 +10,12 @@ class Controller extends BaseController {
     }
 
     async save(req, res) {
+
+        const ROUTE_PRIVILAGE = [PRIVILAGES.SUPER_ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        }
 
         const data = await new Service().save(req.body);
         if (!_.isUndefined(data) && data.id) {
@@ -24,6 +29,12 @@ class Controller extends BaseController {
 
     async list(req, res) {
 
+        const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        }
+
         const data = await new Service().list({ req })
         if (!_.isUndefined(data)) {
             this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
@@ -34,6 +45,12 @@ class Controller extends BaseController {
 
     async update(req, res) {
 
+        const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        }
+
         const data = await new Service().update(req.body)
         if (!_.isUndefined(data)) {
             this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
@@ -43,6 +60,12 @@ class Controller extends BaseController {
     }
 
     async delete(req, res) {
+
+        const ROUTE_PRIVILAGE = [PRIVILAGES.USER.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        }
 
         const data = await new Service().delete(req.body)
         if (!_.isUndefined(data)) {

@@ -91,12 +91,19 @@
                 ],
                 "summary": "branch list",
                 "description": "get a list of all branch",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
                     },
                     "401": {
-                        "description": "Authorization_error"
+                        "description": "Unauthorized Request"
                     },
                     "404": {
                         "description": "Server_down"
@@ -115,6 +122,11 @@
                 "summary": "branch list including ...",
                 "description": "get a list of all branch including the appointment, visit, etc",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "visit",
                         "required": true,
@@ -154,6 +166,11 @@
                 "summary": "create a new Branch",
                 "description": "create a new branch",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -224,6 +241,11 @@
                 "description": "update branch info",
                 "operationId": "getHome",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -299,6 +321,11 @@
                 "summary": "delete service",
                 "description": "delete service by id",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "branchId",
                         "required": true,
@@ -788,7 +815,7 @@
             }
         },
         "/api/v1/payments": {
-            "get": {
+            "post": {
                 "tags": [
                     "Payment"
                 ],
@@ -844,7 +871,7 @@
             }
         },
         "/api/v1/payments/": {
-            "get": {
+            "post": {
                 "tags": [
                     "Payment"
                 ],
@@ -983,6 +1010,48 @@
                                 },
                                 "time": {
                                     "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/users/signin": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "sigin",
+                "description": "signin",
+                "parameters": [
+                    {
+                        "name": "Login",
+                        "in": "body",
+                        "description": "Login",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
                                 }
                             }
                         }
