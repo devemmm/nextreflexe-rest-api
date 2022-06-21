@@ -67,8 +67,6 @@ class Service {
         try {
             let appointment = await Schema.findByPk(req.params.id)
 
-            console.log({ i: '---------------------------------------------' })
-            console.log(appointment)
             if (!appointment || appointment.status === "DELETED") {
                 throw new Error("appointment not found")
             }

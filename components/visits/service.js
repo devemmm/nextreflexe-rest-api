@@ -89,6 +89,7 @@ class Service {
       }
     } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
@@ -107,32 +108,44 @@ class Service {
       }
 
       return data;
-    } catch (error) {
+    } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
-  async update(params) {
+  async update(req) {
     try {
-      const query =
-        "UPDATE branch_location SET createdBy='Emmanuell' where branchId='RW01';";
-      const [results, metadata] = await sequelize.query(query);
+      const visit = await Schema.findByPk(req.params.id)
 
-      if (metadata.affectedRows > 0 && metadata.changedRows > 0) {
-        return { resullt: "branch_updated_successfull" };
+      if (!visit || visit.status === "DELETED") {
+        throw new Error("visit nof found")
       }
 
-      return { resullt: "something_went_wrong" };
-    } catch (error) {
+      visit.status = req.body?.status?.toUpperCase()
+
+      return await visit.save();
+    } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
   async delete(params) {
     try {
-      return { data: [] };
-    } catch (error) {
+
+      let visit = await Schema.findByPk(params.id)
+
+      if (!visit || visit.status === "DELETED") {
+        throw new Error('visit not found')
+      }
+
+      visit.status = "DELETED"
+
+      return await visit.save()
+    } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 }

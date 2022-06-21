@@ -134,6 +134,7 @@ class Validator {
     branchId: joi.string(),
     doctorId: joi.string(),
     userId: joi.string(),
+    status: joi.string()
   });
 
   UPDATE_VISIT = joi.object().keys({
@@ -143,7 +144,7 @@ class Validator {
     brachId: joi.string(),
     patientId: joi.string(),
     doctorId: joi.string(),
-    status: joi.string().valid("PENDING", "SUCCESS", "FAILED"),
+    status: joi.string().valid("PENDING", "SUCCESS", "FAILED").required(),
   });
 
   DELETE_VISIT = joi.object().keys({

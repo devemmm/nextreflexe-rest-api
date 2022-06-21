@@ -359,7 +359,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/services": {
@@ -394,7 +399,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/services?id={id}": {
@@ -431,7 +441,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/services/": {
@@ -481,7 +496,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/services/{id}": {
@@ -535,7 +555,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/services/{serviceId}": {
@@ -1087,7 +1112,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/patients/": {
@@ -1182,7 +1212,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/payments": {
@@ -1243,7 +1278,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/payments/": {
@@ -1295,7 +1335,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/visits": {
@@ -1303,8 +1348,8 @@
                 "tags": [
                     "Visit"
                 ],
-                "summary": "start visit for patient",
-                "description": "start visit for patient",
+                "summary": "list of visit",
+                "description": "list vist",
                 "parameters": [
                     {
                         "name": "Authorization",
@@ -1325,7 +1370,297 @@
                     "500": {
                         "description": "Server_error"
                     }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits?id={id}": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "find vist by id",
+                "description": "find vist by id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "id",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits?patientId={id}": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "find vist by patient_id",
+                "description": "find vist by patient_id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits?patientId={patientId}&status=success": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "single success visit visit_id",
+                "description": "single success visit with visit_id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits?patientId={patientId}&status=failed": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ],
+                "summary": "single failed visit visit_id",
+                "description": "single failed vist visit_id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
                 }
+            }
+        },
+        "/api/v1/visits?patientId={patientId}&status=pending": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "single pending vist visit_id",
+                "description": "single pending visit visit_id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits?status=pending": {
+            "get": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "list of all pending vist",
+                "description": "list of all pending visit ",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visits/update/{id}": {
+            "patch": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "update-confirm -visit",
+                "description": "update-confirm -visit",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/visits?": {
@@ -1377,7 +1712,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/visits/": {
@@ -1426,7 +1766,51 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
+            }
+        },
+        "/api/v1/visit/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Visit"
+                ],
+                "summary": "Delete vist of a Patient",
+                "description": "Delete vist of a Patient",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/users/signin": {
@@ -1503,7 +1887,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/users?id={id}": {
@@ -1511,7 +1900,7 @@
                 "tags": [
                     "User"
                 ],
-                "summary": "get single user info --route for system admin",
+                "summary": "single user info --route for system admin",
                 "description": "list of users",
                 "parameters": [
                     {
@@ -1538,7 +1927,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/users/": {
@@ -1623,7 +2017,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         }
     },
