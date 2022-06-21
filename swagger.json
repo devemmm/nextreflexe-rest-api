@@ -358,6 +358,11 @@
                 "description": "get all available service",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "id",
                         "in": "query",
                         "description": "Service_id __unique__identifier"
@@ -389,6 +394,11 @@
                 "operationId": "getHome",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "id",
                         "in": "path",
                         "required": true,
@@ -419,6 +429,11 @@
                 "summary": "create service",
                 "description": "Services available",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -464,6 +479,11 @@
                 "summary": "update service",
                 "description": "update a single service",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -514,6 +534,11 @@
                 "description": "delete service by id",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "serviceId",
                         "required": true,
                         "in": "path",
@@ -545,6 +570,11 @@
                 "description": "get all appointments",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "id",
                         "in": "query",
                         "description": "appointment_id __unique__identifier"
@@ -574,6 +604,11 @@
                 "summary": "make appointment when you have account",
                 "description": "create appointment",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -622,6 +657,11 @@
                 "summary": "make appointment for unknow user",
                 "description": "create appointment",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -708,6 +748,13 @@
                 ],
                 "summary": "list of patient",
                 "description": "list of patient",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -732,6 +779,11 @@
                 "summary": "register new patient",
                 "description": "register patient, this route it will be used by branch admin",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -823,6 +875,11 @@
                 "description": "Directly payment",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "body",
                         "in": "body",
                         "required": "true",
@@ -879,6 +936,11 @@
                 "description": "Payment made before",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "body",
                         "in": "body",
                         "required": "true",
@@ -924,6 +986,13 @@
                 ],
                 "summary": "start visit for patient",
                 "description": "start visit for patient",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -948,6 +1017,11 @@
                 "summary": "start visit visit for patient who haven't appointment",
                 "description": "start visit visit for patient who haven't appointment",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
@@ -996,6 +1070,11 @@
                 "description": "list of visits",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "body",
                         "in": "body",
                         "required": "true",
@@ -1040,6 +1119,11 @@
                 "description": "signin",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
                         "name": "Login",
                         "in": "body",
                         "description": "Login",
@@ -1080,6 +1164,13 @@
                 ],
                 "summary": "list of users --route for system admin",
                 "description": "list of users",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -1104,6 +1195,11 @@
                 "summary": "get single user info --route for system admin",
                 "description": "list of users",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "id",
                         "in": "path",
@@ -1134,6 +1230,11 @@
                 "summary": "create user",
                 "description": "list of users",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
                     {
                         "name": "body",
                         "in": "body",
