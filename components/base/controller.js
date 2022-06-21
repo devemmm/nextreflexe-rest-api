@@ -3,29 +3,30 @@ const appConst = require('../../libs/constants')
 const moment = require('moment')
 const { errLogger } = require('../../config/logger')
 const Util = require('../../helpers/utils')
+const { responses: RESPONSE } = require('../../libs/constant')
 
 const currentTime = moment().format('YYYY-MM-DD HH:mm:ss')
 const { ERROR, SUCCESS } = appConst
 
 class Controller {
-  constructor () {
+  constructor() {
     this.response = {}
   }
 
-  static responseFormat () {
+  static responseFormat() {
     return {
       responseTime: new Util().rightNow(),
       code: '',
       status: {
-          code: '',
-          message: ''
+        code: '',
+        message: ''
       },
       message: '',
       data: {}
     }
   }
 
-  static formatLogs (req, res) {
+  static formatLogs(req, res) {
     let id
     let role
     let reqIp
@@ -55,23 +56,24 @@ class Controller {
     }
   }
 
-  static errorResponse (req, error) {
+  static errorResponse({ req, STATUS, info }) {
     const response = Controller.responseFormat()
-    response.status.code = ERROR.CODE
-    response.status.message = ERROR.MSG
+    response.status.code = STATUS.CODE
+    response.status.message = STATUS.MSG
 
-    if (_.has(error, 'data')) {
-      response.data = error.data
+
+    if (_.has(info, 'data')) {
+      response.data = info.data
     } else {
       delete response.data
     }
 
-    if (_.has(error, 'message')) {
-      response.message = error.message
+    if (_.has(info, 'message')) {
+      response.message = info.message
     }
 
-    if (_.has(error, 'error')){
-      response.error = error.error
+    if (_.has(info, 'error')) {
+      response.error = info.error
     }
 
     const logData = Controller.formatLogs(req, response)
@@ -80,40 +82,40 @@ class Controller {
     return response
   }
 
-  static successResponse (success) {
+  static successResponse({ STATUS, resToSend }) {
     const response = Controller.responseFormat()
-    response.status.code = SUCCESS.CODE
-    response.status.message = SUCCESS.MSG
+    response.status.code = STATUS.SUCCESS
+    response.status.message = STATUS.SUCCESS
 
-    if (_.has(success, 'data')) {
-      response.data = success.data
+    if (_.has(resToSend, 'data')) {
+      response.data = resToSend.data
     } else {
       delete response.data
     }
-    if (_.has(success, 'count')) {
-      response.count = success.count
+    if (_.has(resToSend, 'count')) {
+      response.count = resToSend.count
     } else {
       delete response.count
     }
-    if (_.has(success, 'message')) {
-      response.message = success.message
+    if (_.has(resToSend, 'message')) {
+      response.message = resToSend.message
     } else {
       delete response.message
     }
     return response
   }
 
-  sendResponse (req, res, type, resToSend) {
+  sendResponse(req, res, STATUS, resToSend) {
     this.response = {}
-    if (type === ERROR.CODE) {
-      this.response = Controller.errorResponse(req, resToSend)
+    if (STATUS.CODE === RESPONSE.BAD_REQUEST.CODE || STATUS.CODE === RESPONSE.ERROR.CODE || STATUS.CODE === RESPONSE.UNAUTHORIZED_REQUEST.CODE) {
+      this.response = Controller.errorResponse({ req, STATUS, info: resToSend })
     } else {
-      this.response = Controller.successResponse(resToSend)
+      this.response = Controller.successResponse({ STATUS, resToSend })
     }
-    return res.status(type).json(this.response)
+    return res.status(STATUS.CODE).json(this.response)
   }
 
-  permittedParams (params, acceptedKeys) {
+  permittedParams(params, acceptedKeys) {
     if (!_.isEmpty(params)) {
       const mappedParams = _.mapKeys(params, function (value, key) {
         const paramsMap = {}

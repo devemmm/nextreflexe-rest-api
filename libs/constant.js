@@ -55,6 +55,34 @@ class Constant {
       },
     ],
   };
+
+  static PRIVILAGES = {
+    USER: {
+      VALUE: 'USER',
+      description: '',
+      role: ''
+    },
+    ADMIN: {
+      VALUE: 'ADMIN',
+      description: '',
+      role: ''
+    },
+    SUPER_ADMIN: {
+      VALUE: 'SUPER_ADMIN',
+      description: '',
+      role: ''
+    },
+    PATIENT: {
+      VALUE: 'PATIENT',
+      description: '',
+      role: ''
+    },
+    THERAPIST: {
+      VALUE: 'THERAPIST',
+      description: '',
+      role: ''
+    },
+  }
 }
 
 module.exports = Constant;

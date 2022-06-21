@@ -43,5 +43,14 @@ router
         controller.delete.bind(controller)
     )
 
+router 
+    .route('/signin')
+    .post(
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().SIGNIN)
+        ),
+        controller.signin.bind(controller)
+    )
+
 
 module.exports = router

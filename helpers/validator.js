@@ -177,6 +177,12 @@ class Validator {
     id: joi.string(),
   });
 
+  SIGNIN = joi.object().keys({
+    phone: joi.string(),
+    email: joi.string(),
+    password : joi.string()
+  })
+
   UPDATE_USER = joi.object().keys({
     id: joi.number(),
   });
