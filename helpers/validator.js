@@ -97,6 +97,8 @@ class Validator {
 
   LIST_APPOINTMEENT = joi.object().keys({
     id: joi.number(),
+    patientId: joi.number(),
+    status: joi.string(),
   });
 
   UPDATE_APPOINTMENT = joi.object().keys({
@@ -180,7 +182,7 @@ class Validator {
   SIGNIN = joi.object().keys({
     phone: joi.string(),
     email: joi.string(),
-    password : joi.string()
+    password: joi.string()
   })
 
   UPDATE_USER = joi.object().keys({

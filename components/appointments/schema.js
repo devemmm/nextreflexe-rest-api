@@ -2,7 +2,7 @@ const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../../config/database");
 const Visit = require("../visits/schema");
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init(
   {
@@ -21,7 +21,7 @@ Schema.init(
     },
     status: {
       type: DataTypes.ENUM,
-      values: ["PENDING", "SUCCESS", "FAILED"],
+      values: ["PENDING", "SUCCESS", "FAILED", "DELETED"],
       defaultValue: "PENDING",
       trim: true,
     },

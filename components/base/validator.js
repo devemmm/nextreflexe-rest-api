@@ -1,14 +1,15 @@
 const BaseController = require('./controller')
 const { SUCCESS, ERROR } = require('../../libs/constants')
+const { responses: RESPONSES } = require('../../libs/constant')
 const _ = require('lodash')
 
 class Validator {
-  init (validator) {
+  init(validator) {
     this.validator = validator
     return this
   }
 
-  getRequestData (req) {
+  getRequestData(req) {
     let reqData
     const method = req.method
     const path = req.route.path
@@ -28,7 +29,7 @@ class Validator {
     return reqData
   }
 
-  validateRequest (req, res, next) {
+  validateRequest(req, res, next) {
     const userData = req.body && req.body.userData
     if (userData) {
       delete req.body.userData
@@ -37,7 +38,7 @@ class Validator {
 
     const r = this.validator.validate(reqData)
 
-    
+
     if (_.isUndefined(r.error)) {
       if (userData) {
         req.userData = userData
@@ -45,11 +46,11 @@ class Validator {
       next()
     } else {
       const joiMsg = r.error.details[0].message
-      new BaseController().sendResponse(req, res, ERROR.CODE, { message: `server_error.${joiMsg}` })
+      new BaseController().sendResponse(req, res, RESPONSES.ERROR, { message: `server_error.${joiMsg}` })
     }
   }
 
-  validateResponse (req, res) {
+  validateResponse(req, res) {
     const data = res.data
     if (!_.isUndefined(data)) {
       if (!_.has(data, 'error')) {
@@ -58,9 +59,9 @@ class Validator {
         const formattedData = this.permittedParams(data, allowedAttr)
         const result = this.validator.validate(formattedData)
         if (result.error === null) {
-          this.sendResponse(req, res, SUCCESS.CODE, [result.value])
+          this.sendResponse(req, res, RESPONSES.SUCCESS, [result.value])
         } else {
-          this.sendResponse(req, res, ERROR.CODE, { message: 'server_error.invalid_params' })
+          this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.invalid_params' })
         }
         res.json({ success: true })
       } else {

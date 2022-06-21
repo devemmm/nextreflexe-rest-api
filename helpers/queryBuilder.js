@@ -246,17 +246,37 @@ class QueryBuilder {
 
   static async LIST_APPOINTMENT(req) {
     let query = {};
+
     const reqData = req.query;
     let callFunction = "findOne";
 
     query.where = {};
 
+    query.include = [
+      { model: sequelize.modelManager.getModel('branch'), attributes: ['id', 'name', 'managerId'] },
+      { model: sequelize.modelManager.getModel("user"), attributes: ['id', 'fname', 'lname', 'phone', 'email', 'userType'] },
+      { model: sequelize.modelManager.getModel("patient"), attributes: ['id', 'fname', 'lname', 'phone', 'email'] },
+    ];
+
     if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
-      query.where = {};
+
     } else {
       callFunction = "findAndCountAll"
       query.where.branchId = req.user.branchId;
+    }
+
+    if (reqData.id) {
+      callFunction = "findOne"
+      query.where.id = reqData.id
+    }
+
+    if (reqData.patientId) {
+      query.where.patientId = reqData.patientId;
+    }
+
+    if (reqData.status) {
+      query.where.status = reqData.status;
     }
 
     return { callFunction, query };

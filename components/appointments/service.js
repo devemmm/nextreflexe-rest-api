@@ -58,31 +58,41 @@ class Service {
             return data;
         } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
 
-    async update(params) {
+    async update(req) {
         try {
+            let appointment = await Schema.findByPk(req.params.id)
 
-            const query = "UPDATE branch_location SET createdBy='Emmanuell' where branchId='RW01';"
-            const [results, metadata] = await sequelize.query(query);
-
-            if (metadata.affectedRows > 0 && metadata.changedRows > 0) {
-                return { resullt: 'branch_updated_successfull' }
+            console.log({ i: '---------------------------------------------' })
+            console.log(appointment)
+            if (!appointment || appointment.status === "DELETED") {
+                throw new Error("appointment not found")
             }
 
-            return { resullt: 'something_went_wrong' };
+            appointment.status = req.body?.status?.toUpperCase();
+            return await appointment.save();
         } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
     async delete(params) {
         try {
-            return { data: [] }
+            let appointment = await Schema.findByPk(params.id)
+
+            if (!appointment || appointment.status === "DELETED") {
+                throw new Error("appointment not found")
+            }
+            appointment.status = "DELETED"
+            return await appointment.save();
         } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 }

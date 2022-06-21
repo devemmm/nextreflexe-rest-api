@@ -108,7 +108,7 @@ class Controller {
   sendResponse(req, res, STATUS, resToSend) {
 
     this.response = {}
-    if (STATUS.CODE === RESPONSE.BAD_REQUEST.CODE || STATUS.CODE === RESPONSE.ERROR.CODE || STATUS.CODE === RESPONSE.UNAUTHORIZED_REQUEST.CODE) {
+    if (STATUS.CODE === RESPONSE.BAD_REQUEST.CODE || STATUS.CODE === RESPONSE.ERROR.CODE || STATUS.CODE === RESPONSE.UNAUTHORIZED_REQUEST.CODE || STATUS.CODE === RESPONSE.RESOURCE_NOT_FOUND.CODE) {
       this.response = Controller.errorResponse({ req, STATUS, info: resToSend })
     } else {
       this.response = Controller.successResponse({ STATUS, resToSend })

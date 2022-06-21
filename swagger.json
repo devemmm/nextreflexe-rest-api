@@ -586,11 +586,262 @@
                         "name": "Authorization",
                         "in": "header",
                         "description": "Authorization"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?id={id}": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "get single appointment with id",
+                "description": "get single appointment with id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
                     },
                     {
                         "name": "id",
                         "in": "query",
                         "description": "appointment_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?patientId={patientId}&status=success": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "get single success appointment with id",
+                "description": "get single success appointment with id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?patientId={patientId}&status=failed": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "get single failed appointment with id",
+                "description": "get single failed appointment with id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?patientId={patientId}&status=pending": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "get single pending appointment with id",
+                "description": "get single pending appointment with id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments?patientId={patientId}": {
+            "get": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "all appointment for patient",
+                "description": "all appointment for patient",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "patientId",
+                        "in": "query",
+                        "description": "patient_id __unique__identifier"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments/update/{id}": {
+            "patch": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "update appointment status",
+                "description": "update appointment status",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "status": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Authorization_error"
+                    },
+                    "404": {
+                        "description": "Server_down"
+                    },
+                    "500": {
+                        "description": "Server_error"
+                    }
+                }
+            }
+        },
+        "/api/v1/appointments/delete/{id}": {
+            "delete": {
+                "tags": [
+                    "Appointment"
+                ],
+                "summary": "Delete appointment of a Patient",
+                "description": "Delete appointment of a Patient",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path"
                     }
                 ],
                 "responses": {
