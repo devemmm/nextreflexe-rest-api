@@ -571,7 +571,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments": {
@@ -601,7 +606,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments?id={id}": {
@@ -636,7 +646,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments?patientId={patientId}&status=success": {
@@ -671,13 +686,23 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments?patientId={patientId}&status=failed": {
             "get": {
                 "tags": [
                     "Appointment"
+                ],
+                "security": [
+                    {
+                        "JWT": []
+                    }
                 ],
                 "summary": "get single failed appointment with id",
                 "description": "get single failed appointment with id",
@@ -741,7 +766,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments?patientId={patientId}": {
@@ -776,7 +806,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments/update/{id}": {
@@ -823,7 +858,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments/delete/{id}": {
@@ -857,7 +897,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments/": {
@@ -910,7 +955,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/appointments?": {
@@ -1002,7 +1052,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/patients": {
