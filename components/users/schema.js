@@ -5,7 +5,7 @@ const Token = require('../tokens/schema')
 const Appointment = require('../appointments/schema')
 const Visit = require('../visits/schema')
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init({
   id: {
@@ -18,11 +18,11 @@ Schema.init({
     type: DataTypes.STRING,
     trim: true
   },
-  lname:{
+  lname: {
     type: DataTypes.STRING,
     trim: true,
   },
-  nid:{
+  nid: {
     type: DataTypes.STRING,
     trim: true
   },
@@ -44,9 +44,13 @@ Schema.init({
     defaultValue: 'ACTIVE',
   },
   userType: {
-      type: DataTypes.ENUM,
-      values: ['USER', 'ADMIN', 'SUPER_ADMIN'],
-      defaultValue: 'USER',
+    type: DataTypes.ENUM,
+    values: ['USER', 'ADMIN', 'SUPER_ADMIN'],
+    defaultValue: 'USER',
+  },
+  branchId: {
+    type: DataTypes.INTEGER,
+    defaultValue: 'RW01',
   },
   password: {
     type: DataTypes.STRING,

@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const { STATUS, NURSE_ATTENDANTS } = require("../libs/constants");
 const sequelize = require("../config/database");
 const { Op, BOOLEAN } = require("sequelize");
+const { PRIVILAGES } = require('../libs/constant')
 
 class QueryBuilder {
   static async BRANCH_LIST(req, skipPageLimit) {
@@ -187,7 +188,7 @@ class QueryBuilder {
     return { callFunction, query };
   }
 
-  static async SAVE_SERVICE(req) {}
+  static async SAVE_SERVICE(req) { }
 
   static async LIST_SERVICE(req, skipPaging) {
     const reqData = req.query;
@@ -244,17 +245,21 @@ class QueryBuilder {
   }
 
   static async LIST_APPOINTMENT(req) {
+    let query = {};
     const reqData = req.query;
+    let callFunction = "findOne";
 
-    let db_query = "SELECT * FROM appointment;";
+    query.where = {};
 
-    const [metadata] = await sequelize.query(db_query);
+    if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
+      callFunction = "findAndCountAll"
+      query.where = {};
+    } else {
+      callFunction = "findAndCountAll"
+      query.where.branchId = req.user.branchId;
+    }
 
-    const moment = require("moment");
-
-    console.log(moment(metadata[0].createdAt).format("YYYY-MM-DD HH:mm:ss"));
-
-    return metadata;
+    return { callFunction, query };
   }
 
   static async LIST_PAYMENT(req) {

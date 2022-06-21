@@ -91,13 +91,6 @@
                 ],
                 "summary": "branch list",
                 "description": "get a list of all branch",
-                "parameters": [
-                    {
-                        "name": "Authorization",
-                        "in": "header",
-                        "description": "Authorization"
-                    }
-                ],
                 "responses": {
                     "200": {
                         "description": "Success"
@@ -111,7 +104,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/branches?visit={visit}&appointment={appointment}": {
@@ -155,7 +153,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/branches/": {
@@ -229,7 +232,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/branches/{id}": {
@@ -310,7 +318,12 @@
                     "500": {
                         "description": "Server_error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "JWT": []
+                    }
+                ]
             }
         },
         "/api/v1/branches/{branchId}": {
