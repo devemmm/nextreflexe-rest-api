@@ -1,8 +1,9 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../../config/database');
 const Payment = require('../payments/schema')
+const { SERVICE_AVATAR } = require('../../libs/constant')
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init({
   id: {
@@ -14,9 +15,13 @@ Schema.init({
     type: DataTypes.STRING,
     trim: true
   },
-  description:{
+  description: {
     type: DataTypes.STRING,
     trim: true,
+  },
+  avatar: {
+    type: DataTypes.STRING,
+    defaultValue: SERVICE_AVATAR
   },
   status: {
     type: DataTypes.STRING,
@@ -27,7 +32,7 @@ Schema.init({
     type: DataTypes.STRING,
     trim: true
   }
-}, 
+},
   {
     sequelize,
     modelName: 'service',
@@ -37,11 +42,13 @@ Schema.init({
 
 
 Schema.hasMany(Payment, {
-  foreignKey:{
+  foreignKey: {
     name: 'serviceId'
   },
   onDelete: 'RESTRICT',
   onUpdate: 'RESTRICT'
 })
+
+Payment.belongsTo(Schema)
 
 module.exports = Schema

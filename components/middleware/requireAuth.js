@@ -33,7 +33,7 @@ class Authorization {
                     const user = await new User().list({ userId })
 
                     if (!user) {
-                        throw new Error('wrong token')
+                        throw new Error('session was been  expired please signin again')
                     }
 
                     req.user = user

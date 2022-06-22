@@ -1,10 +1,10 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../../config/database');
-const Location = require('./locationSchema')
+const Location = require('../location/schema')
 const Appointment = require('../appointments/schema')
 const Visit = require('../visits/schema')
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init({
   id: {
@@ -20,14 +20,13 @@ Schema.init({
     type: DataTypes.STRING,
     allowNull: false
   }
-},  
+},
   {
     sequelize,
     modelName: 'branch',
     tableName: 'branch'
   }
 )
-
 
 Schema.hasOne(Location, {
   foreignKey: {
@@ -38,7 +37,7 @@ Schema.hasOne(Location, {
 })
 
 Schema.hasMany(Appointment, {
-  foreignKey:{
+  foreignKey: {
     name: 'branchId'
   },
   onDelete: 'RESTRICT',
@@ -46,7 +45,7 @@ Schema.hasMany(Appointment, {
 })
 
 Schema.hasMany(Visit, {
-  foreignKey:{
+  foreignKey: {
     name: 'branchId'
   },
   onDelete: 'RESTRICT',

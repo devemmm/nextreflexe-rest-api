@@ -84,8 +84,8 @@ class Controller {
 
   static successResponse({ STATUS, resToSend }) {
     const response = Controller.responseFormat()
-    response.status.code = STATUS.SUCCESS
-    response.status.message = STATUS.SUCCESS
+    response.status.code = STATUS.CODE
+    response.status.message = STATUS.MSG
 
     if (_.has(resToSend, 'data')) {
       response.data = resToSend.data

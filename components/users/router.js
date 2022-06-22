@@ -12,7 +12,6 @@ const validator = new Validator();
 router
     .route('/')
     .post(
-        authorization.requireAuth.bind(authorization),
         validator.validateRequest.bind(
             new Validator().init(new RequestValidator().CREATE_USER)
         ),

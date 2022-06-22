@@ -14,8 +14,8 @@ const validator = new Validator()
 router
   .route('/')
   .get(
+    authorization.requireAuth.bind(authorization),
     validator.validateRequest.bind(
-      authorization.requireAuth.bind(authorization),
       new Validator().init(new RequestValidator().LIST_SERVICE)
     ),
     controller.list.bind(controller)
@@ -33,7 +33,7 @@ router
   )
 
 router
-  .route('/:id')
+  .route('/update/:id')
   .patch(
     authorization.requireAuth.bind(authorization),
     validator.validateRequest.bind(
@@ -43,7 +43,7 @@ router
   )
 
 router
-  .route('/:id')
+  .route('/delete/:id')
   .delete(
     authorization.requireAuth.bind(authorization),
     validator.validateRequest.bind(

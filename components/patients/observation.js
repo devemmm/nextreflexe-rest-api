@@ -2,13 +2,17 @@ const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../../config/database');
 
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init({
     id: {
         type: DataTypes.BIGINT,
         primaryKey: true,
         autoIncrement: true,
+    },
+    diagnosis: {
+        type: DataTypes.STRING,
+        trim: true
     },
     month1: {
         type: DataTypes.STRING,
@@ -54,20 +58,20 @@ Schema.init({
         type: DataTypes.STRING,
         trim: true
     },
-    year1:{
+    year1: {
         type: DataTypes.STRING,
         trim: true
     },
-    doctorId:{
+    doctorId: {
         type: DataTypes.STRING,
         trim: true
     }
-}, 
-  {
-    sequelize,
-    modelName: 'observation',
-    tableName: 'observation'
-  }
+},
+    {
+        sequelize,
+        modelName: 'observation',
+        tableName: 'observation'
+    }
 )
 
 

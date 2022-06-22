@@ -152,7 +152,7 @@ class Validator {
   });
 
   CREATE_USER = joi.object().keys({
-    id: joi.string().required(),
+    id: joi.string(),
     fname: joi.string().required(),
     lname: joi.string().required(),
     nid: joi.string().required(),

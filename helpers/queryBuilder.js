@@ -13,7 +13,7 @@ class QueryBuilder {
 
     query.where = {};
     query.include = [
-      { model: sequelize.modelManager.getModel("branchLocation") },
+      { model: sequelize.modelManager.getModel("location") },
     ];
 
     if (reqData.id) {
@@ -50,7 +50,7 @@ class QueryBuilder {
       } else {
         query.include = [
           {
-            model: sequelize.modelManager.getModel("branchLocation"),
+            model: sequelize.modelManager.getModel("location"),
             where: {
               [Op.or]: [
                 {
@@ -216,15 +216,22 @@ class QueryBuilder {
   static async SAVE_SERVICE(req) { }
 
   static async LIST_SERVICE(req, skipPaging) {
+    let query = {};
     const reqData = req.query;
+    let callFunction = "findAndCountAll";
 
-    let db_qery = "SELECT * FROM service;";
+    query.where = {};
+
     if (reqData.id) {
-      db_qery = `SELECT * FROM service WHERE id='${reqData.id}'`;
+      callFunction = "findOne"
+      query.where.id = reqData.id
     }
 
-    const [metadata] = await sequelize.query(db_qery);
-    return metadata;
+    if (reqData.name) {
+      query.where.name = reqData.name
+    }
+
+    return { callFunction, query }
   }
 
   static async UPDATE_SERVICE(req) {
@@ -245,17 +252,35 @@ class QueryBuilder {
 
   // ----------------------------USER-----------------------------------------------
   static async USER_LIST(req) {
+    let query = {};
     const reqData = req.query;
+    let callFunction = "findOne";
 
-    let db_qery =
-      "SELECT user.id, user.fname, user.lname, user.nid, user.email, user.phone, user.dob, user.createdAt AS user_createdAt,  user.updatedAt AS user_updatedAt, user_location.country, user_location.province, user_location.district, user_location.sector, user_location.cell, user_location.village, user_location.createdAt AS location_createdAt, user_location.updatedAt AS location_updatedAt FROM user, user_location WHERE user.id = user_location.userId;";
-    if (reqData.id) {
-      db_qery = `SELECT user.id, user.fname, user.lname, user.nid, user.email, user.phone, user.dob, user.createdAt AS user_createdAt,  user.updatedAt AS user_updatedAt, user_location.country, user_location.province, user_location.district, user_location.sector, user_location.cell, user_location.village, user_location.createdAt AS location_createdAt, user_location.updatedAt AS location_updatedAt FROM user, user_location WHERE user.id = user_location.userId AND user.id='${reqData.id}';`;
+    query.where = {};
+
+    if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
+      callFunction = "findAndCountAll"
+
+    } else {
+      callFunction = "findAndCountAll"
+      query.where.branchId = req.user.branchId;
     }
 
-    const [metadata] = await sequelize.query(db_qery);
+    query.include = [
+      { module: sequelize.modelManager.getModel('userLocation') }
+    ]
 
-    return metadata;
+    // query.include = [
+    //   // { model: sequelize.modelManager.getModel('userLocation'), attributes: ['id', 'country', 'province', 'district', 'sector', 'cell', 'village'] },
+    //   { model: sequelize.modelManager.getModel('branch'), attributes: ['id', 'name', 'managerId'] },
+    // ];
+
+    if (reqData.id) {
+      callFunction = "findOne";
+      query.where.id = reqData.id;
+    }
+
+    return { callFunction, query }
   }
 
   static async PATIENT_LIST(req) {

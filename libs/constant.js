@@ -1,13 +1,16 @@
 class Constant {
   static responses = {
-    SUCCESS: { CODE: 200, MSG: "Success" },
     HEADER: {
       AUTHORIZATION: "Authorization",
       CONTENT_TYPE: "application/json",
       MULTIPART_CONTENT_TYPE: "multipart/form-data",
       TIMEOUT: 120000,
     },
-    ERROR: { CODE: 200, MSG: "error", INVALID_RESPONSE: "INVALID_RESPONSE" },
+    SUCCESS: { CODE: 200, MSG: "Success" },
+    CREATED: { CODE: 201, MSG: "Resources has been created" },
+    DELETED: { CODE: 204, MSG: "Resource deleted successfully" },
+    INVALID_RESPONSE: { CODE: 204, MSG: "INVALID_RESPONSE" },
+    ERROR: { CODE: 500, MSG: "Internal Server Error" },
     BAD_REQUEST: { CODE: 400, MSG: "Bad Request" },
     RESOURCE_ALREADY_EXISTS: { CODE: 409, MSG: "Resource Already Exists" },
     MOVED_PERMANENTLY: { CODE: 301, MSG: "Moved Permanently" },
@@ -36,6 +39,11 @@ class Constant {
     PATIENT: { VALUE: 'PATIENT', description: '', role: '' },
     THERAPIST: { VALUE: 'THERAPIST', description: '', role: '' },
   }
+
+  static AVATAR = "https://png.pngtree.com/png-clipart/20210608/ourlarge/pngtree-light-gray-silhouette-avatar-png-image_3418403.jpg"
+  static SERVICE_AVATAR = "https://png.pngtree.com/png-clipart/20210608/ourlarge/pngtree-light-gray-silhouette-avatar-png-image_3418403.jpg"
+  static USER_STATUS = ['ACTIVE', 'INACTIVE', 'DELETED']
+  static USER_TYPE = ['PATIENT', 'THERAPIST', 'ADMIN', 'SUPER_ADMIN']
 }
 
 module.exports = Constant;

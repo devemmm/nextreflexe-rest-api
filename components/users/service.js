@@ -1,6 +1,6 @@
 const Schema = require('./schema')
 const { errLogger } = require('../../config/logger')
-const LocationShema = require('./locationSchema')
+const LocationShema = require('../location/schema')
 const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
@@ -12,16 +12,14 @@ class Service {
         try {
 
             params.password = await bcrypt.hash(params.password, 8)
-            const data = new Schema(params)
 
-            const location = new LocationShema({
-                userId: data.id,
-                ...params.location
-            })
+            const user = new Schema(params)
+            await user.save()
 
-            await data.save()
+            const location = new LocationShema({ ...params.location, userId: user.id })
+
             await location.save()
-            return data
+            return user
         } catch (e) {
             console.log(e.message)
             errLogger.error(e)
@@ -31,15 +29,32 @@ class Service {
     async list({ req, userId }) {
         try {
 
-            if (userId) {
-                const user = await Schema.findByPk(userId)
-                return this.hideUserData(user._previousDataValues)
-            }
+            // // this case its for middleware validation
+            // if (userId) {
+            //     const user = await Schema.findByPk(userId)
+            //     return this.hideUserData(user._previousDataValues)
+            // }
+            // // --------------------------------------------------------------------
 
-            const metadata = await QueryBuilder.USER_LIST(req, sequelize, true)
+            // const { callFunction, query } = await QueryBuilder.USER_LIST(req)
+            // let data;
 
-            return { users: metadata, rows: metadata.length }
-        } catch (error) {
+            // console.log({ query })
+            // switch (callFunction) {
+            //     case 'findOne':
+            //         data = await Schema.findOne(query)
+            //         break;
+            //     default:
+            //         data = await Schema.findAndCountAll(query)
+            // }
+            // console.log("---------------------------------")
+            // return data
+
+
+            const user = Schema.findOne({ where: { id: 1 }, include: [{ model: sequelize.modelManager.getModel("location") }] })
+
+            return user
+        } catch (e) {
             errLogger.error(e)
         }
     }

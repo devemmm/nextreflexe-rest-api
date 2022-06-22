@@ -1,15 +1,15 @@
 const Schema = require('./schema')
 const { errLogger } = require('../../config/logger')
-const LocationShema = require('./locationSchema')
+const LocationShema = require('../location/schema')
 const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
 
 
 class Service {
-    async save(params){
+    async save(params) {
         try {
-            
+
             const data = new Schema({
                 id: params.id,
                 name: params.name,
@@ -22,53 +22,57 @@ class Service {
             await location.save()
             return data;
         } catch (e) {
-
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
-    async list(req, skipPaging = false, isActiveList = false){
+    async list(req) {
         try {
-        
-            const {callFunction, query } = await QueryBuilder.BRANCH_LIST(req, true)
+
+            const { callFunction, query } = await QueryBuilder.BRANCH_LIST(req, true)
             let data;
 
-            switch(callFunction){
+            switch (callFunction) {
                 case 'findOne':
                     data = await Schema.findOne(query)
                     break;
-                default: 
+                default:
                     data = await Schema.findAndCountAll(query)
             }
 
             return data;
-        } catch (error) {
+        } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
 
-    async update(params){
+    async update(req) {
         try {
+            const branch = await Schema.findByPk(req.params?.id)
 
-            const query = "UPDATE branch_location SET createdBy='Emmanuell' where branchId='RW01';"
-            const [results, metadata] = await sequelize.query(query);
+            const updates = Object.keys(req.body)
+            updates.forEach((update) => branch[update] = req.body[update])
 
-            if( metadata.affectedRows > 0 && metadata.changedRows > 0){
-                return {resullt: 'branch_updated_successfull'}
+            return await branch.save()
+        } catch (e) {
+            errLogger.error(e)
+            throw new Error(e.message)
+        }
+    }
+
+    async delete(req) {
+        try {
+            const branch = await Schema.findByPk(req.params?.id)
+            if (!branch) {
+                throw new Error("branch not found")
             }
-
-            return {resullt: 'something_went_wrong'};
-        } catch (error) {
+            return await Schema.destroy({ where: { id: req.params?.id } })
+        } catch (e) {
             errLogger.error(e)
-        }
-    }
-
-    async delete(params){
-        try {
-            return {data: []}
-        } catch (error) {
-            errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 }
