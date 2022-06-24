@@ -134,17 +134,14 @@ class Service {
     }
   }
 
-  async update(params) {
+  async update(req) {
     try {
-      const query =
-        "UPDATE payment SET createdBy='Emmanuell' where branchId='RW01';";
-      const [results, metadata] = await sequelize.query(query);
+      const payment = await Schema.findByPk(req.params?.id)
 
-      if (metadata.affectedRows > 0 && metadata.changedRows > 0) {
-        return { resullt: "branch_updated_successfull" };
-      }
+      const updates = Object.keys(req.body)
+      updates.forEach((update) => payment[update] = req.body[update])
 
-      return { resullt: "something_went_wrong" };
+      return await payment.save()
     } catch (e) {
       errLogger.error(e);
       throw new Error(e.message)

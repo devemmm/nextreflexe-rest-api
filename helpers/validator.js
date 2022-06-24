@@ -266,6 +266,10 @@ class Validator {
 
   UPDATE_PAYMENT = joi.object().keys({
     id: joi.number(),
+    visitId: joi.number().required(),
+    serviceId: joi.number().required(),
+    sessionPrice: joi.number(),
+    pay: joi.number(),
   });
 
   DELETE_PAYMENT = joi.object().keys({

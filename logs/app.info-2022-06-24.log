@@ -204,3 +204,15 @@
 {"level":"info","message":"::1 - [2022-06-24T14:53:41.739Z] \"POST /api/v1/payments HTTP/1.1\" 500 135 \"-\" \"PostmanRuntime/7.29.0\"\n"}
 {"level":"info","message":"::1 - [2022-06-24T14:53:51.035Z] \"POST /api/v1/payments HTTP/1.1\" 200 426 \"-\" \"PostmanRuntime/7.29.0\"\n"}
 {"level":"info","message":"::1 - [2022-06-24T14:54:39.001Z] \"GET /api/v1/payments/ HTTP/1.1\" 200 47551 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:01:08.903Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 500 176 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:02:04.013Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 500 176 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:02:05.217Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 500 176 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:03:33.681Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 200 47551 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:03:54.060Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 200 47551 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:03:55.634Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 200 47551 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:04:14.564Z] \"GET /api/v1/payments?visitId=1 HTTP/1.1\" 200 1462 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:28:26.998Z] \"PATCH /api/v1/payments/update/35 HTTP/1.1\" 500 152 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:29:00.270Z] \"PATCH /api/v1/payments/update/35 HTTP/1.1\" 500 153 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:29:29.800Z] \"PATCH /api/v1/payments/update/35 HTTP/1.1\" 500 155 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:29:44.299Z] \"PATCH /api/v1/payments/update/35 HTTP/1.1\" 200 379 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-06-24T15:30:59.538Z] \"GET /api/v1/payments/ HTTP/1.1\" 200 47551 \"-\" \"PostmanRuntime/7.29.0\"\n"}

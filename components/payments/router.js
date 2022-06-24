@@ -30,11 +30,11 @@ router
     )
 
 router
-    .route('/:id')
+    .route('/update/:id')
     .patch(
         authorization.requireAuth.bind(authorization),
         validator.validateRequest.bind(
-            new Validator().init(new RequestValidator().LIST_PAYMENT)
+            new Validator().init(new RequestValidator().UPDATE_PAYMENT)
         ),
         controller.update.bind(controller)
     )

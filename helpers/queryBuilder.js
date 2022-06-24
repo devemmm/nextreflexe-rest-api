@@ -368,10 +368,19 @@ class QueryBuilder {
       query.where.patientId = reqData.patientId
     }
 
-    if (reqData.visit) {
-      callFunction = "findOne";
-      query.where.visitId = req.visitId
+    if (reqData.visitId) {
+      query.where.visitId = reqData.visitId
     }
+
+    // if (reqData.daily) {
+    //   query.where.visitId = reqData.visitId
+    // }
+
+    // if (reqData.period) {
+    //   callFunction = "findAndCountAll";
+    //   // query.where.visitId = reqData.visitId
+    //   query.where.createdAt = { [Op.gt] : moment().subtract(7, 'days').toDate()}
+    // }
 
     return { callFunction, query }
   }

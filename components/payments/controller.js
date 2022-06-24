@@ -56,7 +56,7 @@ class Controller extends BaseController {
         }
 
         try {
-            const data = await new Service().update(req.body)
+            const data = await new Service().update(req)
             if (!_.isUndefined(data)) {
                 this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
             } else {
