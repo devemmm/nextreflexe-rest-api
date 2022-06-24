@@ -18,7 +18,7 @@ class Controller extends BaseController {
         try {
             const data = await new Service().save(req);
             if (!_.isUndefined(data) && data.id) {
-                this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.user_created' })
+                this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.payment_successfull', data })
             } else {
                 this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
             }

@@ -221,6 +221,7 @@ class QueryBuilder {
     let callFunction = "findAndCountAll";
 
     query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
     if (reqData.id) {
       callFunction = "findOne"
@@ -257,6 +258,7 @@ class QueryBuilder {
     let callFunction = "findOne";
 
     query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
     if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
@@ -289,6 +291,7 @@ class QueryBuilder {
     let callFunction = "findOne";
 
     query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
     query.include = { all: true }
 
@@ -307,6 +310,7 @@ class QueryBuilder {
     let callFunction = "findOne";
 
     query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
     // attributes: ['id', 'fname', 'lname', 'phone', 'email', 'userType']
     console.log({ model: sequelize.modelManager })
@@ -346,12 +350,30 @@ class QueryBuilder {
   }
 
   static async LIST_PAYMENT(req) {
+    let query = {};
     const reqData = req.query;
+    let callFunction = "findAndCountAll";
 
-    let db_query = "SELECT * FROM payment;";
+    query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
-    const [metadata] = await sequelize.query(db_query);
-    return metadata;
+    query.include = { all: true }
+
+    if (reqData.id) {
+      callFunction = "findOne";
+      query.where.id = reqData.id;
+    }
+
+    if (reqData.patientId) {
+      query.where.patientId = reqData.patientId
+    }
+
+    if (reqData.visit) {
+      callFunction = "findOne";
+      query.where.visitId = req.visitId
+    }
+
+    return { callFunction, query }
   }
 }
 

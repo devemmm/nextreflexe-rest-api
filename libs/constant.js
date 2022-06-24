@@ -25,9 +25,11 @@ class Constant {
   static MOMENT_TIME_FOMART = "YYYY-MM-DD HH:mm:ss";
 
   static PAYMENT = {
-    STATUS: { PAY: "PAY", BEFORE: "BEFORE", AFTER: "AFTER" },
-    METHOD: { MOMO: "MOMO", BK: "BK", HANDS: "HANDS", EQUITY: "EQUITY", SPENN: "SPENN" },
-    ERROR: { UNPAID: "please pay", SESSION: "please specify total session" },
+    STATUS: { PAY: "PAY", BEFORE: "BEFORE", AFTER: "AFTER", INSUFFICIENT_FOUND: "INSUFFICIENT_FOUND" },
+    METHOD: { HANDS: "HANDS", MOMO: "MOMO", BK: "BK", EQUITY: "EQUITY", SPENN: "SPENN" },
+    ERROR: { UNPAID: "please pay", SESSION: "please specify total session ans session price", VISIT: "Please specify the visit id", INSUFFICIENT_FOUND: 'insufficient funds' },
+    CONDITION: { INITIAL: "INITIAL", BEFORE: "BEFORE", INSUFFICIENT_FOUND: "INSUFFICIENT_FOUND" },
+    ENUM: { STATUS: ["PAY", "BEFORE", "AFTER", "INSUFFICIENT_FOUND"], METHOD: ["HANDS", "MOMO", "BK", "EQUITY", "SPENN"] }
   };
 
   static BRANCH = { MIN: [{ id: "RW01", price: 150000 }] };

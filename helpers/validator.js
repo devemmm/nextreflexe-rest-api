@@ -245,17 +245,23 @@ class Validator {
 
   CREATE_PAYMENT = joi.object().keys({
     patientId: joi.number().required(),
+    visitId: joi.number().required(),
     serviceId: joi.number().required(),
     sessionPrice: joi.number(),
     pay: joi.number(),
     totalPayment: joi.number(),
     totalSession: joi.number(),
-    paymentMethod: joi.string().required(),
+    paymentMethod: joi.string(),
     status: joi.string(),
+    insufficient: joi.boolean()
   });
 
   LIST_PAYMENT = joi.object().keys({
     id: joi.string(),
+    visitId: joi.number(),
+    patientId: joi.number(),
+    sessionPrice: joi.number(),
+    insufficient: joi.boolean()
   });
 
   UPDATE_PAYMENT = joi.object().keys({

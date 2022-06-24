@@ -1,8 +1,8 @@
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../../config/database");
-const Util = require("../../helpers/utils");
+const { PAYMENT } = require('../../libs/constant')
 
-class Schema extends Model {}
+class Schema extends Model { }
 
 Schema.init(
   {
@@ -43,14 +43,14 @@ Schema.init(
     },
     paymentMethod: {
       type: DataTypes.ENUM,
-      values: ["MOMO", "BK", "HANDS", "EQUITY", "SPENN"],
-      defaultValue: "HANDS",
+      values: PAYMENT.ENUM.METHOD,
+      defaultValue: PAYMENT.ENUM.METHOD[0],
       trim: true,
     },
     status: {
       type: DataTypes.ENUM,
-      values: ["PAY", "BEFORE", "AFTER"],
-      defaultValue: "PAY",
+      values: PAYMENT.ENUM.STATUS,
+      defaultValue: PAYMENT.ENUM.STATUS[0],
       trim: true,
     },
   },
