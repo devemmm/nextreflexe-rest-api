@@ -44,6 +44,7 @@ class Constant {
   static SERVICE_AVATAR = "https://png.pngtree.com/png-clipart/20210608/ourlarge/pngtree-light-gray-silhouette-avatar-png-image_3418403.jpg"
   static USER_STATUS = ['ACTIVE', 'INACTIVE', 'DELETED']
   static USER_TYPE = ['PATIENT', 'THERAPIST', 'ADMIN', 'SUPER_ADMIN']
+  static APPO_VIST_STATUS = ['PENDING', 'SUCCESS', 'FAILED', 'DELETED']
 }
 
 module.exports = Constant;

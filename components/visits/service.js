@@ -15,11 +15,11 @@ class Service {
         !_.isUndefined(req.query.appointment) &&
         req.query.appointment === "true"
       ) {
-        const { appointmentId, doctorId, time } = req.body;
+        const { appointmentId, userId, time } = req.body;
 
         if (
           _.isUndefined(appointmentId) ||
-          _.isUndefined(doctorId) ||
+          _.isUndefined(userId) ||
           _.isUndefined(time)
         ) {
           throw new Error(
@@ -48,28 +48,27 @@ class Service {
           appointmentId: appointment.id,
           patientId: appointment.patientId,
           branchId: appointment.branchId,
-          doctorId,
-          userId: appointment.doctorId,
+          userId: appointment.userId,
         });
 
         // 1. SAVE VISIT
         await visit.save();
-        // 2. UPDATE APPIINTMENT
+        // 2. UPDATE APPOINTMENT
         appointment.status = "SUCCESS";
         await appointment.save();
         // 3. PUSH MESSAGE
 
         return appointment;
       } else {
-        const { patientId, branchId, doctorId, time } = req.body;
+        const { patientId, branchId, userId, time } = req.body;
 
         if (
           _.isUndefined(patientId) ||
           _.isUndefined(branchId) ||
-          _.isUndefined(doctorId) ||
+          _.isUndefined(userId) ||
           _.isUndefined(time)
         ) {
-          throw new error(
+          throw new Error(
             "missing some required values please check in required body"
           );
         }
@@ -81,8 +80,7 @@ class Service {
           status: "PENDING",
           patientId,
           branchId,
-          doctorId,
-          userId: doctorId,
+          userId,
         });
 
         return await visit.save();

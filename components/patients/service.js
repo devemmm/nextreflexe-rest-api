@@ -1,4 +1,4 @@
-const Schema = require('../users/schema')
+const Schema = require('./schema')
 const { errLogger } = require('../../config/logger')
 const LocationShema = require('../location/schema')
 const _ = require('lodash')
@@ -21,18 +21,26 @@ class Service {
             return data;
         } catch (e) {
             errLogger.error(e)
-            return { code: e.parent.code, message: e.parent.sqlMessage }
+            throw new Error(e.message)
         }
     }
 
     async list(req, skipPaging = false, isActiveList = false) {
         try {
+            const { callFunction, query } = await QueryBuilder.PATIENT_LIST(req)
+            let data;
 
-            const metadata = await QueryBuilder.PATIENT_LIST(req)
-
-            return { patients: metadata, rows: metadata.length }
-        } catch (error) {
+            switch (callFunction) {
+                case "findOne":
+                    data = await Schema.findOne(query);
+                    break;
+                default:
+                    data = await Schema.findAndCountAll(query);
+            }
+            return data;
+        } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
@@ -48,8 +56,9 @@ class Service {
             }
 
             return { resullt: 'something_went_wrong' };
-        } catch (error) {
+        } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
@@ -58,6 +67,7 @@ class Service {
             return { data: [] }
         } catch (error) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 }

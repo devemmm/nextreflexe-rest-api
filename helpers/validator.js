@@ -73,6 +73,7 @@ class Validator {
   //--------------APPOINTMENT----------------
 
   CREATE_APPOINTMENT = joi.object().keys({
+    account: joi.string(),
     fname: joi.string(),
     lname: joi.string(),
     email: joi.string(),
@@ -92,13 +93,15 @@ class Validator {
     endTime: joi.string(),
     branchId: joi.string().required(),
     patientId: joi.number(),
-    doctorId: joi.string(),
+    userId: joi.string(),
+    serviceId: joi.number()
   });
 
   LIST_APPOINTMEENT = joi.object().keys({
     id: joi.number(),
     patientId: joi.number(),
     status: joi.string(),
+    serviceId: joi.number()
   });
 
   UPDATE_APPOINTMENT = joi.object().keys({
@@ -107,8 +110,9 @@ class Validator {
     endTime: joi.string(),
     brachId: joi.string(),
     patientId: joi.string(),
-    doctorId: joi.string(),
+    userId: joi.string(),
     status: joi.string().valid("PENDING", "SUCCESS", "FAILED"),
+    serviceId: joi.number()
   });
 
   DELETE_APPOINTMEENT = joi.object().keys({
@@ -124,7 +128,9 @@ class Validator {
     endTime: joi.string(),
     branchId: joi.string(),
     patientId: joi.number(),
-    doctorId: joi.string(),
+    userId: joi.string(),
+    serviceId: joi.number(),
+    visitId: joi.number()
   });
 
   LIST_VISIT = joi.object().keys({
@@ -132,9 +138,10 @@ class Validator {
     appointmentId: joi.number(),
     patientId: joi.number(),
     branchId: joi.string(),
-    doctorId: joi.string(),
     userId: joi.string(),
-    status: joi.string()
+    status: joi.string(),
+    serviceId: joi.number(),
+    visitId: joi.number()
   });
 
   UPDATE_VISIT = joi.object().keys({
@@ -143,8 +150,10 @@ class Validator {
     endTime: joi.string(),
     brachId: joi.string(),
     patientId: joi.string(),
-    doctorId: joi.string(),
+    userId: joi.string(),
     status: joi.string().valid("PENDING", "SUCCESS", "FAILED").required(),
+    serviceId: joi.number(),
+    visitId: joi.number()
   });
 
   DELETE_VISIT = joi.object().keys({
@@ -152,7 +161,7 @@ class Validator {
   });
 
   CREATE_USER = joi.object().keys({
-    id: joi.string(),
+    id: joi.string().required(),
     fname: joi.string().required(),
     lname: joi.string().required(),
     nid: joi.string().required(),

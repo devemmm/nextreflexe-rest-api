@@ -39,10 +39,9 @@ class Service {
 
         return [];
       }
-
-      return data;
     } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
@@ -51,8 +50,9 @@ class Service {
       const metadata = await QueryBuilder.LIST_PAYMENT(req);
 
       return { patients: metadata, rows: metadata.length };
-    } catch (error) {
+    } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
@@ -67,8 +67,9 @@ class Service {
       }
 
       return { resullt: "something_went_wrong" };
-    } catch (error) {
+    } catch (e) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 
@@ -77,6 +78,7 @@ class Service {
       return { data: [] };
     } catch (error) {
       errLogger.error(e);
+      throw new Error(e.message)
     }
   }
 }

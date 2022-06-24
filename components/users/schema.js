@@ -2,22 +2,20 @@ const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../../config/database');
 const Location = require('../location/schema')
 const Token = require('../tokens/schema')
+const Branch = require('../branches/schema')
 const Appointment = require('../appointments/schema')
 const Visit = require('../visits/schema')
-const Branch = require('../branches/schema')
-const Observation = require('../patients/observation')
-const Payment = require('../payments/schema')
 const { AVATAR, USER_STATUS, USER_TYPE } = require('../../libs/constant')
+
 
 class Schema extends Model { }
 
 Schema.init({
   id: {
-    type: DataTypes.BIGINT,
+    type: DataTypes.STRING,
     primaryKey: true,
     trim: true,
-    allowNull: false,
-    autoIncrement: true
+    allowNull: false
   },
   fname: {
     type: DataTypes.STRING,
@@ -37,11 +35,13 @@ Schema.init({
   },
   dob: {
     type: DataTypes.STRING,
-    trim: true
+    trim: true,
+    unique: true
   },
   email: {
     type: DataTypes.STRING,
-    trim: true
+    trim: true,
+    unique: true
   },
   avatar: {
     type: DataTypes.STRING,
@@ -63,7 +63,7 @@ Schema.init({
   userType: {
     type: DataTypes.ENUM,
     values: USER_TYPE,
-    defaultValue: 'PATIENT',
+    defaultValue: 'THERAPIST',
   },
   password: {
     type: DataTypes.STRING,
@@ -99,43 +99,25 @@ Schema.hasMany(Token, {
 
 Schema.hasMany(Appointment, {
   foreignKey: {
-    name: 'patientId'
-  },
-  onDelete: 'RESTRICT',
-  onUpdate: 'RESTRICT',
-})
-
-Schema.hasMany(Visit, {
-  foreignKey: {
-    name: 'patientId'
-  },
-  onDelete: 'RESTRICT',
-  onUpdate: 'RESTRICT',
-})
-
-Schema.hasMany(Observation, {
-  foreignKey: {
-    name: 'patientId'
+    name: 'userId'
   },
   onDelete: 'RESTRICT',
   onUpdate: 'RESTRICT'
 })
 
-
-Schema.hasMany(Payment, {
+Schema.hasMany(Visit, {
   foreignKey: {
-    name: 'patientId'
+    name: 'userId'
   },
   onDelete: 'RESTRICT',
   onUpdate: 'RESTRICT'
 })
 
 Location.belongsTo(Schema)
-Observation.belongsTo(Schema)
-Payment.belongsTo(Schema)
 Schema.belongsTo(Branch)
 Token.belongsTo(Schema)
 Appointment.belongsTo(Schema)
 Visit.belongsTo(Schema)
+
 
 module.exports = Schema;

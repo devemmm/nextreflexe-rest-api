@@ -11,7 +11,6 @@ const moment = require('moment')
 class Service {
     async save(req) {
         req.body.password = Constants.user.PASSWORD;
-        req.body.userId = req.body.doctorId;
         req.body.startTime = moment(req.body.startTime).format(Constants.MOMENT_TIME_FOMART)
         req.body.endTime = moment(req.body.startTime).add(1.5, 'hours').format(Constants.MOMENT_TIME_FOMART)
 
@@ -37,9 +36,9 @@ class Service {
                 //send message to customer
                 return await appointment.save();
             }
-        } catch (error) {
+        } catch (e) {
             errLogger.error(e)
-            return false
+            throw new Error(e.message)
         }
     }
 
@@ -47,6 +46,8 @@ class Service {
         try {
             const { callFunction, query } = await QueryBuilder.LIST_APPOINTMENT(req)
             let data;
+
+            console.log({ callFunction, query })
 
             switch (callFunction) {
                 case "findOne":

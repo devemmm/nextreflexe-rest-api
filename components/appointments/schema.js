@@ -1,6 +1,7 @@
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("../../config/database");
 const Visit = require("../visits/schema");
+const { APPO_VIST_STATUS } = require('../../libs/constant')
 
 class Schema extends Model { }
 
@@ -21,7 +22,7 @@ Schema.init(
     },
     status: {
       type: DataTypes.ENUM,
-      values: ["PENDING", "SUCCESS", "FAILED", "DELETED"],
+      values: APPO_VIST_STATUS,
       defaultValue: "PENDING",
       trim: true,
     },
@@ -42,5 +43,7 @@ Schema.hasOne(Visit, {
 });
 
 Visit.belongsTo(Schema);
+
+
 
 module.exports = Schema;

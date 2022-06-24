@@ -153,13 +153,13 @@ class QueryBuilder {
 
     query.where = {};
 
-    if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
-      callFunction = "findAndCountAll"
+    // if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
+    //   callFunction = "findAndCountAll"
 
-    } else {
-      callFunction = "findAndCountAll"
-      query.where.branchId = req.user.branchId;
-    }
+    // } else {
+    //   callFunction = "findAndCountAll"
+    //   query.where.branchId = req.user.branchId;
+    // }
 
     query.include = [
       { model: sequelize.modelManager.getModel('appointment'), attributes: ['id', 'startTime', 'endTime', 'status'] },
@@ -284,17 +284,20 @@ class QueryBuilder {
   }
 
   static async PATIENT_LIST(req) {
+    let query = {};
     const reqData = req.query;
+    let callFunction = "findOne";
 
-    let db_qery =
-      "SELECT patient.id, patient.fname, patient.lname, patient.email, patient.phone, patient.dob, patient.nid, patient.diagnosis, patient.status, patient.createdAt, patient.updatedAt, patient_location.id AS location_id, patient_location.country, patient_location.province, patient_location.district, patient_location.sector, patient_location.cell, patient_location.village, patient_location.createdAt as location_createdAt, patient_location.updatedAt AS location_updatedAt, patient_location.branchId FROM  patient, patient_location WHERE patient.id = patient_location.patientId;";
+    query.where = {};
+
+    query.include = { all: true }
 
     if (reqData.id) {
-      db_qery = `SELECT patient.id, patient.fname, patient.lname, patient.email, patient.phone, patient.dob, patient.nid, patient.diagnosis, patient.status, patient.createdAt, patient.updatedAt, patient_location.id AS location_id, patient_location.country, patient_location.province, patient_location.district, patient_location.sector, patient_location.cell, patient_location.village, patient_location.createdAt as location_createdAt, patient_location.updatedAt AS location_updatedAt, patient_location.branchId FROM  patient, patient_location WHERE patient.id = patient_location.patientId AND patient.id ='${reqData.id}';`;
+      callFunction = "findOne";
+      query.where.id = reqData.id;
     }
 
-    const [metadata] = await sequelize.query(db_qery);
-    return metadata;
+    return { callFunction, query }
   }
 
   static async LIST_APPOINTMENT(req) {
@@ -305,18 +308,25 @@ class QueryBuilder {
 
     query.where = {};
 
-    query.include = [
-      { model: sequelize.modelManager.getModel('branch'), attributes: ['id', 'name', 'managerId'] },
-      { model: sequelize.modelManager.getModel("user"), attributes: ['id', 'fname', 'lname', 'phone', 'email', 'userType'] },
-      { model: sequelize.modelManager.getModel("patient"), attributes: ['id', 'fname', 'lname', 'phone', 'email'] },
-    ];
+    // attributes: ['id', 'fname', 'lname', 'phone', 'email', 'userType']
+    console.log({ model: sequelize.modelManager })
+    // query.include = [
+    //   { model: sequelize.modelManager.getModel('branch'), attributes: ['id', 'name', 'managerId'] },
+    //   { model: sequelize.modelManager.getModel("user") },
+    //   // { model: sequelize.modelManager.getModel("patient"), attributes: ['id', 'fname', 'lname', 'phone', 'email'] },
+    // ];
+
+    // query.include = { all: true }
+    // query.include = [
+    //   { module: sequelize.modelManager.getModel('branch') }
+    // ]
 
     if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
 
     } else {
       callFunction = "findAndCountAll"
-      query.where.branchId = req.user.branchId;
+      // query.where.branchId = req.user.branchId;
     }
 
     if (reqData.id) {

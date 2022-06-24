@@ -51,7 +51,7 @@ class Service {
             // return data
 
 
-            const user = Schema.findOne({ where: { id: 1 }, include: [{ model: sequelize.modelManager.getModel("location") }] })
+            const user = Schema.findOne({ where: { id: 'RWB101' }, include: [{ model: sequelize.modelManager.getModel("location") }] })
 
             return user
         } catch (e) {
