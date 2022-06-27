@@ -50,10 +50,10 @@ const payment = {
             ]
         },
         get: {
-            tags: ['Service'],
-            summary: 'available Service',
-            description: 'get all available service',
-            operationId: 'get all available service',
+            tags: ['Payment'],
+            summary: 'get all payment',
+            description: 'get all payment',
+            operationId: 'get all payment',
             produces: ['application/json'],
             responses
         }
