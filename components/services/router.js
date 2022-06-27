@@ -14,7 +14,6 @@ const validator = new Validator()
 router
   .route('/')
   .get(
-    authorization.requireAuth.bind(authorization),
     validator.validateRequest.bind(
       new Validator().init(new RequestValidator().LIST_SERVICE)
     ),
