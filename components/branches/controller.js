@@ -31,11 +31,11 @@ class Controller extends BaseController {
 
     async list(req, res) {
 
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+        // const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
-        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
-            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
-        }
+        // if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+        //     return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        // }
 
         try {
             const data = await new Service().list(req)

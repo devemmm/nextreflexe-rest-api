@@ -78,12 +78,7 @@ const branch = {
             description: 'get a list of all branch',
             operationId: 'get a list of all branch',
             produces: ['application/json'],
-            responses,
-            security: [
-                {
-                    JWT: []
-                }
-            ]
+            responses
         }
     },
 

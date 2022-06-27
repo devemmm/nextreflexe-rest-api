@@ -10,7 +10,7 @@ const controller = new Controller();
 const validator = new Validator();
 
 router
-    .route('/')
+    .route('/signup')
     .post(
         validator.validateRequest.bind(
             new Validator().init(new RequestValidator().CREATE_USER)
