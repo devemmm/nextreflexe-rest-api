@@ -1,14 +1,20 @@
+require('../config/database')
 const express = require('express')
 const app = express()
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("../swagger.json")
-require('../config/database')
+const { serve, setup } = require("swagger-ui-express");
+const docs = require('../documentation/index')
+const cors = require('cors')
 const api = require('../components')
 const { logger } = require('./logger')
 const morgan = require('morgan')
 const _ = require('lodash')
 
 app.set('trust proxy', true)
+app.use(
+  cors({
+    origin: '*'
+  })
+);
 
 morgan.token('ip', req => {
   let reqIp
@@ -20,6 +26,8 @@ morgan.token('ip', req => {
   return reqIp
 })
 
+
+app.use(cors());
 app.use(
   morgan(
     ':ip - [:date[iso]] ":method :url HTTP/:http-version" ' +
@@ -29,8 +37,9 @@ app.use(
 )
 
 app.use(express.json())
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/', api)
+app.use("/api-docs", serve, setup(docs))
+
 
 // catch 404 and forward to error handler
 app.use((req, res) => {

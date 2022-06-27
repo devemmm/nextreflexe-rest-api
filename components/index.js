@@ -3,7 +3,8 @@ const fs = require('fs')
 const router = express.Router()
 
 // GET /health - Check service health
-router.get('/', (req, res) => res.json({message: 'API server running'}))
+router.get('/', (req, res) => res.json({ message: 'API server running' }))
+router.get('/api/v1/', (req, res) => res.json({ message: 'API server running' }))
 
 fs.readdir(__dirname, function (err, components) {
   if (err) {
