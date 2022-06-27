@@ -89,7 +89,12 @@ const patient = {
             description: 'list of patient',
             operationId: 'list of patient',
             produces: ['application/json'],
-            responses
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
         }
     }
 };

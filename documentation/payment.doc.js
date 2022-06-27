@@ -55,7 +55,12 @@ const payment = {
             description: 'get all payment',
             operationId: 'get all payment',
             produces: ['application/json'],
-            responses
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
         }
     },
     '/payments/': {
@@ -89,7 +94,12 @@ const payment = {
                     }
                 }
             ],
-            responses
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
         }
     }
 };
