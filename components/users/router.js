@@ -29,6 +29,15 @@ router
     )
 
 router
+    .route('/team')
+    .get(
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().LIST_USER)
+        ),
+        controller.listTeam.bind(controller)
+    )
+
+router
     .route('/:id')
     .patch(
         authorization.requireAuth.bind(authorization),

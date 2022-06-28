@@ -112,6 +112,16 @@ const user = {
             ]
         }
     },
+    '/users/team': {
+        get: {
+            tags: ['User'],
+            summary: 'get my profile',
+            description: 'get my profile',
+            operationId: 'get my profile',
+            produces: ['application/json'],
+            responses
+        },
+    },
     '/users/me': {
         patch: {
             tags: ['User'],

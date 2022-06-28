@@ -6,6 +6,7 @@ const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
 const Token = require('../tokens/service')
 const bcrypt = require('bcrypt')
+const { team } = require('./team')
 
 class Service {
     async save(params) {
@@ -59,6 +60,10 @@ class Service {
         }
     }
 
+
+    async listTeam() {
+        return team;
+    }
 
     async update(params) {
         try {
