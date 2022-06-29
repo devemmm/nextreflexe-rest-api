@@ -115,8 +115,8 @@ const user = {
     '/users/team': {
         get: {
             tags: ['User'],
-            summary: 'get my profile',
-            description: 'get my profile',
+            summary: 'our team',
+            description: 'our peaple',
             operationId: 'get my profile',
             produces: ['application/json'],
             responses

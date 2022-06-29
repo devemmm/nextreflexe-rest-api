@@ -30,6 +30,15 @@ router
     )
 
 router
+    .route('/basic')
+    .get(
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().LIST_BRANCH)
+        ),
+        controller.basic.bind(controller)
+    )
+
+router
     .route('/:id')
     .patch(
         authorization.requireAuth.bind(authorization),

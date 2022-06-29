@@ -49,6 +49,19 @@ class Controller extends BaseController {
         }
     }
 
+    async basic(req, res) {
+        try {
+            const data = await new Service().basic(req)
+            if (!_.isUndefined(data)) {
+                this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
+            } else {
+                this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
+            }
+        } catch (error) {
+            this.sendResponse(req, res, RESPONSES.ERROR, { message: error.message })
+        }
+    }
+
     async update(req, res) {
 
         const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]

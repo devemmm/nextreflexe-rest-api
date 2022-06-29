@@ -11,6 +11,17 @@ const branch = {
             responses
         }
     },
+    "/branches/basic": {
+        get: {
+            tags: ['Branch'],
+            summary: "Basic clinic information",
+            description: "Basic information for aour clinic",
+            operationId: "getHome",
+            consumes: 'application/json',
+            produces: 'application/json',
+            responses
+        }
+    },
     '/branches': {
         post: {
             tags: ['Branch'],
