@@ -31,7 +31,7 @@ const user = {
             responses
         }
     },
-    '/users': {
+    '/users/signup': {
         post: {
             tags: ['User'],
             summary: 'Signup',
@@ -98,6 +98,9 @@ const user = {
             ],
             responses
         },
+
+    },
+    '/users': {
         get: {
             tags: ['User'],
             summary: 'list of users --route for system admin',
@@ -112,18 +115,8 @@ const user = {
             ]
         }
     },
-    '/users/team': {
-        get: {
-            tags: ['User'],
-            summary: 'our team',
-            description: 'our peaple',
-            operationId: 'get my profile',
-            produces: ['application/json'],
-            responses
-        },
-    },
     '/users/me': {
-        patch: {
+        get: {
             tags: ['User'],
             summary: 'get my profile',
             description: 'get my profile',
@@ -137,6 +130,17 @@ const user = {
             ]
         },
     },
+    '/users/team': {
+        get: {
+            tags: ['User'],
+            summary: 'our team',
+            description: 'our peaple',
+            operationId: 'get my profile',
+            produces: ['application/json'],
+            responses
+        },
+    },
+
     '/users?userId={userId}': {
         patch: {
             tags: ['User'],

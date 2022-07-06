@@ -60,7 +60,7 @@ class Service {
 
         return appointment;
       } else {
-        const { patientId, branchId, userId, time } = req.body;
+        const { patientId, branchId, userId, time, serviceId } = req.body;
 
         if (
           _.isUndefined(patientId) ||
@@ -81,6 +81,7 @@ class Service {
           patientId,
           branchId,
           userId,
+          serviceId
         });
 
         return await visit.save();

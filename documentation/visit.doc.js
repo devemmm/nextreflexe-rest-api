@@ -1,7 +1,7 @@
 const responses = require('./response');
 
 const visit = {
-    '/visits': {
+    '/visits?appointment=true': {
         post: {
             tags: ['Visit'],
             summary: "start visit visit for patient who have appointment",
@@ -19,10 +19,13 @@ const visit = {
                             appointmentId: {
                                 type: "integer"
                             },
-                            doctorId: {
+                            userId: {
                                 type: "string"
                             },
                             time: {
+                                type: "integer"
+                            },
+                            serviceId: {
                                 type: "integer"
                             }
                         }
@@ -36,6 +39,9 @@ const visit = {
                 }
             ]
         },
+
+    },
+    '/visits': {
         get: {
             tags: ['Visit'],
             summary: 'list of visit',
@@ -50,73 +56,35 @@ const visit = {
             ]
         }
     },
-    '/visits?': {
+    '/visits?appointment=false': {
         post: {
             tags: ['Visit'],
-            summary: 'make appointment for unknow user',
-            description: 'create appointment',
-            operationId: 'create appointment',
-            consumes: 'application/json',
-            produces: 'application/json',
+            summary: "start a vist for patient who dont have appointment",
+            description: "start a vist for patient who dont have appointment",
+            // operationId: "start a vist for patient who dont have appointment",
+            produces: ['application/json'],
             parameters: [
                 {
                     name: "body",
                     in: "body",
-                    description: "appointment details",
                     required: "true",
                     schema: {
                         type: "object",
                         properties: {
-                            fname: {
-                                type: "string"
-                            },
-                            lname: {
-                                type: "string"
-                            },
-                            email: {
-                                type: "string"
-                            },
-                            phone: {
-                                type: "string"
-                            },
-                            dob: {
-                                type: "string"
-                            },
-                            nid: {
-                                type: "string"
-                            },
-                            location: {
-                                required: true,
-                                type: "object",
-                                properties: {
-                                    country: {
-                                        type: "string"
-                                    },
-                                    province: {
-                                        type: "string"
-                                    },
-                                    district: {
-                                        type: "string"
-                                    },
-                                    sector: {
-                                        type: "string"
-                                    },
-                                    cell: {
-                                        type: "string"
-                                    },
-                                    village: {
-                                        type: "string"
-                                    }
-                                }
-                            },
-                            startTime: {
-                                "type": "string"
+                            patientId: {
+                                type: "integer"
                             },
                             branchId: {
                                 type: "string"
                             },
-                            doctorId: {
+                            userId: {
                                 type: "string"
+                            },
+                            time: {
+                                type: "integer"
+                            },
+                            serviceId: {
+                                type: "integer"
                             }
                         }
                     }
@@ -128,8 +96,88 @@ const visit = {
                     JWT: []
                 }
             ]
-        }
+        },
     },
+    // '/visits?': {
+    //     post: {
+    //         tags: ['Visit'],
+    //         summary: 'start a vist for patient who dont have appointment',
+    //         description: 'create appointment',
+    //         operationId: 'create appointment',
+    //         consumes: 'application/json',
+    //         produces: 'application/json',
+    //         parameters: [
+    //             {
+    //                 name: "body",
+    //                 in: "body",
+    //                 description: "appointment details",
+    //                 required: "true",
+    //                 schema: {
+    //                     type: "object",
+    //                     properties: {
+    //                         fname: {
+    //                             type: "string"
+    //                         },
+    //                         lname: {
+    //                             type: "string"
+    //                         },
+    //                         email: {
+    //                             type: "string"
+    //                         },
+    //                         phone: {
+    //                             type: "string"
+    //                         },
+    //                         dob: {
+    //                             type: "string"
+    //                         },
+    //                         nid: {
+    //                             type: "string"
+    //                         },
+    //                         location: {
+    //                             required: true,
+    //                             type: "object",
+    //                             properties: {
+    //                                 country: {
+    //                                     type: "string"
+    //                                 },
+    //                                 province: {
+    //                                     type: "string"
+    //                                 },
+    //                                 district: {
+    //                                     type: "string"
+    //                                 },
+    //                                 sector: {
+    //                                     type: "string"
+    //                                 },
+    //                                 cell: {
+    //                                     type: "string"
+    //                                 },
+    //                                 village: {
+    //                                     type: "string"
+    //                                 }
+    //                             }
+    //                         },
+    //                         startTime: {
+    //                             "type": "string"
+    //                         },
+    //                         branchId: {
+    //                             type: "string"
+    //                         },
+    //                         doctorId: {
+    //                             type: "string"
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         ],
+    //         responses,
+    //         security: [
+    //             {
+    //                 JWT: []
+    //             }
+    //         ]
+    //     }
+    // },
     '/visits?id={id}': {
         get: {
             tags: ['Visit'],

@@ -32,29 +32,30 @@ class Service {
     async list({ req, userId }) {
         try {
 
-            // // this case its for middleware validation
-            // if (userId) {
-            //     const user = await Schema.findByPk(userId)
-            //     return this.hideUserData(user._previousDataValues)
-            // }
-            // // --------------------------------------------------------------------
 
-            // const { callFunction, query } = await QueryBuilder.USER_LIST(req)
-            // let data;
+            // this case its for middleware validation
+            if (userId) {
+                const user = await Schema.findByPk(userId)
+                return this.hideUserData(user._previousDataValues)
+            }
+            // --------------------------------------------------------------------
 
-            // console.log({ query })
-            // switch (callFunction) {
-            //     case 'findOne':
-            //         data = await Schema.findOne(query)
-            //         break;
-            //     default:
-            //         data = await Schema.findAndCountAll(query)
-            // }
-            // console.log("---------------------------------")
-            // return data
+            const { callFunction, query } = await QueryBuilder.USER_LIST(req)
+            let data;
+
+            console.log({ query })
+            switch (callFunction) {
+                case 'findOne':
+                    data = await Schema.findOne(query)
+                    break;
+                default:
+                    data = await Schema.findAndCountAll(query)
+            }
+            console.log("---------------------------------")
+            return data
 
 
-            const user = Schema.findOne({ where: { id: 'RWB101' }, include: [{ model: sequelize.modelManager.getModel("location") }] })
+            // const user = Schema.findOne({ where: { id: 'RWB101' }, include: [{ model: sequelize.modelManager.getModel("location") }] })
 
             return user
         } catch (e) {
@@ -63,6 +64,9 @@ class Service {
         }
     }
 
+    async profile({ req }) {
+        return req.user;
+    }
 
     async listTeam() {
         return team;

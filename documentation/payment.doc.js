@@ -104,6 +104,96 @@ const payment = {
                 }
             ]
         }
+    },
+    '/payments?': {
+        post: {
+            tags: ['Payment'],
+            summary: 'Payment for INSUFICIENT Founds',
+            description: 'Payment for INSUFICIENT founds status must be INSUFFICIENT_FOUND',
+            operationId: 'Payment for INSUFICIENT Founds',
+            produces: ['application/json'],
+            parameters: [
+                {
+                    name: "body",
+                    in: "body",
+                    required: "true",
+                    schema: {
+                        type: "object",
+                        properties: {
+                            patientId: {
+                                type: "integer"
+                            },
+                            serviceId: {
+                                type: "integer"
+                            },
+                            visitId: {
+                                type: "integer"
+                            },
+                            sessionPrice: {
+                                type: "integer"
+                            },
+                            pay: {
+                                type: "integer"
+                            },
+                            status: {
+                                type: "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
+        }
+    },
+    'payments?id={id}': {
+        get: {
+            tags: ['Payment'],
+            summary: 'get all payment for single user',
+            description: 'get all payment for single user',
+            operationId: 'get all payment for single user',
+            produces: ['application/json'],
+            parameters: [
+                {
+                    name: "id",
+                    in: "path",
+                    required: true,
+                    description: "patientId"
+                }
+            ],
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
+        }
+    },
+    'payments?visitId={id}': {
+        get: {
+            tags: ['Payment'],
+            summary: 'get all payment for single user using visit Id',
+            description: 'get all payment for single user  using visit Id',
+            operationId: 'get all payment for single user  using visit Id',
+            produces: ['application/json'],
+            parameters: [
+                {
+                    name: "id",
+                    in: "path",
+                    description: "visitId"
+                }
+            ],
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
+        }
     }
 };
 

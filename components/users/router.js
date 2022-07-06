@@ -47,6 +47,16 @@ router
     )
 
 router
+    .route('/me')
+    .get(
+        authorization.requireAuth.bind(authorization),
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().LIST_USER)
+        ),
+        controller.profile.bind(controller)
+    )
+
+router
     .route('/:id')
     .patch(
         authorization.requireAuth.bind(authorization),

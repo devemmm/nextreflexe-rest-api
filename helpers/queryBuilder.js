@@ -255,22 +255,15 @@ class QueryBuilder {
   static async USER_LIST(req) {
     let query = {};
     const reqData = req.query;
-    let callFunction = "findOne";
+    let callFunction = "findAndCountAll";
 
     query.where = {};
     query.order = [['createdAt', 'DESC']]
 
-    if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
-      callFunction = "findAndCountAll"
-
-    } else {
-      callFunction = "findAndCountAll"
-      query.where.branchId = req.user.branchId;
-    }
 
     query.include = [
-      { module: sequelize.modelManager.getModel('userLocation') }
-    ]
+      { model: sequelize.modelManager.getModel("location") },
+    ];
 
     // query.include = [
     //   // { model: sequelize.modelManager.getModel('userLocation'), attributes: ['id', 'country', 'province', 'district', 'sector', 'cell', 'village'] },
