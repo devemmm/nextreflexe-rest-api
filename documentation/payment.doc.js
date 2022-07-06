@@ -5,7 +5,7 @@ const payment = {
         post: {
             tags: ['Payment'],
             summary: 'Directly payment',
-            description: 'Directly payment',
+            description: 'Directly payment status it should be PAY or AFTER',
             operationId: 'Directly payment',
             consumes: 'application/json',
             produces: 'application/json',
@@ -21,6 +21,9 @@ const payment = {
                                 type: "integer"
                             },
                             serviceId: {
+                                type: "integer"
+                            },
+                            visitId: {
                                 type: "integer"
                             },
                             sessionPrice: {

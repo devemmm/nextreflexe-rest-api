@@ -7,11 +7,11 @@ const QueryBuilder = require('../../helpers/queryBuilder')
 const Token = require('../tokens/service')
 const bcrypt = require('bcrypt')
 const { team } = require('./team')
+const PatientService = require('../patients/service')
 
 class Service {
     async save(params) {
         try {
-
             params.password = await bcrypt.hash(params.password, 8)
 
             const user = new Schema(params)
@@ -24,6 +24,7 @@ class Service {
         } catch (e) {
             console.log(e.message)
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
@@ -57,6 +58,7 @@ class Service {
             return user
         } catch (e) {
             errLogger.error(e)
+            throw new Error(e.message)
         }
     }
 
@@ -78,6 +80,7 @@ class Service {
             return { resullt: 'something_went_wrong' };
         } catch (error) {
             errLogger.error(e)
+            throw new Error(error.message)
         }
     }
 
@@ -92,18 +95,22 @@ class Service {
 
     async findByCredentials({ type, credentials }) {
 
-        let user = await Schema.findOne({ where: "email" ? { email: credentials.email } : { phone: credentials.phone } })
+        try {
+            let user = await Schema.findOne({ where: "email" ? { email: credentials.email } : { phone: credentials.phone } })
 
-        if (!user) {
-            throw new Error("user not found")
-        }
-        user = user._previousDataValues
+            if (!user) {
+                throw new Error("user not found")
+            }
+            user = user._previousDataValues
 
-        const isMatch = await bcrypt.compare(credentials.password, user.password)
-        if (!isMatch) {
-            throw new Error("wrong pasword")
+            const isMatch = await bcrypt.compare(credentials.password, user.password)
+            if (!isMatch) {
+                throw new Error("wrong pasword")
+            }
+            return user
+        } catch (error) {
+            throw new Error(error.message)
         }
-        return user
     }
 
     hideUserData(user) {
@@ -129,9 +136,15 @@ class Service {
         }
     }
 
-    async signup(credentials) {
-
+    async signup(params) {
+        try {
+            return await new PatientService().save(params)
+        } catch (e) {
+            errLogger.error(e)
+            throw new Error(e.message)
+        }
     }
+
 }
 
 module.exports = Service;

@@ -146,11 +146,6 @@ const user = {
             produces: ['application/json'],
             parameters: [
                 {
-                    name: "Authorization",
-                    in: "header",
-                    description: "Authorization"
-                },
-                {
                     name: "id",
                     in: "path",
                     required: "true"

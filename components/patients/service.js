@@ -4,12 +4,13 @@ const LocationShema = require('../location/schema')
 const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
-
+const bcrypt = require('bcrypt')
 
 class Service {
     async save(params) {
         try {
 
+            params.password = await bcrypt.hash(params.password, 8)
             const data = new Schema(params)
 
             const location = new LocationShema(params.location)

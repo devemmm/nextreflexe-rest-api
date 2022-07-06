@@ -1,0 +1,37 @@
+{"level":"info","message":"::1 - [2022-07-06T17:17:10.228Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:19:25.375Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:19:53.576Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 148 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:20:56.399Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.210Z] \"GET /api-docs/ HTTP/1.1\" 200 3103 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.253Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 200 68457 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.266Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 200 143980 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.287Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 200 339540 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.295Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 200 1096188 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:42:38.723Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.351Z] \"GET /api-docs/ HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.371Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.372Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.375Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 200 68547 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.376Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T17:45:15.837Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T18:19:10.844Z] \"GET /api/v1/appointments?patientId=12&status=pending HTTP/1.1\" 200 119 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:04:59.806Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:05:56.563Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:06:42.919Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:07:05.703Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:08:31.956Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:09:25.307Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:09:55.633Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:10:46.707Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:11:27.530Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:11:40.506Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:12:01.095Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:12:14.810Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:13:20.568Z] \"POST /api/v1/users/signup HTTP/1.1\" - - \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:16:28.429Z] \"POST /api/v1/users/signup HTTP/1.1\" 200 641 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:17:32.145Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:17:58.175Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:18:47.042Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:19:32.617Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:19:51.488Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T21:22:05.328Z] \"POST /api/v1/users/signup HTTP/1.1\" 500 133 \"-\" \"PostmanRuntime/7.29.0\"\n"}

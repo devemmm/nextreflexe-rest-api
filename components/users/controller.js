@@ -9,6 +9,20 @@ class Controller extends BaseController {
         super()
     }
 
+    async signup(req, res) {
+        try {
+            const data = await new Service().signup(req.body);
+            if (!_.isUndefined(data) && data.id) {
+                this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.user_created', data })
+            } else {
+                this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
+            }
+        } catch (error) {
+            this.sendResponse(req, res, RESPONSES.INTERNAL_SERVER_ERROR, { message: error.message })
+        }
+
+    }
+
     async save(req, res) {
 
         const data = await new Service().save(req.body);

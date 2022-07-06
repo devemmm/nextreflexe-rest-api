@@ -160,6 +160,30 @@ class Validator {
     id: joi.number(),
   });
 
+  SIGNUP = joi.object().keys({
+    fname: joi.string().required(),
+    lname: joi.string().required(),
+    nid: joi.string().required(),
+    email: joi.string().email().required(),
+    phone: joi
+      .string()
+      .regex(/^\d{3}\d{3}\d{4}$/)
+      .required(),
+    dob: joi.string().required(),
+    password: joi.string().required(),
+    location: joi
+      .object()
+      .keys({
+        country: joi.string(),
+        province: joi.string(),
+        district: joi.string(),
+        sector: joi.string(),
+        cell: joi.string(),
+        village: joi.string(),
+      })
+      .required(),
+  });
+
   CREATE_USER = joi.object().keys({
     id: joi.string().required(),
     fname: joi.string().required(),

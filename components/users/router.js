@@ -13,6 +13,15 @@ router
     .route('/signup')
     .post(
         validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().SIGNUP)
+        ),
+        controller.signup.bind(controller)
+    )
+
+router
+    .route('/')
+    .post(
+        validator.validateRequest.bind(
             new Validator().init(new RequestValidator().CREATE_USER)
         ),
         controller.save.bind(controller)
