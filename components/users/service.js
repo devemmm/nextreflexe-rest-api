@@ -8,6 +8,7 @@ const Token = require('../tokens/service')
 const bcrypt = require('bcrypt')
 const { team } = require('./team')
 const PatientService = require('../patients/service')
+const PatientSchema = require('../patients/schema')
 
 class Service {
     async save(params) {
@@ -96,18 +97,29 @@ class Service {
     async findByCredentials({ type, credentials }) {
 
         try {
-            let user = await Schema.findOne({ where: "email" ? { email: credentials.email } : { phone: credentials.phone } })
+
+            let isPatient = false
+            let user;
+            user = await Schema.findOne({ where: "email" ? { email: credentials.email } : { phone: credentials.phone } })
 
             if (!user) {
-                throw new Error("user not found")
+                user = await PatientSchema.findOne({ where: "email" ? { email: credentials.email } : { phone: credentials.phone } })
+
+                if (!user) {
+                    throw new Error("user not found")
+                }
+
+                isPatient = true
             }
+
+
             user = user._previousDataValues
 
             const isMatch = await bcrypt.compare(credentials.password, user.password)
             if (!isMatch) {
                 throw new Error("wrong pasword")
             }
-            return user
+            return { user, isPatient }
         } catch (error) {
             throw new Error(error.message)
         }
@@ -127,8 +139,9 @@ class Service {
 
             email.match(regexEmail) ? type = "email" : type = "phone"
 
-            const user = await this.findByCredentials({ type, credentials: { email, phone, password } })
-            const token = await new Token().generateToken(user.id)
+            const { user, isPatient } = await this.findByCredentials({ type, credentials: { email, phone, password } })
+
+            const token = await new Token().generateToken({ id: user.id, isPatient })
 
             return { user: this.hideUserData(user), token }
         } catch (e) {

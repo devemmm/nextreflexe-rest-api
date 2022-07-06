@@ -4,20 +4,25 @@ const jwt = require('jsonwebtoken')
 
 
 class Service {
-    async generateToken(id) {
+    async generateToken({ id, isPatient }) {
         try {
 
             if (!id) {
                 throw "unique identifier of user required"
             }
 
-            console.log(id)
             const tokenKey = jwt.sign({ id }, process.env.JWT_SECRET)
 
-            const token = new Schema({
+            const bindData = {
                 token: tokenKey,
                 userId: id,
-            })
+            }
+
+            if (isPatient) {
+                delete bindData.userId
+                bindData.patientId = id;
+            }
+            const token = new Schema(bindData)
             await token.save()
 
             return token.token;
