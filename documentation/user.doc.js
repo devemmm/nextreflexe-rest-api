@@ -162,8 +162,22 @@ const user = {
                 }
             ]
         },
+    },
+    '/users/signout': {
+        post: {
+            tags: ['User'],
+            summary: 'signout for user',
+            description: 'signout for user',
+            operationId: 'signout for user',
+            produces: ['application/json'],
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
+        },
     }
-
 
     // '/users/{id}': {
     //     patch: {

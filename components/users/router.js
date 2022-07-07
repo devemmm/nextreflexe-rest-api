@@ -85,5 +85,15 @@ router
         controller.signin.bind(controller)
     )
 
+router
+    .route('/signout')
+    .post(
+        authorization.requireAuth.bind(authorization),
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().SIGNOUT)
+        ),
+        controller.signout.bind(controller)
+    )
+
 
 module.exports = router

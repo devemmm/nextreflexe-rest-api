@@ -31,6 +31,11 @@ class Service {
         }
     }
 
+    async deleteToken(token) {
+        await Schema.destroy({ where: { token } })
+        return "user.logged.out"
+    }
+
     async getUserByToken({ token }) {
         return await Schema.findOne({ where: { token } })
     }

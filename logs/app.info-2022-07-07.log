@@ -135,3 +135,50 @@
 {"level":"info","message":"::1 - [2022-07-06T23:26:15.124Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 200 74404 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-07-06T23:26:15.125Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-07-06T23:26:15.476Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:40:50.616Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:42:56.725Z] \"POST /api/v1/users/signin HTTP/1.1\" 500 170 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:43:17.078Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 170 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:43:50.874Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:44:26.337Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:45:14.251Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 139 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:46:44.977Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:47:54.015Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:47:54.868Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:47:55.637Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:51:22.609Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:52:09.408Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:53:50.904Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 106 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:54:08.816Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:54:13.007Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:56:23.527Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 172 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:57:26.610Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 172 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:57:52.394Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 172 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:58:11.308Z] \"POST /api/v1/users/signout HTTP/1.1\" 500 172 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:58:53.214Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:58:55.354Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 106 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:59:01.440Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-06T23:59:07.045Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.041Z] \"GET /api-docs/ HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.066Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.067Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.070Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 200 75310 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.072Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:14.441Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:22.495Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 86 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:01:49.470Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 112 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:20.824Z] \"GET /api-docs/ HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:20.849Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:20.850Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:20.853Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:20.855Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:21.276Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:42.828Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 112 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:02:58.813Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 89 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:03:10.383Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 106 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:03:51.749Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:04:10.825Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:04:24.681Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:04:46.986Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:04:51.958Z] \"POST /api/v1/users/signout HTTP/1.1\" 401 106 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:05:19.310Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-07T00:05:40.807Z] \"POST /api/v1/users/signout HTTP/1.1\" 200 115 \"-\" \"PostmanRuntime/7.29.0\"\n"}

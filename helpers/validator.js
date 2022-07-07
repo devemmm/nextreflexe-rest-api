@@ -219,6 +219,8 @@ class Validator {
     password: joi.string()
   })
 
+  SIGNOUT = joi.object().keys({})
+
   UPDATE_USER = joi.object().keys({
     id: joi.number(),
   });

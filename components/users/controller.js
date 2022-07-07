@@ -124,7 +124,21 @@ class Controller extends BaseController {
             if (!_.isUndefined(data)) {
                 this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
             } else {
-                console.log(console.log({ data }))
+                this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
+            }
+        } catch (e) {
+            errLogger.error(e)
+            this.sendResponse(req, res, RESPONSES.ERROR, { message: e.message })
+        }
+    }
+
+    async signout(req, res) {
+        try {
+            const data = await new Service().signout(req.headers.authorization.replace('Bearer ', ""))
+
+            if (!_.isUndefined(data)) {
+                this.sendResponse(req, res, RESPONSES.SUCCESS, { data })
+            } else {
                 this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
             }
         } catch (e) {

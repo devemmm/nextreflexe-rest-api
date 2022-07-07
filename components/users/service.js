@@ -51,13 +51,7 @@ class Service {
                 default:
                     data = await Schema.findAndCountAll(query)
             }
-            console.log("---------------------------------")
-            return data
-
-
-            // const user = Schema.findOne({ where: { id: 'RWB101' }, include: [{ model: sequelize.modelManager.getModel("location") }] })
-
-            return user
+            return data;
         } catch (e) {
             errLogger.error(e)
             throw new Error(e.message)
@@ -159,6 +153,15 @@ class Service {
         } catch (e) {
             errLogger.error(e)
             throw new Error(e.message)
+        }
+    }
+
+    async signout(params) {
+        try {
+            return await new Token().deleteToken(params)
+        } catch (error) {
+            errLogger.error(error)
+            throw new Error(error.message)
         }
     }
 

@@ -30,3 +30,19 @@
 {"level":"error","message":{"reqBody":{"appointmentId":1,"serviceId":1,"time":30,"userId":"RWB101"},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{"appointment":"true"},"reqTime":"2022-07-07 00:54:24","reqUrl":"/?appointment=true","response":{"code":"","message":"appointment successfull","responseTime":"2022-07-07 00:55:45","status":{"code":404,"message":"Resource Not Found"}}}}
 {"level":"error"}
 {"level":"error","message":{"reqBody":{"appointmentId":2,"serviceId":1,"time":30,"userId":"RWB101"},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{"appointment":"true"},"reqTime":"2022-07-07 01:10:54","reqUrl":"/?appointment=true","response":{"code":"","message":"appointment successfull","responseTime":"2022-07-07 01:11:03","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:41:05","reqUrl":"/signin","response":{"code":"","message":"Cannot read properties of undefined (reading 'match')","responseTime":"2022-07-07 01:42:56","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:41:05","reqUrl":"/signout","response":{"code":"","message":"Cannot read properties of undefined (reading 'match')","responseTime":"2022-07-07 01:43:17","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:44:20","reqUrl":"/signout","response":{"code":"","message":"server_error.try_again","responseTime":"2022-07-07 01:44:26","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:45:08","reqUrl":"/signout","response":{"code":"","message":"server_error.try_again","responseTime":"2022-07-07 01:45:14","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:56:20","reqUrl":"/signout","response":{"code":"","message":"Cannot read properties of undefined (reading 'replace')","responseTime":"2022-07-07 01:56:23","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:57:21","reqUrl":"/signout","response":{"code":"","message":"Cannot read properties of undefined (reading 'replace')","responseTime":"2022-07-07 01:57:26","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:57:48","reqUrl":"/signout","response":{"code":"","message":"Cannot read properties of undefined (reading 'replace')","responseTime":"2022-07-07 01:57:52","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-07 01:58:05","reqUrl":"/signout","response":{"code":"","message":"Cannot read properties of undefined (reading 'replace')","responseTime":"2022-07-07 01:58:11","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error"}
