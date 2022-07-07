@@ -141,8 +141,8 @@ const user = {
         },
     },
 
-    '/users?userId={userId}': {
-        patch: {
+    '/users?id={id}': {
+        get: {
             tags: ['User'],
             summary: 'single user info --route for system admin',
             description: 'single user info --route for system admin',
@@ -152,7 +152,6 @@ const user = {
                 {
                     name: "id",
                     in: "path",
-                    required: "true"
                 }
             ],
             responses,
