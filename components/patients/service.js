@@ -21,8 +21,8 @@ class Service {
 
             return data;
         } catch (e) {
-            errLogger.error(e)
-            throw new Error(e.message)
+            errLogger.error(e.errors[0].message)
+            throw new Error(e.errors[0].message)
         }
     }
 
