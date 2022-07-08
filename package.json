@@ -130,7 +130,7 @@
   "scripts": {
     "dev": "nodemon ./bin/www",
     "test": "npm test",
-    "start": "npm start"
+    "start": "npm ./bin/www"
   },
   "keywords": [
     "Genuine",
