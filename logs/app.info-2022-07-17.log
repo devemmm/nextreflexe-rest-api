@@ -1,0 +1,12 @@
+{"level":"info","message":"::1 - [2022-07-16T22:05:49.718Z] \"POST /api/v1/services HTTP/1.1\" 200 447 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:10:09.271Z] \"PATCH /api/v1/services/update/1 HTTP/1.1\" 400 57 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:10:26.066Z] \"PATCH /api/v1/services/1 HTTP/1.1\" 500 155 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:13:21.188Z] \"PATCH /api/v1/services/1 HTTP/1.1\" 500 162 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:14:46.506Z] \"PATCH /api/v1/services/1 HTTP/1.1\" 200 514 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:16:46.471Z] \"PATCH /api/v1/services/2 HTTP/1.1\" 200 507 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:18:10.002Z] \"PATCH /api/v1/services/3 HTTP/1.1\" 200 449 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:20:28.418Z] \"POST /api/v1/services HTTP/1.1\" 500 155 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:22:05.630Z] \"POST /api/v1/services HTTP/1.1\" 200 598 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:23:26.113Z] \"POST /api/v1/services HTTP/1.1\" 200 566 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:23:53.535Z] \"GET /api/v1/services HTTP/1.1\" 200 2181 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T22:28:06.695Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 11913 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}

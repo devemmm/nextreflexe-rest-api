@@ -3,6 +3,7 @@ const joi = require("@hapi/joi");
 class Validator {
   CREATE_SERVICE = joi.object().keys({
     name: joi.string().required(),
+    avatar: joi.string(),
     description: joi.string().required(),
     status: joi.string().valid("ACTIVE", "INACTIVE"),
     createdBy: joi.string().required(),
@@ -14,6 +15,7 @@ class Validator {
 
   UPDATE_SERVICE = joi.object().keys({
     id: joi.number(),
+    avatar: joi.string(),
     name: joi.string(),
     description: joi.string().required(),
   });
@@ -245,6 +247,7 @@ class Validator {
     lname: joi.string().required(),
     nid: joi.string().required(),
     email: joi.string().email().required(),
+    avatar: joi.string().email(),
     phone: joi
       .string()
       .regex(/^\d{3}\d{3}\d{4}$/)

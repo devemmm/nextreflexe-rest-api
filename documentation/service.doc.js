@@ -21,6 +21,9 @@ const service = {
                             name: {
                                 type: "string"
                             },
+                            avatar: {
+                                type: "string"
+                            },
                             description: {
                                 type: "string"
                             },
@@ -88,6 +91,9 @@ const service = {
                     schema: {
                         type: "object",
                         properties: {
+                            avatar: {
+                                type: "string"
+                            },
                             name: {
                                 type: "string"
                             },
