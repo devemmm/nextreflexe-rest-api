@@ -310,6 +310,15 @@ class Validator {
   DELETE_PAYMENT = joi.object().keys({
     id: joi.number(),
   });
+
+  GALLERY_UPLOAD_IMAGE_ = joi.object().keys({
+    album: joi.string(),
+    image: joi.string(),
+    redirect: joi.string(),
+    uploadedBy: joi.string()
+  })
+
+  GALLERY_VIEW = joi.object().keys({})
 }
 
 module.exports = Validator;

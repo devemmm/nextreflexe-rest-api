@@ -377,6 +377,33 @@ class QueryBuilder {
 
     return { callFunction, query }
   }
+
+  static async GALLERY(req) {
+    let query = {};
+    const reqData = req.query;
+    let callFunction = "findAndCountAll";
+
+    query.where = {};
+    query.order = [['createdAt', 'DESC']]
+    query.attributes = ['id', 'album', ['image', 'original'], 'thumbnail', 'redirect', 'uploadedBy', 'createdAt', 'updatedAt']
+
+    query.include = { all: true }
+
+    if (reqData.id) {
+      callFunction = "findOne";
+      query.where.id = reqData.id;
+    }
+
+    if (reqData.album) {
+      query.where.album = reqData.album
+    }
+
+    if (reqData.uploadedBy) {
+      query.where.uploadedBy = reqData.uploadedBy
+    }
+
+    return { callFunction, query }
+  }
 }
 
 module.exports = QueryBuilder;

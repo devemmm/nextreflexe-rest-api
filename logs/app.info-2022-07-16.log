@@ -42,3 +42,75 @@
 {"level":"info","message":"::1 - [2022-07-16T10:21:26.122Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-07-16T10:21:26.124Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
 {"level":"info","message":"::1 - [2022-07-16T10:21:26.462Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.440Z] \"GET /api-docs/ HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.467Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.469Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.472Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.473Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:10.820Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:27:21.201Z] \"GET /api/v1/branches/basic HTTP/1.1\" 400 57 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:28:43.198Z] \"GET /api/v1/branches/basic HTTP/1.1\" 400 57 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:29:19.017Z] \"GET /api/v1/branches/basic HTTP/1.1\" 400 57 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:33:03.635Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 9448 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:33:52.946Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 9448 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:35:01.030Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 9429 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T10:35:40.585Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 9429 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:18:54.532Z] \"POST /api/v1/gallery HTTP/1.1\" 401 86 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:19:09.913Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:19:20.886Z] \"POST /api/v1/gallery HTTP/1.1\" 401 86 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:19:32.568Z] \"POST /api/v1/gallery HTTP/1.1\" 401 106 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:19:41.734Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 696 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:19:52.690Z] \"POST /api/v1/gallery HTTP/1.1\" 401 106 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:20:04.612Z] \"POST /api/v1/gallery HTTP/1.1\" 500 173 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:20:40.451Z] \"POST /api/v1/gallery HTTP/1.1\" 200 447 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:21:21.342Z] \"GET /api/v1/gallery HTTP/1.1\" 200 414 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:28:55.422Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:30:24.160Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:38:39.426Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:50:22.135Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T11:50:31.209Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:06:03.550Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:08:55.765Z] \"POST /api/v1/gallery HTTP/1.1\" 500 170 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:09:04.699Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:09:17.267Z] \"POST /api/v1/gallery HTTP/1.1\" 200 324 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:12:05.217Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:13:05.497Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:13:30.098Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:14:05.201Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:14:13.078Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:17:56.747Z] \"POST /api/v1/gallery HTTP/1.1\" 500 193 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:18:36.455Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:18:48.486Z] \"POST /api/v1/gallery HTTP/1.1\" 500 193 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:19:02.161Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:19:54.746Z] \"POST /api/v1/gallery HTTP/1.1\" 500 193 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:21:20.918Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:21:39.665Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:23:12.065Z] \"POST /api/v1/gallery HTTP/1.1\" 500 193 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:23:51.068Z] \"POST /api/v1/gallery HTTP/1.1\" 500 193 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:40:11.614Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:41:49.500Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:42:05.464Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:44:02.919Z] \"POST /api/v1/gallery HTTP/1.1\" 500 1429 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:44:31.947Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:46:22.886Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:50:02.967Z] \"POST /api/v1/gallery HTTP/1.1\" 500 140 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:53:55.170Z] \"POST /api/v1/gallery HTTP/1.1\" 500 140 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T12:54:58.466Z] \"POST /api/v1/gallery HTTP/1.1\" 200 325 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:08:42.511Z] \"POST /api/v1/gallery HTTP/1.1\" 200 604 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:09:01.195Z] \"GET /api/v1/gallery HTTP/1.1\" 200 571 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:16:17.746Z] \"GET /api/v1/gallery HTTP/1.1\" 200 493 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:16:50.802Z] \"GET /api/v1/gallery HTTP/1.1\" 200 571 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:18:08.173Z] \"GET /api/v1/gallery HTTP/1.1\" 200 569 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:18:36.748Z] \"GET /api/v1/gallery HTTP/1.1\" 200 574 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:19:45.936Z] \"POST /api/v1/gallery HTTP/1.1\" 200 617 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:23:08.566Z] \"POST /api/v1/gallery HTTP/1.1\" 200 617 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:23:39.384Z] \"POST /api/v1/gallery HTTP/1.1\" 200 617 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:23:47.683Z] \"GET /api/v1/gallery HTTP/1.1\" 200 1981 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:27.868Z] \"GET /api-docs/ HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:27.889Z] \"GET /api-docs/swagger-ui.css HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:27.894Z] \"GET /api-docs/swagger-ui-init.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:27.896Z] \"GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:27.901Z] \"GET /api-docs/swagger-ui-bundle.js HTTP/1.1\" 200 1096188 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:28.316Z] \"GET /api-docs/favicon-32x32.png HTTP/1.1\" 304 - \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:25:32.787Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 10185 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2022-07-16T13:26:10.782Z] \"GET /api/v1/branches/basic HTTP/1.1\" 200 10166 \"http://localhost:3000/api-docs/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\"\n"}

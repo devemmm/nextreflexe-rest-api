@@ -5,7 +5,8 @@ const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
 const { team } = require('../users/team')
-
+const OurServiice = require('../services/service')
+const Gallery = require('../gallery/service');
 
 class Service {
     async save(params) {
@@ -67,38 +68,7 @@ class Service {
                 }
             ]
 
-            const services = [
-                {
-                    id: 1,
-                    avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656490859/icons/jointTret-icon_uo1j6m.svg',
-                    name: 'Joint Treatment',
-                    description: 'Be they knees, wrists, hip joints and elbow joints, our therapists will diagnose each case and prescribe the requisite therapy and duration.'
-                },
-                {
-                    id: 2,
-                    avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656490833/icons/chinese-arc-icon_xmfai6.svg',
-                    name: 'Back Treatement',
-                    description: 'We do have specific procedures designed to soothe back pain and completely eliminate any discomfort or pain in a very short period.'
-                },
-                {
-                    id: 3,
-                    avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656490883/icons/shoulderTret-icon_izu2uk.svg',
-                    name: 'Shoulder Treatement',
-                    description: 'We offer tailor-made treatment that is structured for the shoulders.'
-                },
-                {
-                    id: 4,
-                    avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656490833/icons/disabilityTret-icon_wxpm7z.svg',
-                    name: 'Disability Treatement',
-                    description: 'Through our therapy, people living with disability can have their lives greatly improved through increasing their energy levels, improving blood circulation .'
-                },
-                {
-                    id: 5,
-                    avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656490883/icons/shoulderTret-icon_izu2uk.svg',
-                    name: 'Migraines',
-                    description: 'Be they knees, wrists, hip joints and elbow joints, our therapists will diagnose each case and prescribe the requisite therapy and duration'
-                }
-            ]
+            const services = await new OurServiice().list(req)
 
             const methods = [
                 {
@@ -121,49 +91,7 @@ class Service {
                 }
             ]
 
-            const gallery = [
-                {
-                    id: 1,
-                    image: 'https://media.istockphoto.com/photos/success-picture-id912928582?b=1&k=20&m=912928582&s=170667a&w=0&h=DVRQz_Dq4HLr0rJ02uvVPZr6MOK7_TtbeRkWFcKifu4=',
-                    link: ''
-                },
-                {
-                    id: 2,
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_L6zqvKijy3UpsxdVdQO8ygcpUy4yzIh-hQ&usqp=CAU",
-                    link: ''
-                },
-                {
-                    id: 3,
-                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrNoJWs5MIAdjGvFTmyke82LSMT1MEezibw&usqp=CAU',
-                    link: ''
-                },
-                {
-                    id: 4,
-                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL77hcfFpNY7zrePlelBEDjp2x2t4Eu9oG6g&usqp=CAU',
-                    link: ''
-                },
-                {
-                    id: 5,
-                    image: 'https://media.istockphoto.com/photos/success-picture-id912928582?b=1&k=20&m=912928582&s=170667a&w=0&h=DVRQz_Dq4HLr0rJ02uvVPZr6MOK7_TtbeRkWFcKifu4=',
-                    link: ''
-                },
-                {
-                    id: 6,
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_L6zqvKijy3UpsxdVdQO8ygcpUy4yzIh-hQ&usqp=CAU",
-                    link: ''
-                },
-                {
-                    id: 7,
-                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbrNoJWs5MIAdjGvFTmyke82LSMT1MEezibw&usqp=CAU',
-                    link: ''
-                },
-                {
-                    id: 8,
-                    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL77hcfFpNY7zrePlelBEDjp2x2t4Eu9oG6g&usqp=CAU',
-                    link: ''
-                }
-            ]
-
+            const gallery = await new Gallery().list(req)
             const testimonials = [
                 {
                     image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313966/our-people/02_pjl9vm.png',
@@ -187,7 +115,7 @@ class Service {
                 },
             ];
             const clinic = { experience: 11, therapists: 30, branch: 7, patients: 10873 }
-            return { scrollData, clinic, services, methods, gallery, team, testimonials }
+            return { scrollData, clinic, services: services.rows, methods, gallery: gallery.rows, team, testimonials }
         } catch (e) {
             errLogger.error(e)
             throw new Error(e.message)

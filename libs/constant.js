@@ -47,6 +47,8 @@ class Constant {
   static USER_STATUS = ['ACTIVE', 'INACTIVE', 'DELETED']
   static USER_TYPE = ['PATIENT', 'THERAPIST', 'ADMIN', 'SUPER_ADMIN']
   static APPO_VIST_STATUS = ['PENDING', 'SUCCESS', 'FAILED', 'DELETED']
+  static DEFAULT_ALBUM = "main"
+  static REDIRECT = "https://deploy-preview-8--nextreflexe.netlify.app/gallery"
 }
 
 module.exports = Constant;
