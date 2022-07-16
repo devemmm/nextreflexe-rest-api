@@ -140,6 +140,42 @@ const user = {
             responses
         },
     },
+    '/users/contact-us': {
+        post: {
+            tags: ['User'],
+            summary: 'Contact us | Get In Touch',
+            description: 'sent a message for us',
+            operationId: 'Get In Touch',
+            consumes: 'application/json',
+            produces: 'application/json',
+            parameters: [
+                {
+                    name: "body",
+                    in: "body",
+                    required: "true",
+                    schema: {
+                        type: "object",
+                        properties: {
+                            names: {
+                                type: "string"
+                            },
+                            email: {
+                                type: "string"
+                            },
+                            phone: {
+                                type: "string"
+                            },
+                            message: {
+                                type: "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            responses
+        },
+
+    },
 
     '/users?id={id}': {
         get: {
