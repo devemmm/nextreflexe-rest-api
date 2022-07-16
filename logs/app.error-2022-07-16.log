@@ -19,3 +19,28 @@
 {"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-16 14:49:53","reqUrl":"/","response":{"code":"","message":"Upload preset not found","responseTime":"2022-07-16 14:50:02","status":{"code":500,"message":"Internal Server Error"}}}}
 {"http_code":400,"level":"error","message":"Upload preset not found","name":"Error"}
 {"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"POST","reqParams":{},"reqQuery":{},"reqTime":"2022-07-16 14:49:53","reqUrl":"/","response":{"code":"","message":"Upload preset not found","responseTime":"2022-07-16 14:53:55","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":{"patientId":25},"reqTime":"2022-07-16 23:49:32","reqUrl":"/","response":{"code":"","message":"server_error.\"patientId\" is not allowed","responseTime":"2022-07-16 23:49:53","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":{"patientId":25},"reqTime":"2022-07-16 23:49:32","reqUrl":"/","response":{"code":"","message":"server_error.\"patientId\" is not allowed","responseTime":"2022-07-16 23:50:36","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":{"id":25},"reqTime":"2022-07-16 23:51:42","reqUrl":"/","response":{"code":"","message":"server_error.\"id\" must be a string","responseTime":"2022-07-16 23:51:51","status":{"code":500,"message":"Internal Server Error"}}}}

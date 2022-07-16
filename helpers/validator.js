@@ -265,7 +265,7 @@ class Validator {
   });
 
   LIST_PATIENT = joi.object().keys({
-    id: joi.string(),
+    id: joi.number(),
   });
 
   UPDATE_PATIENT = joi.object().keys({

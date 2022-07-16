@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 const Token = require('../tokens/service')
 const User = require('../users/service')
+const Patient = require('../patients/service')
 
 class Authorization {
 
@@ -17,6 +18,7 @@ class Authorization {
 
             jwt.verify(token, process.env.JWT_SECRET, async (error, payload) => {
 
+
                 try {
                     if (error) {
                         throw new Error("authorization token is invalid")
@@ -24,15 +26,21 @@ class Authorization {
 
                     const tokenData = await new Token().getUserByToken({ token })
 
+
                     if (!tokenData) {
                         throw new Error("authorization token expired please signin again")
                     }
 
-                    const { userId } = tokenData.dataValues
 
-                    const user = await new User().list({ userId })
+                    const { userId, patientId } = tokenData.dataValues
+                    let user;
 
-                    if (!user) {
+                    if (userId) {
+                        user = await new User().list({ userId })
+                    } else if (patientId) {
+                        req.query.id = patientId;
+                        user = await new Patient().list(req)
+                    } else {
                         throw new Error('session was been  expired please signin again')
                     }
 
