@@ -38,6 +38,21 @@ class Controller extends BaseController {
 
     }
 
+    async contactUs(req, res) {
+
+        const data = await new Service().contactUs(req.body);
+        try {
+            if (!_.isUndefined(data.message)) {
+                this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.messagge_sent_successful', data })
+            } else {
+                this.sendResponse(req, res, RESPONSES.ERROR, { message: 'server_error.try_again' })
+            }
+        } catch (error) {
+            this.sendResponse(req, res, RESPONSES.INTERNAL_SERVER_ERROR, { message: error.message })
+        }
+
+    }
+
 
     async list(req, res) {
 

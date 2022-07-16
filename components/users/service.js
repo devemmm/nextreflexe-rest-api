@@ -9,6 +9,7 @@ const bcrypt = require('bcrypt')
 const { team } = require('./team')
 const PatientService = require('../patients/service')
 const PatientSchema = require('../patients/schema')
+const nodemailer = require("nodemailer");
 
 class Service {
     async save(params) {
@@ -22,6 +23,52 @@ class Service {
 
             await location.save()
             return user
+        } catch (e) {
+            console.log(e.message)
+            errLogger.error(e)
+            throw new Error(e.message)
+        }
+    }
+
+    async contactUs(params) {
+        try {
+            const { fname, lname, names, email, phone, message } = params
+            const output = `
+            <p>Genuine Kunga Therapy Custom Message</p>
+            <h3>Custom Details</h3>
+            <ul>
+                <li>Name: ${names}</li>
+                <li>Email: ${email}</li>
+                <li>Phone: ${phone}</li>
+            </ul>
+            <h3>Message</h3>
+            <p>${message}</p>
+        `;
+
+            let transporter = nodemailer.createTransport({
+                service: "gmail",
+                auth: {
+                    user: process.env.EMAIL,
+                    pass: process.env.PASSWORD,
+                },
+            });
+
+            // Step 2
+            let mailOptions = {
+                from: process.env.EMAIL,
+                to: `${process.env.TECHNICAL_SUPPORT_EMAIL}`,
+                subject: "Genuine Kunga Therapy Custom Message",
+                text: "heading",
+                html: output
+            };
+
+            // Step 3
+            transporter.sendMail(mailOptions, function (err, data) {
+                if (err) {
+                    return res.send({ error: err });
+                }
+            });
+            return { message: "message sent successfull" }
         } catch (e) {
             console.log(e.message)
             errLogger.error(e)

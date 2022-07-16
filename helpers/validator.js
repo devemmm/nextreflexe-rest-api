@@ -209,6 +209,15 @@ class Validator {
       .required(),
   });
 
+  CONTACT_US = joi.object().keys({
+    fname: joi.string(),
+    lname: joi.string(),
+    names: joi.string(),
+    email: joi.string().required(),
+    phone: joi.string().required(),
+    message: joi.string().required()
+  })
+
   LIST_USER = joi.object().keys({
     id: joi.string(),
   });

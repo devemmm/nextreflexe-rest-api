@@ -163,8 +163,31 @@ class Service {
                     link: ''
                 }
             ]
+
+            const testimonials = [
+                {
+                    image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313966/our-people/02_pjl9vm.png',
+                    names: 'THERAPIST',
+                    body: 'Mwiriwe neza!, nkomeje gushima umuryango mugari wa Genuine KUNGA Therapy kubafasha imaze gutanga kubanyarwanda even no muri Africa',
+                },
+                {
+                    image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656262847/cld-sample.jpg',
+                    names: 'RESTAURANT Owner',
+                    body: 'Mwiriwe neza!, nkomeje gushima umuryango mugari wa Genuine KUNGA Therapy kubafasha imaze gutanga kubanyarwanda even no muri Africa',
+                },
+                {
+                    image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656262848/cld-sample-3.jpg',
+                    names: 'Geeky Medussa',
+                    body: 'Genuine Kunga services are really genuine',
+                },
+                {
+                    image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656262819/sample.jpg',
+                    names: 'CONTENT Developer',
+                    body: 'We really love your services and we pray that you keep going on and expand your reach.',
+                },
+            ];
             const clinic = { experience: 11, therapists: 30, branch: 7, patients: 10873 }
-            return { scrollData, clinic, services, methods, gallery, team }
+            return { scrollData, clinic, services, methods, gallery, team, testimonials }
         } catch (e) {
             errLogger.error(e)
             throw new Error(e.message)

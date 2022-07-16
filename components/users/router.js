@@ -38,6 +38,15 @@ router
     )
 
 router
+    .route('/contact-us')
+    .post(
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().CONTACT_US)
+        ),
+        controller.contactUs.bind(controller)
+    )
+
+router
     .route('/team')
     .get(
         validator.validateRequest.bind(
