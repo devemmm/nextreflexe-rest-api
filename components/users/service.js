@@ -24,9 +24,8 @@ class Service {
             await location.save()
             return user
         } catch (e) {
-            console.log(e.message)
-            errLogger.error(e)
-            throw new Error(e.message)
+            errLogger.error(e.parent.sqlMessage ? e.parent.sqlMessage : e.message)
+            throw new Error(e.parent.sqlMessage ? e.parent.sqlMessage : e.message)
         }
     }
 

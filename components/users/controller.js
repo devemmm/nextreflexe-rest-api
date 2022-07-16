@@ -25,8 +25,15 @@ class Controller extends BaseController {
 
     async save(req, res) {
 
-        const data = await new Service().save(req.body);
+        const ROUTE_PRIVILAGE = [PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+
+        if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
+            return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
+        }
+
         try {
+            const data = await new Service().save(req.body);
+
             if (!_.isUndefined(data) && data.id) {
                 this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.user_created', data })
             } else {
@@ -40,8 +47,9 @@ class Controller extends BaseController {
 
     async contactUs(req, res) {
 
-        const data = await new Service().contactUs(req.body);
         try {
+            const data = await new Service().contactUs(req.body);
+
             if (!_.isUndefined(data.message)) {
                 this.sendResponse(req, res, RESPONSES.SUCCESS, { message: 'server_success.messagge_sent_successful', data })
             } else {
@@ -52,7 +60,6 @@ class Controller extends BaseController {
         }
 
     }
-
 
     async list(req, res) {
 
