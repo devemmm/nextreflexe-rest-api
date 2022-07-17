@@ -6,6 +6,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "accepts": "^1.3.8",
+    "africastalking": "^0.5.5",
     "app-root-path": "^3.0.0",
     "array-flatten": "^1.1.1",
     "async": "^3.2.3",
