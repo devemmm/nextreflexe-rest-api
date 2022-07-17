@@ -135,7 +135,7 @@ const user = {
             tags: ['User'],
             summary: 'our team',
             description: 'our peaple',
-            operationId: 'get my profile',
+            operationId: 'our people',
             produces: ['application/json'],
             responses
         },

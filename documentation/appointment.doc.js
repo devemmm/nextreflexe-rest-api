@@ -59,7 +59,7 @@ const appointment = {
             tags: ['Appointment'],
             summary: 'make appointment for unknow user',
             description: 'create appointment',
-            operationId: 'create appointment',
+            operationId: 'create appointment for unknow',
             consumes: 'application/json',
             produces: 'application/json',
             parameters: [
