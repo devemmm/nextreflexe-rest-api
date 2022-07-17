@@ -101,6 +101,80 @@ const user = {
 
     },
     '/users': {
+        post: {
+            tags: ['User'],
+            summary: 'create clinic user',
+            description: 'create clinic user. EXAMPLE ID: RWB101',
+            operationId: 'create clinic user',
+            consumes: 'application/json',
+            produces: 'application/json',
+            parameters: [
+                {
+                    name: "body",
+                    in: "body",
+                    required: "true",
+                    schema: {
+                        type: "object",
+                        properties: {
+                            id: {
+                                type: "string"
+                            },
+                            fname: {
+                                type: "string"
+                            },
+                            lname: {
+                                type: "string"
+                            },
+                            nid: {
+                                type: "string"
+                            },
+                            email: {
+                                type: "string"
+                            },
+                            phone: {
+                                type: "string"
+                            },
+                            dob: {
+                                type: "string"
+                            },
+                            password: {
+                                type: "string"
+                            },
+                            location: {
+                                required: true,
+                                type: "object",
+                                properties: {
+                                    country: {
+                                        type: "string"
+                                    },
+                                    province: {
+                                        type: "string"
+                                    },
+                                    district: {
+                                        type: "string"
+                                    },
+                                    sector: {
+                                        type: "string"
+                                    },
+                                    cell: {
+                                        type: "string"
+                                    },
+                                    village: {
+                                        type: "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            responses,
+            security: [
+                {
+                    JWT: []
+                }
+            ]
+        },
         get: {
             tags: ['User'],
             summary: 'list of users --route for system admin',

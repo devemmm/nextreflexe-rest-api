@@ -2,7 +2,7 @@ const joi = require("@hapi/joi");
 
 class Validator {
   CREATE_SERVICE = joi.object().keys({
-    name: joi.string().required(),
+    name: joi.string().min(4).required(),
     avatar: joi.string(),
     description: joi.string().required(),
     status: joi.string().valid("ACTIVE", "INACTIVE"),
@@ -76,12 +76,12 @@ class Validator {
 
   CREATE_APPOINTMENT = joi.object().keys({
     account: joi.string(),
-    fname: joi.string(),
-    lname: joi.string(),
-    email: joi.string(),
-    phone: joi.string(),
-    dob: joi.string(),
-    nid: joi.string(),
+    fname: joi.string().min(3).max(15),
+    lname: joi.string().min(3).max(20),
+    email: joi.string().email(),
+    phone: joi.string().min(10).max(12),
+    dob: joi.string().isoDate(),
+    nid: joi.string().min(16).max(16),
     location: joi.object().keys({
       country: joi.string(),
       province: joi.string(),
@@ -171,7 +171,7 @@ class Validator {
       .string()
       .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
-    dob: joi.string().required(),
+    dob: joi.string().isoDate().required(),
     password: joi.string().required(),
     location: joi
       .object()
@@ -187,16 +187,16 @@ class Validator {
   });
 
   CREATE_USER = joi.object().keys({
-    id: joi.string().required(),
+    id: joi.string().min(3).required(),
     fname: joi.string().required(),
     lname: joi.string().required(),
-    nid: joi.string().required(),
+    nid: joi.string().min(16).max(16).required(),
     email: joi.string().email().required(),
     phone: joi
       .string()
       .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
-    dob: joi.string().required(),
+    dob: joi.string().isoDate().required(),
     password: joi.string().required(),
     location: joi
       .object()
@@ -215,8 +215,11 @@ class Validator {
     fname: joi.string(),
     lname: joi.string(),
     names: joi.string(),
-    email: joi.string().required(),
-    phone: joi.string().required(),
+    email: joi.string().email(),
+    phone: joi
+      .string()
+      .regex(/^\d{3}\d{3}\d{4}$/)
+      .required(),
     message: joi.string().required()
   })
 
@@ -225,8 +228,10 @@ class Validator {
   });
 
   SIGNIN = joi.object().keys({
-    phone: joi.string(),
-    email: joi.string(),
+    phone: joi
+      .string()
+      .regex(/^\d{3}\d{3}\d{4}$/),
+    email: joi.string().email(),
     password: joi.string()
   })
 
@@ -247,12 +252,12 @@ class Validator {
     lname: joi.string().required(),
     nid: joi.string().required(),
     email: joi.string().email().required(),
-    avatar: joi.string().email(),
+    avatar: joi.string(),
     phone: joi
       .string()
       .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
-    dob: joi.string().required(),
+    dob: joi.string().isoDate().required(),
     password: joi.string().required(),
     location: joi
       .object()
@@ -280,7 +285,6 @@ class Validator {
   });
 
   // ---------------PAYMENT-----------------------
-
   CREATE_PAYMENT = joi.object().keys({
     patientId: joi.number().required(),
     visitId: joi.number().required(),

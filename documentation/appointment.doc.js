@@ -119,7 +119,7 @@ const appointment = {
                             branchId: {
                                 type: "string"
                             },
-                            doctorId: {
+                            userId: {
                                 type: "string"
                             }
                         }

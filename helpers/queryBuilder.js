@@ -305,25 +305,14 @@ class QueryBuilder {
     query.where = {};
     query.order = [['createdAt', 'DESC']]
 
-    // attributes: ['id', 'fname', 'lname', 'phone', 'email', 'userType']
-    console.log({ model: sequelize.modelManager })
-    // query.include = [
-    //   { model: sequelize.modelManager.getModel('branch'), attributes: ['id', 'name', 'managerId'] },
-    //   { model: sequelize.modelManager.getModel("user") },
-    //   // { model: sequelize.modelManager.getModel("patient"), attributes: ['id', 'fname', 'lname', 'phone', 'email'] },
-    // ];
+    query.include = { all: true }
 
-    // query.include = { all: true }
-    // query.include = [
-    //   { module: sequelize.modelManager.getModel('branch') }
-    // ]
-
-    if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
+    if (req.user.userType === PRIVILAGES.ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
 
     } else {
       callFunction = "findAndCountAll"
-      // query.where.branchId = req.user.branchId;
+      query.where.branchId = req.user.branchId;
     }
 
     if (reqData.id) {

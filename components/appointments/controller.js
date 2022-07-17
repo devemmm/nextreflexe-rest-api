@@ -29,9 +29,7 @@ class Controller extends BaseController {
     }
 
     async list(req, res) {
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
-
-
+        const ROUTE_PRIVILAGE = [PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
         try {
             if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
