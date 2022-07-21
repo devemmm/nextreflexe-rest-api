@@ -1,0 +1,3 @@
+{"level":"info","message":"::1 - [2022-07-21T12:18:06.355Z] \"POST /api/v1/users/signin HTTP/1.1\" 200 689 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-21T12:18:16.769Z] \"GET /api/v1/patients HTTP/1.1\" 200 1882 \"-\" \"PostmanRuntime/7.29.0\"\n"}
+{"level":"info","message":"::1 - [2022-07-21T12:20:42.111Z] \"GET /api/v1/patients HTTP/1.1\" 200 18387 \"-\" \"PostmanRuntime/7.29.0\"\n"}
