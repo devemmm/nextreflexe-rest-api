@@ -20,6 +20,15 @@ router
     )
 
 router
+    .route('/unknown')
+    .post(
+        validator.validateRequest.bind(
+            new Validator().init(new RequestValidator().CREATE_APPOINTMENT)
+        ),
+        controller.save.bind(controller)
+    )
+
+router
     .route('/')
     .get(
         authorization.requireAuth.bind(authorization),

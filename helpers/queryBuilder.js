@@ -281,20 +281,12 @@ class QueryBuilder {
   static async PATIENT_LIST(req) {
     let query = {};
     const reqData = req.query;
-    let callFunction = "findOne";
+    let callFunction = "findAndCountAll";
 
     query.where = {};
     query.order = [['createdAt', 'DESC']]
 
     query.include = { all: true }
-
-    if (req.user.userType === PRIVILAGES.ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
-      callFunction = "findAndCountAll"
-
-    } else {
-      callFunction = "findAndCountAll"
-      query.where.branchId = req.user.branchId;
-    }
 
     if (reqData.id) {
       callFunction = "findOne";

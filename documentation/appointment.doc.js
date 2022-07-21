@@ -54,7 +54,7 @@ const appointment = {
             ]
         }
     },
-    '/appointments?': {
+    '/appointments/unknown?account=false': {
         post: {
             tags: ['Appointment'],
             summary: 'make appointment for unknow user',
@@ -126,12 +126,7 @@ const appointment = {
                     }
                 }
             ],
-            responses,
-            security: [
-                {
-                    JWT: []
-                }
-            ]
+            responses
         }
     },
     '/appointments?id={id}': {
