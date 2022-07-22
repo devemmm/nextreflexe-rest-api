@@ -5,15 +5,15 @@ const patient = {
         post: {
             tags: ['Patient'],
             summary: 'register new patient',
-            description: 'register patient, this route it will be used by branch admin',
-            operationId: 'register patient, this route it will be used by branch admin',
+            description: 'this route it will create a new patient with appointment',
+            operationId: 'this route it will create a new patient with appointment',
             consumes: 'application/json',
             produces: 'application/json',
             parameters: [
                 {
                     name: "body",
                     in: "body",
-                    description: "most information in this body it will come from the appointment he /she made",
+                    description: "appointment details",
                     required: "true",
                     schema: {
                         type: "object",
@@ -34,9 +34,6 @@ const patient = {
                                 type: "string"
                             },
                             nid: {
-                                type: "string"
-                            },
-                            password: {
                                 type: "string"
                             },
                             location: {
@@ -64,24 +61,19 @@ const patient = {
                                 }
                             },
                             startTime: {
-                                type: "string"
+                                "type": "string"
                             },
                             branchId: {
                                 type: "string"
                             },
-                            doctorId: {
+                            userId: {
                                 type: "string"
                             }
                         }
                     }
                 }
             ],
-            responses,
-            security: [
-                {
-                    JWT: []
-                }
-            ]
+            responses
         },
         get: {
             tags: ['Patient'],

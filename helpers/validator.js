@@ -270,6 +270,9 @@ class Validator {
         village: joi.string(),
       })
       .required(),
+    startTime: joi.string(),
+    branchId: joi.string(),
+    userId: joi.string()
   });
 
   LIST_PATIENT = joi.object().keys({
