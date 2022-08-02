@@ -9,7 +9,7 @@ const debug = require("debug")("CRVS-api:server");
 const path = require('path')
 const https = require("https");
 const http = require('http')
-var fs = require('fs');
+const fs = require('fs');
 
 
 /**
