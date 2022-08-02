@@ -8,8 +8,8 @@ const { user, userDefinitions } = require('./user.doc')
 
 
 const host = process.env.NODE_ENV === 'production'
-    ? process.env.BASE_URL.split('https://')[1]
-    : process.env.BASE_URL.split('http://')[1];
+    ? process.env.BASE_URL.replace(/^/, 'https://')
+    : process.env.BASE_URL.replace(/^/, 'http://');
 
 console.log({ host })
 

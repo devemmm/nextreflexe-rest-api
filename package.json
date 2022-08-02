@@ -143,9 +143,9 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development && nodemon ./bin/www",
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
     "start": "node ./bin/www",
-    "prod": "cross-env NODE_ENV=production && node ./bin/www",
+    "prod": "cross-env NODE_ENV=production node ./bin/www",
     "build": "babel ./ -d cross-envbuild",
     "test": "cross-env NODE_ENV=test && nyc --reporter=text --reporter=lcov mocha --recursive --require @babel/polyfill --require @babel/register ./tests/*.js --timeout 500000000 --exit && cross-env NODE_ENV=test"
   },

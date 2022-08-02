@@ -33,7 +33,7 @@ let server;
 if (process.env.NODE_ENV === "production") {
   server = https.createServer(https_options, app)
 } else {
-  server = http.createServer(https_options, app)
+  server = http.createServer(app)
 }
 
 /**
