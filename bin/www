@@ -6,7 +6,9 @@
 
 const app = require("../app");
 const debug = require("debug")("CRVS-api:server");
-const http = require("http");
+const path = require('path')
+const https = require("https");
+const http = require('http')
 
 /**
  * Get port from environment and store in Express.
@@ -16,10 +18,21 @@ const port = normalizePort(process.env.PORT);
 app.set("port", port);
 
 /**
- * Create HTTP server.
+ * Create HTTPS server.
  */
 
-const server = http.createServer(app);
+let https_options = {
+  key: fs.readFileSync(path.join(__dirname, 'cert', "private.pem")),
+
+  cert: fs.readFileSync(path.join(__dirname, 'cert', "nextreflexe_com.pem")),
+};
+
+let server;
+if (process.env.NODE_ENV === "production") {
+  server = https.createServer(https_options, app)
+} else {
+  server = http.createServer(https_options, app)
+}
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -65,11 +78,9 @@ function onError(error) {
     case "EACCES":
       console.error(bind + " requires elevated privileges");
       process.exit(1);
-      break;
     case "EADDRINUSE":
       console.error(bind + " is already in use");
       process.exit(1);
-      break;
     default:
       throw error;
   }
