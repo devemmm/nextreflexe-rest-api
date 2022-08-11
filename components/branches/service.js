@@ -58,13 +58,13 @@ class Service {
                     id: 1,
                     image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656436764/page/home_bg1_enqgeq.jpg',
                     title: 'Genuine Kunga',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor'
+                    description: 'Your Wellness, our Concern !!!'
                 },
                 {
                     id: 2,
                     image: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656436758/page/home_bg2_z322jw.jpg',
-                    title: 'Joint Treatment',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                    title: 'Disability Treatement',
+                    description: 'Through our therapy, people living with disability can have their lives greatly improved through increasing their energy levels, improving blood circulation.'
                 }
             ]
 
