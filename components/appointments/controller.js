@@ -68,7 +68,7 @@ class Controller extends BaseController {
                 return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
             }
 
-            const data = await new Service().delete(req.params)
+            const data = await new Service().delete(req)
 
             if (!_.isUndefined(data)) {
                 this.sendResponse(req, res, RESPONSES.SUCCESS, { data })

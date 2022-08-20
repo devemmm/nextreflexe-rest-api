@@ -138,10 +138,10 @@ class Service {
     }
   }
 
-  async delete(params) {
+  async delete(req) {
     try {
 
-      let visit = await Schema.findByPk(params.id)
+      let visit = await Schema.findByPk(req.params.id)
 
       if (!visit || visit.status === "DELETED") {
         throw new Error('visit not found')

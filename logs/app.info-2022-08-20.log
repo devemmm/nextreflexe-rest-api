@@ -170,3 +170,8 @@
 {"level":"info","message":"::1 - [2022-08-20T19:21:31.598Z] \"GET /api/v1/visits HTTP/1.1\" 200 5606 \"-\" \"PostmanRuntime/7.29.2\"\n"}
 {"level":"info","message":"::1 - [2022-08-20T19:21:41.400Z] \"GET /api/v1/visits HTTP/1.1\" 200 5606 \"-\" \"PostmanRuntime/7.29.2\"\n"}
 {"level":"info","message":"::1 - [2022-08-20T19:21:43.221Z] \"GET /api/v1/visits HTTP/1.1\" 200 5606 \"-\" \"PostmanRuntime/7.29.2\"\n"}
+{"level":"info","message":"::1 - [2022-08-20T19:50:35.359Z] \"DELETE /api/v1/appointments/delete/4 HTTP/1.1\" 400 57 \"-\" \"PostmanRuntime/7.29.2\"\n"}
+{"level":"info","message":"::1 - [2022-08-20T19:50:49.615Z] \"DELETE /api/v1/appointments/4 HTTP/1.1\" 500 135 \"-\" \"PostmanRuntime/7.29.2\"\n"}
+{"level":"info","message":"::1 - [2022-08-20T19:51:57.020Z] \"DELETE /api/v1/appointments/4 HTTP/1.1\" 500 135 \"-\" \"PostmanRuntime/7.29.2\"\n"}
+{"level":"info","message":"::1 - [2022-08-20T19:54:59.525Z] \"DELETE /api/v1/appointments/4 HTTP/1.1\" 500 162 \"-\" \"PostmanRuntime/7.29.2\"\n"}
+{"level":"info","message":"::1 - [2022-08-20T19:55:18.739Z] \"DELETE /api/v1/visits/2 HTTP/1.1\" 401 163 \"-\" \"PostmanRuntime/7.29.2\"\n"}

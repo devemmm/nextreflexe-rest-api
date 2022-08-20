@@ -83,7 +83,7 @@ class Controller extends BaseController {
       }
 
 
-      const data = await new Service().delete(req.params);
+      const data = await new Service().delete(req);
       if (!_.isUndefined(data)) {
         this.sendResponse(req, res, RESPONSES.SUCCESS, { data });
       } else {

@@ -59,3 +59,10 @@
 {"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:17:28","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'status')","responseTime":"2022-08-20 21:17:32","status":{"code":404,"message":"Resource Not Found"}}}}
 {"level":"error"}
 {"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:18:55","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'appointmentId')","responseTime":"2022-08-20 21:19:08","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"4"},"reqQuery":"","reqTime":"2022-08-20 21:49:52","reqUrl":"/4","response":{"code":"","message":"req is not defined","responseTime":"2022-08-20 21:50:49","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"4"},"reqQuery":"","reqTime":"2022-08-20 21:51:54","reqUrl":"/4","response":{"code":"","message":"req is not defined","responseTime":"2022-08-20 21:51:57","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"4"},"reqQuery":"","reqTime":"2022-08-20 21:54:44","reqUrl":"/4","response":{"code":"","message":"You are not Authorized to perform this action","responseTime":"2022-08-20 21:54:59","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"2"},"reqQuery":"","reqTime":"2022-08-20 21:54:44","reqUrl":"/2","response":{"code":"","message":"unauthorized resources","responseTime":"2022-08-20 21:55:18","status":{"code":401,"message":"You are not Authorized to perform this action"}}}}
