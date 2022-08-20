@@ -16,15 +16,15 @@ class QueryBuilder {
       { model: sequelize.modelManager.getModel("location") },
     ];
 
-    if (reqData.id) {
+    if (reqData?.id) {
       query.where.id = reqData.id;
     }
 
-    if (reqData.name) {
+    if (reqData?.name) {
       query.where.name = reqData.name;
     }
 
-    if (reqData.search) {
+    if (reqData?.search) {
       callFunction = "findAndCountAll";
 
       if (_.isUndefined(reqData.byLocation)) {
@@ -294,7 +294,7 @@ class QueryBuilder {
 
     query.include = { all: true }
 
-    if (reqData.id) {
+    if (reqData?.id) {
       callFunction = "findOne";
       query.where.id = reqData.id;
     }
@@ -324,16 +324,16 @@ class QueryBuilder {
       query.where.branchId = req.user.branchId;
     }
 
-    if (reqData.id) {
+    if (reqData?.id) {
       callFunction = "findOne"
       query.where.id = reqData.id
     }
 
-    if (reqData.patientId) {
+    if (reqData?.patientId) {
       query.where.patientId = reqData.patientId;
     }
 
-    if (reqData.status) {
+    if (reqData?.status) {
       query.where.status = reqData.status;
     }
 
@@ -350,16 +350,16 @@ class QueryBuilder {
 
     query.include = { all: true }
 
-    if (reqData.id) {
+    if (reqData?.id) {
       callFunction = "findOne";
       query.where.id = reqData.id;
     }
 
-    if (reqData.patientId) {
+    if (reqData?.patientId) {
       query.where.patientId = reqData.patientId
     }
 
-    if (reqData.visitId) {
+    if (reqData?.visitId) {
       query.where.visitId = reqData.visitId
     }
 
@@ -387,16 +387,16 @@ class QueryBuilder {
 
     query.include = { all: true }
 
-    if (reqData.id) {
+    if (reqData?.id) {
       callFunction = "findOne";
       query.where.id = reqData.id;
     }
 
-    if (reqData.album) {
+    if (reqData?.album) {
       query.where.album = reqData.album
     }
 
-    if (reqData.uploadedBy) {
+    if (reqData?.uploadedBy) {
       query.where.uploadedBy = reqData.uploadedBy
     }
 
