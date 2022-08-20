@@ -39,7 +39,7 @@ router
     )
 
 router
-    .route('/update/:id')
+    .route('/:id')
     .patch(
         authorization.requireAuth.bind(authorization),
         validator.validateRequest.bind(
@@ -49,7 +49,7 @@ router
     )
 
 router
-    .route('/delete/:id')
+    .route('/:id')
     .delete(
         authorization.requireAuth.bind(authorization),
         validator.validateRequest.bind(

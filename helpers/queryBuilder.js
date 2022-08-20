@@ -310,6 +310,9 @@ class QueryBuilder {
     if (req.user.userType === PRIVILAGES.ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
 
+    } else if (req.user.userType === PRIVILAGES.PATIENT.VALUE) {
+      callFunction = "findAndCountAll",
+        query.where.patientId = req.user.id;
     } else {
       callFunction = "findAndCountAll"
       query.where.branchId = req.user.branchId;

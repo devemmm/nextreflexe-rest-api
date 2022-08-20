@@ -7,11 +7,11 @@ const { payment, paymentDefinitions } = require('./payment.doc')
 const { user, userDefinitions } = require('./user.doc')
 
 
-const host = process.env.NODE_ENV === 'production'
+const url = process.env.NODE_ENV === 'production'
     ? process.env.BASE_URL.replace(/^/, 'https://')
     : process.env.BASE_URL.replace(/^/, 'http://');
 
-console.log({ host })
+const host = url.split('://')[1]
 
 const paths = {
     ...branch,

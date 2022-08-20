@@ -5,6 +5,7 @@ const _ = require('lodash')
 const sequelize = require('../../config/database')
 const QueryBuilder = require('../../helpers/queryBuilder')
 const Constants = require('../../libs/constant')
+const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
 const moment = require('moment')
 
 
@@ -46,9 +47,6 @@ class Service {
         try {
             const { callFunction, query } = await QueryBuilder.LIST_APPOINTMENT(req)
             let data;
-
-            console.log({ callFunction, query })
-
             switch (callFunction) {
                 case "findOne":
                     data = await Schema.findOne(query);
@@ -72,6 +70,12 @@ class Service {
                 throw new Error("appointment not found")
             }
 
+            if (req.user.userType !== PRIVILAGES.ADMIN.VALUE || req.user.userType !== PRIVILAGES.SUPER_ADMIN.VALUE) {
+                if (req.user.branchId !== appointment.branchId) {
+                    throw new Error(RESPONSES.UNAUTHORIZED_REQUEST.MSG)
+                }
+            }
+
             appointment.status = req.body?.status?.toUpperCase();
             return await appointment.save();
         } catch (e) {
@@ -87,6 +91,13 @@ class Service {
             if (!appointment || appointment.status === "DELETED") {
                 throw new Error("appointment not found")
             }
+
+            if (req.user.userType !== PRIVILAGES.ADMIN.VALUE || req.user.userType !== PRIVILAGES.SUPER_ADMIN.VALUE) {
+                if (req.user.branchId !== appointment.branchId) {
+                    throw new Error(RESPONSES.UNAUTHORIZED_REQUEST.MSG)
+                }
+            }
+
             appointment.status = "DELETED"
             return await appointment.save();
         } catch (e) {

@@ -26,7 +26,10 @@ const appointment = {
                             patientId: {
                                 type: "string"
                             },
-                            doctorId: {
+                            userId: {
+                                type: "string"
+                            },
+                            serviceId: {
                                 type: "string"
                             }
                         }
@@ -120,6 +123,9 @@ const appointment = {
                                 type: "string"
                             },
                             userId: {
+                                type: "string"
+                            },
+                            serviceId: {
                                 type: "string"
                             }
                         }
@@ -259,10 +265,9 @@ const appointment = {
                 {
                     name: "body",
                     in: "body",
-                    required: true,
                     schema: {
                         type: "object",
-                        propertie: {
+                        properties: {
                             status: {
                                 type: "string"
                             }

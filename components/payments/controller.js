@@ -9,7 +9,7 @@ class Controller extends BaseController {
     }
 
     async save(req, res) {
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+        const ROUTE_PRIVILAGE = [PRIVILAGES.MANAGER.VALUE, PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
         if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
             return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
@@ -30,7 +30,7 @@ class Controller extends BaseController {
 
 
     async list(req, res) {
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+        const ROUTE_PRIVILAGE = [PRIVILAGES.MANAGER.VALUE, PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
         if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
             return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
@@ -49,7 +49,7 @@ class Controller extends BaseController {
     }
 
     async update(req, res) {
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+        const ROUTE_PRIVILAGE = [PRIVILAGES.MANAGER.VALUE, PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
         if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
             return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
@@ -68,7 +68,7 @@ class Controller extends BaseController {
     }
 
     async delete(req, res) {
-        const ROUTE_PRIVILAGE = [PRIVILAGES.PATIENT.VALUE, PRIVILAGES.THERAPIST.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
+        const ROUTE_PRIVILAGE = [PRIVILAGES.ADMIN.VALUE, PRIVILAGES.SUPER_ADMIN.VALUE]
 
         if (!_.includes(ROUTE_PRIVILAGE, req.user.userType)) {
             return this.sendResponse(req, res, RESPONSES.UNAUTHORIZED_REQUEST, { message: 'unauthorized resources' })
