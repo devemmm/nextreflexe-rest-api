@@ -40,6 +40,7 @@ class Authorization {
                     } else if (patientId) {
                         req.query.id = patientId;
                         user = await new Patient().list(req)
+                        delete req.query;
                     } else {
                         throw new Error('session was been  expired please signin again')
                     }

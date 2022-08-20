@@ -7,6 +7,8 @@ const QueryBuilder = require("../../helpers/queryBuilder");
 const Util = require("../../helpers/utils");
 const Constants = require("../../libs/constant");
 const moment = require("moment");
+const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
+
 
 class Service {
   async save(req) {
@@ -121,6 +123,12 @@ class Service {
         throw new Error("visit nof found")
       }
 
+      if (req.user.userType !== PRIVILAGES.ADMIN.VALUE || req.user.userType !== PRIVILAGES.SUPER_ADMIN.VALUE) {
+        if (req.user.branchId !== visit.branchId) {
+          throw new Error(RESPONSES.UNAUTHORIZED_REQUEST.MSG)
+        }
+      }
+
       visit.status = req.body?.status?.toUpperCase()
 
       return await visit.save();
@@ -137,6 +145,12 @@ class Service {
 
       if (!visit || visit.status === "DELETED") {
         throw new Error('visit not found')
+      }
+
+      if (req.user.userType !== PRIVILAGES.ADMIN.VALUE || req.user.userType !== PRIVILAGES.SUPER_ADMIN.VALUE) {
+        if (req.user.branchId !== visit.branchId) {
+          throw new Error(RESPONSES.UNAUTHORIZED_REQUEST.MSG)
+        }
       }
 
       visit.status = "DELETED"

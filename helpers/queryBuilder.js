@@ -153,13 +153,15 @@ class QueryBuilder {
 
     query.where = {};
 
-    // if (req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
-    //   callFunction = "findAndCountAll"
-
-    // } else {
-    //   callFunction = "findAndCountAll"
-    //   query.where.branchId = req.user.branchId;
-    // }
+    if (req.user.userType === PRIVILAGES.ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
+      callFunction = "findAndCountAll"
+    } else if (req.user.userType === PRIVILAGES.PATIENT.VALUE) {
+      callFunction = "findAndCountAll",
+        query.where.id = req.user.id;
+    } else {
+      callFunction = "findAndCountAll"
+      query.where.branchId = req.user.branchId;
+    }
 
     query.include = [
       { model: sequelize.modelManager.getModel('appointment'), attributes: ['id', 'startTime', 'endTime', 'status'] },
@@ -168,35 +170,36 @@ class QueryBuilder {
       { model: sequelize.modelManager.getModel("patient"), attributes: ['id', 'fname', 'lname', 'phone', 'email'] },
     ];
 
-    if (reqData.id) {
+
+    if (reqData?.id) {
       callFunction = "findOne";
       query.where.id = reqData.id;
     }
 
-    if (reqData.status) {
+    if (reqData?.status) {
       query.where.status = reqData.status?.toUpperCase()
     }
 
-    if (reqData.appointmentId) {
+    if (reqData?.appointmentId) {
       query.where.appointmentId = reqData.appointmentId;
     }
 
-    if (reqData.patientId) {
+    if (reqData?.patientId) {
       callFunction = "findAndCountAll";
       query.where.patientId = reqData.patientId;
     }
 
-    if (reqData.branchId) {
+    if (reqData?.branchId) {
       callFunction = "findAndCountAll";
       query.where.branchId = reqData.branchId;
     }
 
-    if (reqData.doctorId) {
+    if (reqData?.doctorId) {
       callFunction = "findAndCountAll";
       query.where.doctorId = reqData.doctorId;
     }
 
-    if (reqData.userId) {
+    if (reqData?.userId) {
       callFunction = "findAndCountAll";
       query.where.userId = reqData.userId;
     }
@@ -205,6 +208,9 @@ class QueryBuilder {
       delete query.where;
       callFunction = "findAndCountAll";
     }
+
+
+    console.log({ callFunction, query })
 
     return { callFunction, query };
   }

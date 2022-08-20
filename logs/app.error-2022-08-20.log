@@ -8,3 +8,54 @@
 {"level":"error","message":{"reqBody":{"status":"PENDING"},"reqIp":"::1","reqMethod":"PATCH","reqParams":{"id":"3"},"reqQuery":{},"reqTime":"2022-08-20 12:41:02","reqUrl":"/3","response":{"code":"","message":"you are not allowed to perfom this action","responseTime":"2022-08-20 12:41:05","status":{"code":500,"message":"Internal Server Error"}}}}
 {"level":"error"}
 {"level":"error","message":{"reqBody":{"status":"PENDING"},"reqIp":"::1","reqMethod":"PATCH","reqParams":{"id":"3"},"reqQuery":{},"reqTime":"2022-08-20 12:44:07","reqUrl":"/3","response":{"code":"","message":"You are not Authorized to perform this action","responseTime":"2022-08-20 12:44:09","status":{"code":500,"message":"Internal Server Error"}}}}
+{"fields":["serviceId"],"index":"appointment_ibfk_4","level":"error","name":"SequelizeForeignKeyConstraintError","original":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sql":"DELETE FROM `service` WHERE `id` = '1'","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`genuine`.`appointment`, CONSTRAINT `appointment_ibfk_4` FOREIGN KEY (`serviceId`) REFERENCES `service` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)","sqlState":"23000"},"parameters":{},"parent":{"code":"ER_ROW_IS_REFERENCED_2","errno":1451,"sql":"DELETE FROM `service` WHERE `id` = '1'","sqlMessage":"Cannot delete or update a parent row: a foreign key constraint fails (`genuine`.`appointment`, CONSTRAINT `appointment_ibfk_4` FOREIGN KEY (`serviceId`) REFERENCES `service` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)","sqlState":"23000"},"reltype":"parent","sql":"DELETE FROM `service` WHERE `id` = '1'","table":"service"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"1"},"reqQuery":{"id":2},"reqTime":"2022-08-20 13:04:23","reqUrl":"/1","response":{"code":"","message":"Cannot delete or update a parent row: a foreign key constraint fails (`genuine`.`appointment`, CONSTRAINT `appointment_ibfk_4` FOREIGN KEY (`serviceId`) REFERENCES `service` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)","responseTime":"2022-08-20 13:07:28","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"1"},"reqQuery":{"id":2},"reqTime":"2022-08-20 13:09:09","reqUrl":"/1","response":{"code":"","message":"visit not found","responseTime":"2022-08-20 20:21:24","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"1"},"reqQuery":{"id":2},"reqTime":"2022-08-20 13:09:09","reqUrl":"/1","response":{"code":"","message":"visit not found","responseTime":"2022-08-20 20:21:28","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"DELETE","reqParams":{"id":"1"},"reqQuery":{"id":2},"reqTime":"2022-08-20 13:09:09","reqUrl":"/1","response":{"code":"","message":"visit not found","responseTime":"2022-08-20 20:21:58","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":{"id":2,"name":"10"},"reqTime":"2022-08-20 20:56:14","reqUrl":"/?name=10","response":{"code":"","message":"server_error.\"name\" is not allowed","responseTime":"2022-08-20 20:58:08","status":{"code":500,"message":"Internal Server Error"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:07:32","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:07:39","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:08:55","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:09:00","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:09:40","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:09:44","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:10:44","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:10:52","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:11:02","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:11:05","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:11:12","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:11:15","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:11:36","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:11:42","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:12:01","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:12:04","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:12:47","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:12:52","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:13:04","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:13:09","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:13:38","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:13:40","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:14:06","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:14:08","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:14:31","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:14:33","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:15:28","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:15:31","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:15:41","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:15:47","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:15:55","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:15:57","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:16:19","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:16:21","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:17:03","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:17:05","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:17:14","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'id')","responseTime":"2022-08-20 21:17:17","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:17:28","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'status')","responseTime":"2022-08-20 21:17:32","status":{"code":404,"message":"Resource Not Found"}}}}
+{"level":"error"}
+{"level":"error","message":{"reqBody":{},"reqIp":"::1","reqMethod":"GET","reqParams":{},"reqQuery":"","reqTime":"2022-08-20 21:18:55","reqUrl":"/","response":{"code":"","message":"Cannot read properties of undefined (reading 'appointmentId')","responseTime":"2022-08-20 21:19:08","status":{"code":404,"message":"Resource Not Found"}}}}
