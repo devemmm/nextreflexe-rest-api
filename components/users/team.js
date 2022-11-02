@@ -7,13 +7,6 @@ const team = [
         role: 'Founder && CEO'
     },
     {
-        id: 2,
-        fname: 'Daniel',
-        lname: 'NKWIYISHIMWE',
-        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313976/our-people/12_r9cyrl.png',
-        role: 'Chief Kunga Therapist'
-    },
-    {
         id: 3,
         fname: 'Jannette',
         lname: 'MUKAGASANA',
