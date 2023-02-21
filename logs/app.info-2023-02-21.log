@@ -1,0 +1,2 @@
+{"level":"info","message":"::1 - [2023-02-21T11:11:56.220Z] \"GET / HTTP/1.1\" 200 32 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\"\n"}
+{"level":"info","message":"::1 - [2023-02-21T11:11:56.311Z] \"GET /favicon.ico HTTP/1.1\" 400 57 \"http://localhost:3000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36\"\n"}
