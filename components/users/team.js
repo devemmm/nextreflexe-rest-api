@@ -1,13 +1,13 @@
 const team = [
     {
-        id: 1,
+        id: "RWB101",
         fname: 'Gad',
         lname: 'KIRENGA',
         avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313966/our-people/01-green_a0ktds.png',
         role: 'Founder && CEO'
     },
     {
-        id: 2,
+        id: "RWB102",
         fname: 'Jannette',
         lname: 'MUKAGASANA',
         avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313985/our-people/06_mmudvp.png',
@@ -63,7 +63,7 @@ const team = [
     //     role: 'Therapist'
     // },
     {
-        id: 3,
+        id: "RWB103",
         fname: 'Justine',
         lname: 'MUKAMUGEMA',
         avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313986/our-people/13_edysaw.png',
