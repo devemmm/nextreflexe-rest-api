@@ -169,7 +169,7 @@ class Validator {
     email: joi.string().email().required(),
     phone: joi
       .string()
-      .regex(/^\d{3}\d{3}\d{4}$/)
+      // .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
     dob: joi.string().isoDate().required(),
     password: joi.string().required(),
@@ -194,7 +194,7 @@ class Validator {
     email: joi.string().email().required(),
     phone: joi
       .string()
-      .regex(/^\d{3}\d{3}\d{4}$/)
+      // .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
     dob: joi.string().isoDate().required(),
     password: joi.string().required(),
@@ -218,7 +218,7 @@ class Validator {
     email: joi.string().email(),
     phone: joi
       .string()
-      .regex(/^\d{3}\d{3}\d{4}$/)
+      // .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
     message: joi.string().required()
   })
@@ -229,8 +229,8 @@ class Validator {
 
   SIGNIN = joi.object().keys({
     phone: joi
-      .string()
-      .regex(/^\d{3}\d{3}\d{4}$/),
+      .string(),
+      // .regex(/^\d{3}\d{3}\d{4}$/),
     email: joi.string().email(),
     password: joi.string()
   })
@@ -250,12 +250,12 @@ class Validator {
   CREATE_PATIENT = joi.object().keys({
     fname: joi.string().required(),
     lname: joi.string().required(),
-    nid: joi.string().required(),
+    nid: joi.string(),
     email: joi.string().email().required(),
     avatar: joi.string(),
     phone: joi
       .string()
-      .regex(/^\d{3}\d{3}\d{4}$/)
+      // .regex(/^\d{3}\d{3}\d{4}$/)
       .required(),
     dob: joi.string().isoDate().required(),
     password: joi.string().required(),
