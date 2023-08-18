@@ -250,13 +250,13 @@ class Validator {
   CREATE_PATIENT = joi.object().keys({
     fname: joi.string().required(),
     lname: joi.string().required(),
-    nid: joi.string(),
-    email: joi.string().email().required(),
+    nid: joi.string().empty(''),
+    email: joi.string().email().empty(''),
     avatar: joi.string(),
     phone: joi
       .string()
-      // .regex(/^\d{3}\d{3}\d{4}$/)
-      .required(),
+      .regex(/^\d{3}\d{3}\d{4}$/)
+      .empty(''),
     dob: joi.string().isoDate().required(),
     password: joi.string().required(),
     location: joi
