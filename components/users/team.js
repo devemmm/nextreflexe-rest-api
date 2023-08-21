@@ -3,51 +3,51 @@ const team = [
         id: "RWB101",
         fname: 'Gad',
         lname: 'KIRENGA',
-        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313966/our-people/01-green_a0ktds.png',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692627164/kirenga_gad_oke6rt.jpg',
         role: 'Founder && CEO'
     },
     {
         id: "RWB102",
         fname: 'Jannette',
         lname: 'MUKAGASANA',
-        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313985/our-people/06_mmudvp.png',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/Chief_operations_flnufo.jpg',
         role: 'Operations Manager'
     },
-    // {
-    //     id: 4,
-    //     fname: 'Jesus',
-    //     lname: 'ISHIMWE',
-    //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313966/our-people/03_zbtqbp.png',
-    //     role: 'Therapist'
-    // },
-    // {
-    //     id: 5,
-    //     fname: 'Jean Claude',
-    //     lname: 'NSENGIMANA',
-    //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313963/our-people/04_znafdg.png',
-    //     role: 'Therapist'
-    // },
-    // {
-    //     id: 6,
-    //     fname: 'Jean Claude',
-    //     lname: 'NSENGIMANA',
-    //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313971/our-people/05_ohpsjz.png',
-    //     role: 'Therapist'
-    // },
-    // {
-    //     id: 7,
-    //     fname: 'Jonathan',
-    //     lname: 'NIYONZIMA',
-    //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313971/our-people/07_lngmfi.png',
-    //     role: 'Therapist'
-    // },
-    // {
-    //     id: 8,
-    //     fname: 'Rosine',
-    //     lname: 'IRADUKUNDA',
-    //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313986/our-people/09_cgk6bx.png',
-    //     role: 'Therapist'
-    // },
+    {
+        id: "RWB103",
+        fname: 'Elyse',
+        lname: 'NTABUGI',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/Elise_NTABUGI_cypo2f.jpg',
+        role: 'Therapist'
+    },
+    {
+        id: "RWB104",
+        fname: 'Mimi',
+        lname: '',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/MIMI_xjzdby.jpg',
+        role: 'Therapist'
+    },
+    {
+        id: "RWB105",
+        fname: 'Jean Claude',
+        lname: 'NSENGIMANA',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/Nsengimana_claude_ufjyem.jpg',
+        role: 'Therapist'
+    },
+    {
+        id: "RWB106",
+        fname: 'Eric',
+        lname: '',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/Nsengimana_claude_ufjyem.jpg',
+        role: 'Therapist'
+    },
+    {
+        id: "RWB107",
+        fname: 'Aline',
+        lname: '',
+        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1692626571/Aline_jizew6.jpg',
+        role: 'Therapist'
+    },
     // {
     //     id: 9,
     //     fname: 'Jolie Betha',
@@ -62,13 +62,6 @@ const team = [
     //     avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313986/our-people/11_rwm0fq.png',
     //     role: 'Therapist'
     // },
-    {
-        id: "RWB103",
-        fname: 'Justine',
-        lname: 'MUKAMUGEMA',
-        avatar: 'https://res.cloudinary.com/nextreflexe/image/upload/v1656313986/our-people/13_edysaw.png',
-        role: 'Therapist'
-    },
     // {
     //     id: 12,
     //     fname: 'Justine',
