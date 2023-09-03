@@ -12,7 +12,10 @@ class Service {
       const { patientId, status } = reqData;
       let data = new Schema(reqData);
 
-      const payment = await Schema.findAll({ where: { patientId: patientId }, order: [['createdAt', 'DESC']] });
+      const payment = await Schema.findAll({
+        where: { patientId: patientId },
+        order: [["createdAt", "DESC"]],
+      });
 
       let paymentCondition = PAYMENT.CONDITION.INITIAL;
 
@@ -21,19 +24,21 @@ class Service {
       } else if (payment.length > 0 && status === PAYMENT.STATUS.BEFORE) {
         paymentCondition = PAYMENT.CONDITION.BEFORE;
       } else {
-        paymentCondition = PAYMENT.CONDITION.INSUFFICIENT_FOUND
+        paymentCondition = PAYMENT.CONDITION.INSUFFICIENT_FOUND;
       }
 
       switch (paymentCondition) {
-
         case PAYMENT.CONDITION.INITIAL: {
-          // this case means that the there is no payment done by this paient before he/she need 
-          if (_.isUndefined(reqData.totalSession) || _.isUndefined(reqData.sessionPrice)) {
+          // this case means that the there is no payment done by this paient before he/she need
+          if (
+            _.isUndefined(reqData.totalSession) ||
+            _.isUndefined(reqData.sessionPrice)
+          ) {
             throw new Error(PAYMENT.ERROR.SESSION);
           }
 
           if (_.isUndefined(reqData.visitId)) {
-            throw new Error(PAYMENT.ERROR.VISIT)
+            throw new Error(PAYMENT.ERROR.VISIT);
           }
 
           data.status = reqData.status;
@@ -48,42 +53,48 @@ class Service {
           data.debit = reqData.pay - reqData.sessionPrice;
           data.credit = 0;
 
+          if (
+            reqData.serviceId &&
+            reqData.serviceId === PAYMENT.CONSULTATION.ID
+          ) {
+            data.remainsSession = reqData.totalSession;
+            data.debit = data.totalPayment;
+          }
+
           return await data.save();
         }
 
         case PAYMENT.CONDITION.BEFORE: {
-
-
           data.status = status;
           data.totalSession = payment[0].totalSession;
           data.remainsSession = payment[0].dataValues.remainsSession - 1;
           data.totalPayment = payment[0].totalPayment;
           data.pay = payment[0].sessionPrice;
           data.debit = payment[0].debit - payment[0].sessionPrice;
-          data.paymentMethod = payment[0].paymentMethod
+          data.paymentMethod = payment[0].paymentMethod;
 
-          if ((payment[0].debit - payment[0].sessionPrice) < 0) {
-            throw new Error(PAYMENT.ERROR.INSUFFICIENT_FOUND)
+          if (payment[0].debit - payment[0].sessionPrice < 0) {
+            throw new Error(PAYMENT.ERROR.INSUFFICIENT_FOUND);
           }
-          data.credit = 0
-
+          data.credit = 0;
 
           return await data.save();
         }
 
         case PAYMENT.CONDITION.INSUFFICIENT_FOUND: {
-
           // ADD AMOUNT ON BALANCE
           data.pay = reqData.pay;
           data.debit = payment[0].debit + reqData.pay;
-          data.credit = 0
+          data.credit = 0;
 
           await data.save();
 
-          const newData = new Schema(reqData)
+          const newData = new Schema(reqData);
 
           // removingNullForAddFoundRecord
-          const filteredPayment = payment.filter((item) => item.totalPayment !== null && item.remainsSession !== null)
+          const filteredPayment = payment.filter(
+            (item) => item.totalPayment !== null && item.remainsSession !== null
+          );
 
           newData.status = PAYMENT.STATUS.PAY;
           newData.totalSession = filteredPayment[0].totalSession;
@@ -91,15 +102,18 @@ class Service {
           newData.totalPayment = filteredPayment[0].totalPayment;
           newData.pay = filteredPayment[0].sessionPrice;
 
-          newData.paymentMethod = filteredPayment[0].paymentMethod
+          newData.paymentMethod = filteredPayment[0].paymentMethod;
 
-          const newSlip = await Schema.findAll({ where: { patientId: patientId }, order: [['createdAt', 'DESC']] });
+          const newSlip = await Schema.findAll({
+            where: { patientId: patientId },
+            order: [["createdAt", "DESC"]],
+          });
 
-          if ((newSlip[0].debit - filteredPayment[0].sessionPrice) < 0) {
-            throw new Error(PAYMENT.ERROR.INSUFFICIENT_FOUND)
+          if (newSlip[0].debit - filteredPayment[0].sessionPrice < 0) {
+            throw new Error(PAYMENT.ERROR.INSUFFICIENT_FOUND);
           }
           newData.debit = newSlip[0].debit - filteredPayment[0].sessionPrice;
-          newData.credit = 0
+          newData.credit = 0;
 
           return await newData.save();
         }
@@ -109,42 +123,41 @@ class Service {
       }
     } catch (e) {
       errLogger.error(e);
-      throw new Error(e.message)
+      throw new Error(e.message);
     }
   }
 
   async list(req, skipPaging = false, isActiveList = false) {
     try {
-
-      const { callFunction, query } = await QueryBuilder.LIST_PAYMENT(req)
+      const { callFunction, query } = await QueryBuilder.LIST_PAYMENT(req);
       let data;
 
       switch (callFunction) {
-        case 'findOne':
-          data = await Schema.findOne(query)
+        case "findOne":
+          data = await Schema.findOne(query);
           break;
         default:
-          data = await Schema.findAndCountAll(query)
+          data = await Schema.findAndCountAll(query);
       }
 
       return data;
     } catch (e) {
       errLogger.error(e);
-      throw new Error(e.message)
+      throw new Error(e.message);
     }
   }
 
   async update(req) {
     try {
-      const payment = await Schema.findByPk(req.params?.id)
+      const payment = await Schema.findByPk(req.params?.id);
 
-      const updates = Object.keys(req.body)
-      updates.forEach((update) => payment[update] = req.body[update])
+      const updates = Object.keys(req.body);
+      updates.forEach((update) => (payment[update] = req.body[update]));
 
-      return await payment.save()
+      return await payment.save();
     } catch (e) {
       errLogger.error(e);
-      throw new Error(e.message)
+      throw new Error(e.message);
     }
   }
 
@@ -153,7 +166,7 @@ class Service {
       return { data: [] };
     } catch (error) {
       errLogger.error(e);
-      throw new Error(e.message)
+      throw new Error(e.message);
     }
   }
 }
