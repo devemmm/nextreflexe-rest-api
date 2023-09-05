@@ -58,7 +58,8 @@ class Service {
             reqData.serviceId === PAYMENT.CONSULTATION.ID
           ) {
             data.remainsSession = reqData.totalSession;
-            data.debit = data.totalPayment;
+
+            data.debit = data.pay - PAYMENT.CONSULTATION.PRICE;
           }
 
           return await data.save();
