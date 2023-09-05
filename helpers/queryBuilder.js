@@ -152,6 +152,7 @@ class QueryBuilder {
     let callFunction = "findOne";
 
     query.where = {};
+    query.order = [['createdAt', 'DESC']]
 
     if (req.user.userType === PRIVILAGES.ADMIN.VALUE || req.user.userType === PRIVILAGES.SUPER_ADMIN.VALUE) {
       callFunction = "findAndCountAll"
