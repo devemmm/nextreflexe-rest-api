@@ -58,7 +58,12 @@ class Constant {
     },
     CONSULTATION: {
       ID: 8,
+      TIME: 20,
+      PRICE: 10000
     },
+    OTHER: {
+      TIME: 60
+    }
   };
 
   static BRANCH = { MIN: [{ id: "RW01", price: 150000 }] };

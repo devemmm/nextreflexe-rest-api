@@ -7,7 +7,11 @@ const QueryBuilder = require('../../helpers/queryBuilder')
 const Constants = require('../../libs/constant')
 const { responses: RESPONSES, PRIVILAGES } = require('../../libs/constant')
 const moment = require('moment')
+const Visit = require('../visits/service')
+const Payment = require('../patients/service')
 
+const visitService = new Visit();
+const paymentService = new Payment()
 
 class Service {
     async save(req) {
@@ -32,10 +36,24 @@ class Service {
                 }
                 return patient;
             } else {
-                const appointment = new Schema(req.body)
+                const appointment = new Schema({...req.body})
 
                 //send message to customer
-                return await appointment.save();
+                await appointment.save();
+
+
+                req.query.appointment = "true"
+                req.body.appointmentId = appointment.id
+
+                if(req.body.serviceId === Constants.PAYMENT.CONSULTATION.ID){
+                    req.body.time = Constants.PAYMENT.CONSULTATION.TIME
+                }else{
+                    req.body.time = Constants.PAYMENT.OTHER.TIME
+                }
+
+                await visitService.save(req)
+
+                return appointment
             }
         } catch (e) {
             errLogger.error(e)
