@@ -1,11 +1,11 @@
 const team = [
   {
     id: "RWB101",
-    fname: "Pacifique",
-    lname: "KIMENYI",
+    fname: "Peace",
+    lname: "UMUTONI",
     avatar:
-      "https://res.cloudinary.com/nextreflexe/image/upload/v1694194350/Pacifique_KIMENYI_k12ocn.jpg",
-    role: "Managing Director",
+      "https://res.cloudinary.com/nextreflexe/image/upload/v1695021240/Umutoni_Peace_annl0z.jpg",
+    role: "Chief Executive Officer",
   },
   {
     id: "RWB102",
